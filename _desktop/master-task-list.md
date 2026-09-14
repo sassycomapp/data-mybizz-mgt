@@ -2,7 +2,7 @@
 document: Master Task List — mybizz-OS
 date-created: 2026-08-05
 date-revised: 2026-09-11
-status: Working document — open tasks only, in preferred execution order. Tasks only: history, evidence, and decisions live in canonical documents.
+status: "Working document — open tasks only, in preferred execution order. Tasks only: history, evidence, and decisions live in canonical documents."
 ---
 
 # Master Task List — mybizz-OS
