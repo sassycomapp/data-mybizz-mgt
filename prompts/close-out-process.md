@@ -31,8 +31,8 @@ their solutions, and the developer's refinement that the process is
 context-based, not memory-specific.
 
 Reference files (developer-side; agent reads what the guards allow):
-- `C:\_data-mybizz-mgt\_desktop\facts-log.md` — index of saved facts
-- `C:\_data-mybizz-mgt\_desktop\sessions-log.md` — index of session pages
+- `C:\data-mybizz-mgt\_desktop\facts-log.md` — index of saved facts
+- `C:\data-mybizz-mgt\_desktop\sessions-log.md` — index of session pages
 - `C:\mybizz\mybizz-os-docs\operating-procedures\sessions\opening-and-closing.md`
 - `C:\mybizz\mybizz-os-docs\operating-procedures\gbrain\fact-save-and-recall.md`
 
@@ -71,6 +71,12 @@ Reference files (developer-side; agent reads what the guards allow):
    decided by the session's context, proposed by the agent at the gate, and
    confirmed by the developer. The developer is right here: one focused
    question is always cheaper than a wrong assumption.
+8. **Log numbering is developer-supplied — the agent never guesses it.**
+   The agent cannot read the logs (sensitive class), so it never knows the
+   next index. Rows are drafted WITHOUT a number; the developer enters the
+   log's own next zero-padded index at paste time via the `read -p` lines
+   in M-3 / Phase G (live failure 2026-09-15: a guessed number plus a
+   mangled paste produced a numberless row).
 
 ---
 
@@ -106,11 +112,15 @@ commit it in Phase F. No grant needed.
   fact text, proposed kind + routing, confidence, conflict flags) + the
   proposed sessions-log row. Then STOP.
 - The developer's single approval may cancel, amend, reword, or re-route
-  items; the amended set is authoritative. Log formats (dates YYYY/MM/DD;
-  next sequential number):
+  items; the amended set is authoritative. Log formats (dates YYYY/MM/DD):
   - facts-log: `| No. | Date | Subject | Title | Fact | GBrain reference |`
     — reference is `fact-NN`, filled after saving.
   - sessions-log: `| No. | Date | Topic | Subject | Title | GBrain page name |`
+- **Two numbering spaces, never conflated** (live failure 2026-09-15): the
+  `No.` column is the LOG's own zero-padded sequential index (`001`,
+  `002`, … — last row + 1). The gbrain fact number (`fact-NN`) goes ONLY
+  in the GBrain reference column. The agent drafts rows WITHOUT a number
+  and never guesses one — it cannot read the logs (sensitive class).
 
 ## Phase C — routing (decided by the session's context, confirmed at the gate)
 
@@ -151,40 +161,56 @@ Phase G). Editing that file needs a cross-project write: request
 granted; if the grant path is denied, the edit becomes a developer-run
 command.
 
-### M-3 — DEVELOPER TERMINAL BLOCK 1 (governor submissions + review resolution + sessions log)
+### M-3 — DEVELOPER TERMINAL BLOCK 1 (governor submissions + sessions log)
 
 The credential lives in `~/memory-governor/.env`; agent-side `.env`
 sourcing is a permanent guard-denial class — the developer's terminal needs
-no grant. The agent prepares this block with every `<placeholder>` filled
-and hands it over as ONE paste:
+no grant. The agent prepares this block with every value that is already
+known filled in — the block contains NO angle-bracket placeholders (trap
+T8). Values that only exist in this block's OUTPUT (the `memory_id`s) are
+resolved in M-3b, never here.
 
 ```bash
 cd /home/dev-p/memory-governor && set -a && source .env && set +a
 
 # 1. Owning project (idempotent — "already exists" is fine); project_id MUST
 #    equal the gbrain source id of the repo holding the fact files
+#    (agent fills FILLED-BY-AGENT before handing over)
 curl -s -X POST http://127.0.0.1:8321/memory/projects \
   -H "X-Governor-Credential: $MEMORY_GOVERNOR_WRITER_MANUAL_SUBMISSION" \
   -H "Content-Type: application/json" \
-  -d '{"project_id": "<gbrain-source-id>", "display_name": "<name>"}'
+  -d '{"project_id": "FILLED-BY-AGENT", "display_name": "FILLED-BY-AGENT"}'
 
 # 2. One submission per fact file — visibility shared_all ALWAYS (trap T1);
-#    confidence/method from the agent's gate-passed judgment
+#    confidence/method from the agent's gate-passed judgment; source_ref is
+#    the absolute path to the fact file (agent fills FILLED-BY-AGENT)
 curl -s -X POST http://127.0.0.1:8321/memory/candidate \
   -H "X-Governor-Credential: $MEMORY_GOVERNOR_WRITER_MANUAL_SUBMISSION" \
   -H "Content-Type: application/json" \
-  -d '{"owning_project": "<gbrain-source-id>", "visibility": "shared_all", "retention": "long_term", "memory_type": "fact", "source_type": "user", "source_ref": "<abs path to fact file>", "policy_version": "v1", "confidence": {"score": <0.0-1.0>, "method": "model_based"}}'
+  -d '{"owning_project": "FILLED-BY-AGENT", "visibility": "shared_all", "retention": "long_term", "memory_type": "fact", "source_type": "user", "source_ref": "FILLED-BY-AGENT", "policy_version": "v1", "confidence": {"score": 0.0, "method": "model_based"}}'
 
-# 3. Review resolution — one promote per returned memory_id (world-visible
-#    content routes to needs_review by design, trap T3; the promote is the
-#    developer's executing act on content already approved at the gate)
-curl -s -X POST http://127.0.0.1:8321/memory/<memory_id>/review \
+# 3. Sessions log — the approved row, verbatim (universal: every close-out).
+#    The agent drafts the row WITHOUT a number; the developer enters the
+#    log's next zero-padded index at the prompt (hard rule 8)
+read -p "Next sessions-log No: " SLNO
+printf '%s\n' "| $SLNO | DATE-YYYY/MM/DD | topic | subject | title | gbrain-page-name |" >> /mnt/c/data-mybizz-mgt/_desktop/sessions-log.md
+```
+
+### M-3b — DEVELOPER TERMINAL BLOCK 1b (review resolution)
+
+One promote per returned memory_id (world-visible content routes to
+needs_review by design, trap T3; the promote is the developer's executing
+act on content already approved at the gate). The developer pastes Block 1's
+output back; the agent composes this block FULLY LITERAL from the returned
+ids — one curl per memory_id, zero placeholders:
+
+```bash
+cd /home/dev-p/memory-governor && set -a && source .env && set +a
+
+curl -s -X POST http://127.0.0.1:8321/memory/LITERAL-MEMORY-ID/review \
   -H "X-Governor-Credential: $MEMORY_GOVERNOR_WRITER_MANUAL_SUBMISSION" \
   -H "Content-Type: application/json" \
-  -d '{"decision": "promote", "reason": "<approved at the <date> close-out gate>", "reviewer": "dev-p"}'
-
-# 4. Sessions log — the approved row, verbatim (universal: every close-out)
-printf '%s\n' '| <approved sessions-log row> |' >> /mnt/c/_data-mybizz-mgt/_desktop/sessions-log.md
+  -d '{"decision": "promote", "reason": "approved at the DATE close-out gate", "reviewer": "dev-p"}'
 ```
 
 ### M-4 — agent: verify the flush, capture fact numbers
@@ -219,14 +245,19 @@ printf '%s\n' '| <approved sessions-log row> |' >> /mnt/c/_data-mybizz-mgt/_desk
 ## Phase G — DEVELOPER TERMINAL BLOCK 2 (facts log + commits)
 
 ```bash
-# facts-log rows — one per saved fact (advisory and governed alike),
-# with the real fact-NN captured in Phase C-A / M-4
-printf '%s\n' '| <No.> | <date> | <subject> | <title> | <fact> | fact-<NN> |' \
->> /mnt/c/_data-mybizz-mgt/_desktop/facts-log.md
+# facts-log rows — one per saved fact (advisory and governed alike), with the
+# real fact-NN captured in Phase C-A / M-4. The No. column is the LOG's own
+# zero-padded index (hard rule 8): the developer enters the next index once
+# and the helper increments per row. The agent drafts each frow line fully
+# literal; the fact-NN goes ONLY in the last column (trap T9)
+read -p "Next facts-log No: " N
+frow() { printf '%s\n' "| $(printf '%03d' "$N") | $1 | $2 | $3 | $4 | $5 |" >> /mnt/c/data-mybizz-mgt/_desktop/facts-log.md; N=$((N+1)); }
+frow "YYYY/MM/DD" "subject" "title" "fact text" "fact-NN"
+# (one frow line per saved fact)
 
-git -C <working-repo> commit -m "<close-out message>" && git -C <working-repo> push
+git -C WORKING-REPO commit -m "close-out message" && git -C WORKING-REPO push
 # additional repos/commits as the session's work requires, e.g.:
-git -C /mnt/c/mybizz/mybizz-os-docs commit -m "memory: master-explainer - <...> (close-out)" && git -C /mnt/c/mybizz/mybizz-os-docs push
+git -C /mnt/c/mybizz/mybizz-os-docs commit -m "memory: master-explainer - TOPIC (close-out)" && git -C /mnt/c/mybizz/mybizz-os-docs push
 ```
 
 ## Phase H — agent: sync + verify (only after push is confirmed)
@@ -283,6 +314,19 @@ decision, and the next-work pointer. Then the session is closed.
 - **T7 — grants decrement per write.** Request the count the work actually
   needs before starting (live lesson 2026-09-14: a `count 1` grant consumed
   by the first write forced a second request).
+- **T8 — angle-bracket placeholders do not survive pasting** *(M-3, live
+  2026-09-15)*. A block pasted with `<memory_id_1>` unreplaced made bash
+  redirect into files named `memory_id_1` and silently skipped the review
+  promotes. Rule: Block 1 contains only pre-known, agent-filled values;
+  anything that exists only in a previous block's OUTPUT goes into a
+  SECOND, fully literal block composed by the agent from the pasted output
+  (M-3b).
+- **T9 — two numbering spaces, never conflated** *(live 2026-09-15)*. The
+  logs' `No.` column is the log's own zero-padded index (001-style); the
+  gbrain fact number (`fact-NN`) belongs only in the GBrain reference
+  column. The agent never knows the next index (cannot read the logs —
+  sensitive class) and never guesses one: `read -p` at paste time (M-3 /
+  Phase G) or the developer supplies it at the gate.
 
 Completion status per the mb-submit-memory protocol (Branch M runs): DONE,
 or DONE_WITH_REVIEWS_PENDING (list every open memory_id), or BLOCKED (state
