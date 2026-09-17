@@ -1,1 +1,0 @@
-\\wsl.localhost\Ubuntu\home\dev-p\.config\opencode\AGENTS.md
