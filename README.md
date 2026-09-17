@@ -16,21 +16,28 @@ the control surface the skills and agents read from and write to.
 
 | Item | Purpose |
 |---|---|
-| `_desktop/` | Operating documents — scope scaffold (`mybizz-scope-list.md`), sessions log, facts log, daily ops, master task list, standing instruction, repo organization |
-| `Budget/` | Budget data, strategy, risk analysis, learnings |
-| `Models/` | AI model selection working documents |
-| `prompts/` | Standing prompt/process documents (close-out process, learning, quality control, memory family) |
+| `desktop/` | Operating documents — daily ops, master task list, deferred-and-unresolved-matters, dev-makepdlf-todo |
+| `WIP/` | Working files |
+| `archive/` | Archived material |
+| `temp/` | Temporary files |
+| `register-local.md` | Append-only document register |
+| `README.md` | This file |
+
+Related folders that no longer live here: `Budget/` moved to `C:\_data-mybizz-exempt\Budget`
+(out of scope); `Models/` moved to `C:\mybizz\Models`; `prompts/` moved to `C:\mybizz\prompts`.
 
 ## Key documents
 
 - `mybizz-scope-list.md` — the scope scaffold. Read at Phase 0 of every
-  `mb-docs-manager` run; wins over every other document on scope.
+  `mb-docs-manager` run; wins over every other document on scope. Lives at
+  `C:\mybizz\mybizz-os-docs\os-reference-docs\`.
 - `sessions-log.md` — the sessions index; one row per closed session
-  (session open/close routine).
+  (session open/close routine). Lives at `C:\mybizz\logs\sessions-log\`.
 - `facts-log.md` — the authoritative index of saved durable facts
-  (fact save/recall routine).
+  (fact save/recall routine). Lives at `C:\mybizz\logs\gbrain-logs\facts-log\`.
 - `repo-organization.md` — the correlation table of GBrain sources, GitHub
-  repositories, and local paths (replaced `Repo organization.xlsx`).
+  repositories, and local paths (replaced `Repo organization.xlsx`). Lives at
+  `C:\mybizz\mybizz-os-docs\os-reference-docs\`.
 
 ## Naming note
 
