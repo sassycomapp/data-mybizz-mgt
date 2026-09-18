@@ -1,5 +1,7 @@
 ---
 document: Master Task List — mybizz-OS
+doc-id: master-task-list
+state: Live
 date-created: 2026-08-05
 date-revised: 2026-09-11
 status: "Working document — open tasks only, in preferred execution order. Tasks only: history, evidence, and decisions live in canonical documents."
@@ -18,7 +20,7 @@ are reviewed below the line, then migrated to canonical docs and removed.
 
 
 
-3. Research: "C:\_data-mybizz-exempt\WIP\awesome-agent-skills-main.zip"
+3. Research: "C:\_data-not mybizz\Tools and apps\awesome-agent-skills-main.zip"
 
 
 4. **`awesome-anvil` research** — tools/components compatible with the M3

@@ -1,6 +1,8 @@
 ---
 document: Deferred and Unresolved Matters
-state: Living reference — not a task list
+doc-id: deferred-and-unresolved-matters
+state: Live
+date-created: 2026-09-17
 location: mybizz-os
 ---
 

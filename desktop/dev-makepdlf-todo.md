@@ -13,11 +13,15 @@ Action items only. Completed and closed items are not tracked here.
 
 ### 1. Rebuild Steps 42, 42A, 43, 44
 
-These steps currently model a staging/production environment split that does not apply to this platform. Rebuild them around the actual publishing mechanism: a `develop` → `stable` GitHub merge, performed by the operator, outside PDLF's own pipeline. See `adr-local/no-staging-environment-five-app-isolation.md` for full reasoning. Deferred to Phase E.
+These steps currently model a staging/production environment split that does not apply to this platform. Rebuild them around the actual publishing mechanism: a `develop` → `stable` GitHub merge, performed by the operator, outside PDLF's own pipeline. See `adr-local/adr-no-staging-environment-five-app-isolation.md` for full reasoning. Deferred to Phase E.
 
 ### 2. Integrate Suite A and Suite B into Steps 35A, 36, 37, 38, 39
 
-Both testing checklists (`chk-pdlf-self-test.md`, `the retired chk-anvil-app-testing.md`) exist and are referenced from `pol-testing-and-quality.md`, but their checks are not yet built into the actual stepwise files that do testing work. Deferred to Phase D, when those step files are rebuilt.
+Both testing checklists (`chk-pdlf-self-test.md` exists; the earlier
+`chk-anvil-app-testing.md` was retired and is no longer on disk anywhere —
+verified 2026-09-18) are referenced from `pol-testing-and-quality.md`, but
+their checks are not yet built into the actual stepwise files that do
+testing work. Deferred to Phase D, when those step files are rebuilt.
 
 ### 3. Build out `Instructions.md` files
 
@@ -30,7 +34,7 @@ Only one file (`spec-testing-methodology-standards.md`) has been reviewed out of
 ### 5. Build the global-content query-fetch-apply sequence into relevant step files
 
 Rule and enforcement mechanism decided 2026-07-19 — see
-`adr-local/global-content-discovery-and-application-discipline.md` and
+`adr-local/adr-global-content-discovery-and-application-discipline.md` and
 `pol-memory-and-knowledge.md`. `project-library-global`'s GBrain registration is confirmed
 working, so the mechanism is usable, not just designed. Remaining work: build the
 five-step sequence and citation requirement into each relevant step file (17, 20, 22, 26,
@@ -56,7 +60,7 @@ The final, real end-to-end proof that this all works together in practice is tra
 
 ### 9. Relook the testing suite implemented in PDLF
 
-Connects directly to Item 2 above (Suite A/Suite B integration into the testing step files) — review together, not separately. Real, preserved seed material exists from an earlier MB-3-CS testing iteration (test taxonomy, a working Anvil-context test technique, real Anvil/M3-specific pass/fail criteria) — see `pdlf-testing-seed-material-README.md` for what's there and how to use it when this work is actually picked up.
+Connects directly to Item 2 above (Suite A/Suite B integration into the testing step files) — review together, not separately. Real, preserved seed material exists from an earlier MB-3-CS testing iteration (test taxonomy, a working Anvil-context test technique, real Anvil/M3-specific pass/fail criteria) — see `docs-local/pdlf-testing-seed-material/pdlf-testing-seed-material-README.md` in `makepdlf-project-library` for what's there and how to use it when this work is actually picked up.
 
 ---
 

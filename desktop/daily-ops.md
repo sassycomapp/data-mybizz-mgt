@@ -33,7 +33,9 @@ Then run Start sequence above.
 ```bash
 mg-grant --path <folder> --count N
 ```
-`<folder>`: Windows or WSL form, either works. `N`: writes to allow.
+`<folder>`: WSL forward-slash form (`/mnt/c/...`) — required, not optional.
+Windows backslash paths are consumed as escape characters and can never
+match (verified 2026-09-11). `N`: writes to allow.
 Reads open for 30 minutes, no count needed. Closes automatically at 30
 minutes or when the write count hits zero, whichever's first.
 
@@ -232,7 +234,7 @@ not optional — it's what actually catches a phantom candidate (a
 proposed change for text that isn't really there).
 
 **Reference paths (wikilink retrofit):** skill `mb-wikilinks`; backups
-`C:\backup-wikilinks\`; logs `C:\mybizz\logs\wikilinks\`.
+`C:\backup-mb-wikilinks\`; logs `C:\mybizz\logs\mb-wikilinks\`.
 
 ---
 
@@ -254,7 +256,7 @@ to `C:\dev\...`).
 
 **Cause:** OpenCode has no built-in cleanup for stale `project`/`session`
 database rows (confirmed upstream gap — see
-`C:\mybizz\mybizz-os\opencode-project-session-data-integrity.md`).
+`C:\mybizz\mybizz-config-docs\opencode\opencode-project-session-data-integrity.md`).
 
 **Fix:** run the cleanup script — see that same document for the exact
 command and full path.

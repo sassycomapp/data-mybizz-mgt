@@ -2,7 +2,7 @@
 document: Register — data-mybizz-mgt
 doc-id: register-data-mgt
 state: Live
-date-created: 20260914
+date-created: 2026-09-14
 ---
 
 # Register — data-mybizz-mgt
@@ -13,9 +13,11 @@ All other fields are permanent from first registration. This register file
 itself is catalogue — not a member of its own register.
 
 Provisional population 2026-09-14: `_desktop/` authored documents registered
-at folder creation. Membership for `Budget/`, `Models/`, and `prompts/` is
-open — to be assessed by `mb-align-docs` under the register-membership
-policy.
+at folder creation. `Budget/` moved to `C:\_data-mybizz-exempt\Budget` (out
+of scope), `Models/` to `C:\mybizz\Models`, and `prompts/` to
+`C:\mybizz\prompts` — none remain in this corpus and none are registered
+here (moves documented in README.md; settled by the 2026-09-17 register
+reconciliation, confirmed by align-docs 2026-09-18).
 
 | doc-id | filename | folder | type | state | notes |
 |---|---|---|---|---|---|
