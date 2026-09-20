@@ -418,6 +418,51 @@ opencode web --hostname 0.0.0.0
 
 ---
 
+## I-HAVE-ADHD SKILL (installed 2026-09-19, always-on)
+
+The skill enforces action-first output: it leads with the next action, numbers
+multi-step work, and suppresses tangents. Installed globally; the always-on
+flag injects the ruleset into every new session.
+
+| Action | Command |
+|---|---|
+| Invoke for one session | `/i-have-adhd` in the OpenCode chat |
+| Turn off mid-session | type `stop adhd mode` or `normal mode` in the chat |
+| Turn always-on off for good | `rm ~/.config/opencode/.i-have-adhd-always` |
+| Turn always-on back on | `touch ~/.config/opencode/.i-have-adhd-always` |
+| One deep-design session without it | rename the flag file before starting, restore it after |
+| Update the skill | `npx skills add ayghri/i-have-adhd -a opencode -y -g` |
+| Verify the whole wiring | `node /mnt/c/mybizz/scripts/verify-i-have-adhd.mjs` |
+
+Install layout (do not move one piece without the others):
+
+- Skill store: `~/.agents/skills/i-have-adhd/` (the `skills` CLI canonical copy).
+- Discovery: `~/.config/opencode/skills/i-have-adhd` is a symlink to the store.
+- Plugin: `~/.config/opencode/plugin/i-have-adhd.mjs`, registered in
+  `~/.config/opencode/opencode.jsonc` under `"plugin"`.
+- Command: `~/.config/opencode/command/i-have-adhd.md`.
+- Path fix: `~/.config/skills` is a symlink to `~/.config/opencode/skills`;
+  the plugin resolves its ruleset through it. Deleting it stops the always-on
+  injection silently.
+- Always-on flag: `~/.config/opencode/.i-have-adhd-always`.
+
+Uninstall completely:
+
+```bash
+rm ~/.config/opencode/plugin/i-have-adhd.mjs
+rm ~/.config/opencode/command/i-have-adhd.md
+rm ~/.config/opencode/skills/i-have-adhd
+rm ~/.config/skills
+rm ~/.config/opencode/.i-have-adhd-always
+rm -rf ~/.agents/skills/i-have-adhd
+```
+
+Then remove the `"plugin"` entry from `~/.config/opencode/opencode.jsonc` and
+restart OpenCode. Config loads once at startup, so any wiring change needs a
+restart to take effect.
+
+---
+
 | Role | Provider | Status |
 |---|---|---|
 | Embedding | OpenAI (text-embedding-3-large) | ✓ active |

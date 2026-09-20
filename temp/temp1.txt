@@ -1,0 +1,3 @@
+Please present your last response as a downloadable markdown file which I can present alongside my master memory explainer as the Continuity & Architectural State Standard.
+
+Next also provide a prompt for open code to implement this standard In a well integrated manner that builds on what I have and in a way that causes no damage
