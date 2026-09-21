@@ -10,8 +10,8 @@ status: "Working document — open tasks only, in preferred execution order. Tas
 # Master Task List — mybizz-OS
 
 Open tasks for mybizz-OS-level work, in preferred execution order.
-makepdlf-project-library-specific work lives on `dev-makepdlf-todo.md`;
-deferred matters on `deferred-and-unresolved-matters.md`. Completed items
+makepdlf-project-library-specific work lives on [[dev-makepdlf-todo|Active PDLF To-Do List]];
+deferred matters on [[deferred-and-unresolved-matters|Deferred and Unresolved Matters]]. Completed items
 are reviewed below the line, then migrated to canonical docs and removed.
 
 ---

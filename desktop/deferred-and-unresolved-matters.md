@@ -12,7 +12,7 @@ location: mybizz-os
 
 A permanent register of matters that are **closed as active work** but
 **not fully resolved in substance** — too valuable to discard, not
-actionable enough to belong on `master-task-list.md`.
+actionable enough to belong on [[master-task-list|mybizz-OS]].
 
 Every entry exists for one of two reasons, and every entry must state
 which:
@@ -23,7 +23,7 @@ which:
    for the deferral stated.
 
 **This is not a task list.** Nothing here implies "this still needs to
-be done." If an item needs doing, it belongs in `master-task-list.md`
+be done." If an item needs doing, it belongs in [[master-task-list|mybizz-OS]]
 instead.
 
 **Growth:** new entries are added over time as further qualifying
@@ -140,7 +140,7 @@ unrecognized tool name.
 
 Cupcake's current, live implementation — rule inventory, the grant
 system's real mechanics, known limitations, and the full incident
-history behind them — lives in `cupcake-explainer.md`, `cupcake-
+history behind them — lives in [[cupcake-explainer|Mechanical Policy Enforcement for AI Coding Agents]], `cupcake-
 config.md`, and `cupcake-reference.md`. This entry retains only the
 reasoning and the items those documents don't cover.
 
@@ -181,9 +181,9 @@ awaits PDLF's real existence.
 ### Where else to look
 
 Memory Governor's full, current, built system — architecture,
-mechanics, real incidents — lives in `memory-governor-explainer.md`,
-`memory-governor-config.md`, and `memory-governor-reference.md`. The
+mechanics, real incidents — lives in [[memory-governor-explainer|Explainer]],
+[[memory-governor-config|Memory Governor Configuration]], and [[memory-governor-reference|Usage, Invocation, and Incident Response]]. The
 recurring, per-step work of actually wiring each new PDLF step into
 this system (which mechanism to call, when) is tracked on
-`dev-makepdlf-todo.md`, not here — this entry concerns only the final,
+[[dev-makepdlf-todo|Active PDLF To-Do List]], not here — this entry concerns only the final,
 one-time proof that the whole chain works together.
