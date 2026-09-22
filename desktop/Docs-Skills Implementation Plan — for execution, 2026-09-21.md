@@ -107,10 +107,10 @@ stale skills-collective entry removed), and the post-compile fidelity check.
 Actions:
 
 1. Author the commit-allowance channel: amend
-   `no_autonomous_commits_pushes_merges_releases_or_deployments.md` to define the verifiable
+   [[no_autonomous_commits_pushes_merges_releases_or_deployments|no_autonomous_commits_pushes_merges_releases_or_deployments]] to define the verifiable
    allowance; create `bin\git-grant` (clone of `mg-grant` with configurable `--minutes`); amend
    the compiled commit policy to check the new grants-data file.
-2. Amend `no_cross_project_filesystem_access_by_default.md`: add `C:\data-mybizz-mgt` to the
+2. Amend [[no_cross_project_filesystem_access_by_default|no_cross_project_filesystem_access_by_default]]: add `C:\data-mybizz-mgt` to the
    restricted list; remove the stale `skills-collective` entry from the always-open list.
 3. Compile everything via `mb-compile-rules`; run the post-compile fidelity check (authored
    exceptions map to compiled logic).

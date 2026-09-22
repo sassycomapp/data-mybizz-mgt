@@ -29,7 +29,7 @@ Related folders that no longer live here: `Budget/` moved to `C:\_data-mybizz-ex
 ## Key documents
 
 - [[mybizz-scope-list|Mybizz Scope List]] — the scope scaffold. Read at Phase 0 of every
-  `mb-docs-manager` run; wins over every other document on scope. Lives at
+  `mb-doccycle` run; wins over every other document on scope. Lives at
   `C:\mybizz\mybizz-os-docs\os-reference-docs\`.
 - [[2026-09-15-session-numbers-from-sessions-log|session numbers come from the sessions log]] — the sessions index; one row per closed session
   (session open/close routine). Lives at `C:\mybizz\logs\sessions-log\`.
@@ -49,6 +49,6 @@ skills sweep them.
 
 ## Kept fresh by
 
-`mb-docs-manager`, `mb-align-docs`, and `mb-wikilinks` own document
-management for this folder (register membership, cross-references,
-wikilinks). `register-local.md` is the append-only document register.
+`mb-doccycle` owns document management for this folder (register
+membership, cross-references, wikilinks). `register-local.md` is the
+append-only document register.
