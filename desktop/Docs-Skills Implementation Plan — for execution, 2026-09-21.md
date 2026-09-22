@@ -22,7 +22,7 @@ commit-allowance channel takes over from WP3.
 
 ## WP0 — Source home, enforcement on, first developer block
 
-**Status: agent-side scaffolding executed 2026-09-21; developer block pending.**
+**Status: COMPLETE 2026-09-21 — agent-side scaffolding executed; developer block executed (repository sassycomapp/mb-doccycle created, initial commit 799c528 pushed, remote tracking set; Cupcake re-enabled; OpenCode restart issued). Gate passed on the developer's terminal output. Note: the initial commit tracks only SKILL.md — git does not track empty directories, so `phases\`, `tool\`, and `tests\` appear when their first real files are committed in WP2 and WP4.**
 
 Agent-side (done): created `C:\mybizz\mb-doccycle\` (SKILL.md placeholder, `phases\`, `tool\`,
 `tests\`), `C:\mybizz\logs\mb-doccycle\` per the `mb-align-docs` example, and the backup root
@@ -94,6 +94,15 @@ by diff against backup.
 ## WP3 — Cupcake amendments
 
 **Purpose:** the four coexistence changes, authored and compiled the standard way.
+
+**Status update 2026-09-22:** the set-and-forget plugin amendment was pulled
+forward and completed early (fail-open default; missing-skeleton fallback to
+the global-only home `~/.config/cupcake/fallback`; input-gated
+`cup-noop-fallback.rego` placeholder in every skeleton), after a real
+total-evaluation crash from a never-initialized launch folder — live-verified,
+and the cupcake suite docs already updated. WP3 retains: the commit-allowance
+channel, the cross-project rule amendments (data-mybizz-mgt to restricted;
+stale skills-collective entry removed), and the post-compile fidelity check.
 
 Actions:
 
