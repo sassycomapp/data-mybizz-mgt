@@ -39,7 +39,7 @@ The auditor must not be described as a save-event handler. A normal save is hand
 | D1 | Role | Deep, periodic, and on-demand corpus-integrity examination. |
 | D2 | Authority | Measure only against the authoritative G-brain documentation contract and explicitly assigned MyBizz operating requirements. |
 | D3 | Requirement ownership | The auditor does not define or change G-brain requirements. Contract changes are developer architectural decisions. |
-| D4 | Trigger | Explicit request, defined schedule, substantial restructuring, migration, G-brain ingestion/indexing change, requirement change, repeated maintenance evidence, or evidence of possible degradation. Not every save. |
+| D4 | Trigger | Explicit request, defined audit condition (stated by the developer at invocation), substantial restructuring, migration, G-brain ingestion/indexing change, requirement change, repeated maintenance evidence, or evidence of possible degradation. Not every save. **v1 note (developer decision):** no scheduler exists in this environment; "defined schedule" is recorded as future/not established. Building a scheduler is out of scope. |
 | D5 | Scope | Audit a defined scope appropriate to the purpose of the run. Do not default to the largest possible scan. |
 | D6 | Run-log | `mb-doc-maintainer` run-log is investigative evidence only. It is never an automatic work queue. |
 | D7 | Detection | A detected difference is not automatically work. Findings must be classified against G-brain requirements and operational consequence. |
@@ -111,6 +111,10 @@ The auditor may examine:
 
 The selected audit scope must be explicit for each run.
 
+### Hard exclusion — Anvil
+
+Any folder containing `anvil.yaml` is never documentation, and `anvil.yaml` itself is never read, written, or touched. The estate scanner excludes such folders by class rule, inherited from the scope authority (same rule as the maintainer). An Anvil repo present inside a scanned tree is not inspected, not scanned, and generates no findings.
+
 ### Deep audit does not mean maximum audit
 
 The auditor should perform enough examination to establish meaningful health for the selected purpose. It must not scan everything merely because everything is technically scannable.
@@ -149,6 +153,10 @@ The auditor should identify:
 - Registration inconsistencies that affect G-brain documentation integrity.
 
 Where the correct repair is mechanically determinable, safe, and verifiable, repair it automatically.
+
+### Register universe
+
+The register universe is discovered live using the same rule as the maintainer: each project library's root `register-local.md` (located by walking from the document's path), plus `register-global.md` for `project-library-global`. The libraries named above are examples, not an exhaustive list. The current known inventory is the six register files in `register-paths.md` (this folder): `data-mybizz-mgt`, `makepdlf-project-library`, `mb-3-cs-project-library`, `mybizz-config-docs`, `mybizz-os-docs`, and `project-library-global`. `pdlf-register.md` (under `C:\pdlf\pdlf-library`) is outside this inventory; if a C:\pdlf audit scope ever encounters it, surface it as a finding for human judgement rather than assuming its status.
 
 ## 7. Use of the maintainer run-log
 
@@ -239,7 +247,7 @@ Examples include:
 - Repairing mechanically determinable links.
 - Converting references to the required WikiLink form where unambiguous.
 - Correcting document registration.
-- Removing obsolete registration.
+- Retiring obsolete registration **in place** — registers are append-only (four-event model, O4/D4/D5 of the maintainer plan): an obsolete row's `state` is set to `Retired` (`superseded-by` where known); a row is never deleted. A row registered in the wrong location is retired in place there and the correct row is appended in the correct register. If the correct register or supersession target is not determinable, this becomes a human-judgement finding.
 - Repairing known structural inconsistencies.
 
 Human judgement is required when:
@@ -381,7 +389,7 @@ The existence of more detectable differences is not evidence that the audit is i
 
 The skill specification should contain these point-of-action sections:
 
-1. **Governance header** — boundary rules first; no DocCycle involvement; no invented G-brain requirements; no work from mere difference; no automatic work queue from the maintainer run-log; no large routine reports; no endless reconciliation; no duplication of the maintainer; no general document-management role.
+1. **Governance header** — boundary rules first; no DocCycle involvement; no invented G-brain requirements; no work from mere difference; no automatic work queue from the maintainer run-log; no large routine reports; no endless reconciliation; no duplication of the maintainer; no general document-management role; any folder containing `anvil.yaml` is never documentation and `anvil.yaml` itself is never read, written, or touched.
 2. **Invocation model** — explicit/on-schedule/on-condition audit; never save-time triggering.
 3. **Requirement authority** — consume the authoritative G-brain documentation contract; do not modify it.
 4. **Scope selection** — define the audit scope before examination; use the minimum sufficient scope.
@@ -405,25 +413,38 @@ The auditor requires, at minimum, capability for:
 
 | Capability | Function |
 | --- | --- |
-| Scope reader | Obtain the current audit scope from the authoritative scope definition. |
-| Contract reader | Load the G-brain documentation contract without altering it. |
-| Estate scanner | Enumerate only the selected audit scope and applicable exceptions. |
+| Scope reader | Obtain the current audit scope from the authoritative scope definition. **Locked:** `C:\mybizz\mybizz-os-docs\os-reference-docs\mybizz-scope-list.md`, read live at every run. |
+| Contract reader | Load the G-brain documentation contract without altering it. **Locked:** `C:\mybizz\mybizz-config-docs\gbrain\gbrain-doc-contract.md`. |
+| Estate scanner | Enumerate only the selected audit scope and applicable exceptions. Exclusions: any folder containing `anvil.yaml`; `tmp-` prefixed files; stencils; quarantine; backups; catalogue; logs (the maintainer's exempt classes). |
 | Frontmatter checks | Validate contract-defined metadata and structural rules. |
 | Link checks | Detect required WikiLinks, missing targets, and basename collisions. |
 | Register checks | Compare registration against the defined registration model. |
-| Run-log reader | Provide maintenance history as evidence when relevant. |
+| Run-log reader | Provide maintenance history as evidence when relevant. **Locked:** `C:\mybizz\mybizz-config-docs\mb-doc-maintainer\doc-maintainer-run-log.md` (the maintainer SKILL.md §10 path — not the unrelated `doc-maintainer-log.md` in the same directory). Absent or empty log → "no maintenance history available"; the audit proceeds. |
+| G-brain reader | Read-only live verification of G9/G10 within the selected scope (e.g. `gbrain sources list`, `gbrain orphans`). **Read-only calls only — the auditor never writes to G-brain.** CLI unavailable or fails → classify as Can wait; the audit still completes. |
 | Repair engine | Apply only safe, mechanically determinable repairs. |
 | Verification | Independently verify repairs and remaining findings. |
-| Audit record | Preserve sufficient evidence for later queries. |
+| Audit record | Preserve sufficient evidence for later queries. **Locked:** `C:\mybizz\mybizz-config-docs\mb-doc-auditor\doc-auditor-records.md` — one append-only block per run (date, scope, checked, findings by classification, actions, terminal state); register row added on creation, mirroring the maintainer run-log's treatment. |
 | Summary/reporting | Produce concise completion output and support detail-on-demand queries. |
 
-The exact filenames, storage locations, and implementation boundaries are not established by the supplied auditor specification and must be locked during implementation rather than silently assumed.
+Storage locations and boundaries were deferred by the original auditor specification; the locked values above were set by developer decision (2026-09-25) and are no longer open. Any future change to them is a developer decision.
 
 ## 17. Installation and verification
 
-The implemented skill should be installed as:
+### Source repository
 
-`~/.config/opencode/skills/mb-doc-auditor/`
+The skill's home is the source repository `C:\mybizz\mb-doc-auditor` (git init + GitHub remote, per ADR `adr-dev-tooling-source-repos-must-be-github-backed` — same pattern as `C:\mybizz\mb-doc-maintainer`). It contains the skill source file, `tool/`, and `tests/`.
+
+**Skill source file convention (critical):** the source file is `mb-doc-auditor-skill.md` — not `SKILL.md`. In the source repo its frontmatter carries the corpus two-field contract only: `title: "mb-doc-auditor-skill"` and `doc-id: "mb-doc-auditor-skill"` (both = filename stem), mirroring `C:\mybizz\mb-doc-maintainer\mb-doc-maintainer-skill.md`. Installation transforms it:
+
+- Installed path: `~/.config/opencode/skills/mb-doc-auditor/SKILL.md`
+- Installed frontmatter: OpenCode skill frontmatter — `name: mb-doc-auditor` plus a `description` with trigger phrases (see the installed `mb-doc-maintainer/SKILL.md` frontmatter for the pattern).
+- The source file is never installed verbatim under the `SKILL.md` name. Installing a file with corpus frontmatter as a skill entry point is a known blockage; the frontmatter conversion is part of installation, not an afterthought.
+
+### Documentation folder
+
+The auditor's documentation lives at `C:\mybizz\mybizz-config-docs\mb-doc-auditor\` (corpus documents with the two-field frontmatter, registered in the mybizz-config-docs register). Phase 7 populates the three-doc suite there.
+
+### Verification
 
 Verification should cover at least:
 
@@ -472,7 +493,15 @@ Expected result: registration is corrected automatically when the proper row is 
 
 ### Obsolete registration
 
-Expected result: obsolete registration is removed when its status is determinable.
+Expected result: obsolete registration is retired **in place** when its status is determinable — `state: Retired` set on the existing row (`superseded-by` where known); the row is never deleted (append-only, four-event model). A wrong-register row is retired there and the correct row appended in the correct register. Not determinable → human judgement.
+
+### Anvil repo present
+
+Expected result: a folder containing `anvil.yaml` inside the audit scope is not inspected, not scanned, and generates no findings. `anvil.yaml` itself is never read.
+
+### Absent or empty run-log
+
+Expected result: the audit proceeds with "no maintenance history available" as the run-log evidence summary; no repair, no work generation, no error state.
 
 ### Maintainer run-log signal
 
@@ -498,9 +527,11 @@ Expected result: no inspection or modification is required merely because DocCyc
 | 1 | **Phase 1 — skill specification** — write the operational `SKILL.md` from this consolidated plan and the auditor base specification. | Specification review |
 | 2 | **Phase 2 — tooling** — implement the minimum audit, evidence, repair, verification, and reporting capabilities; reuse compatible maintainer utilities where technically appropriate without merging responsibilities. | Tool tests pass |
 | 3 | **Phase 3 — installation** — install the skill to OpenCode and verify discovery. | Discovery verified |
-| 4 | **Phase 4 — corpus-copy walkthroughs** — run controlled audits covering healthy, repairable, ambiguous, deferred, irrelevant, registration, link, frontmatter, and run-log-guided cases. | Walkthroughs pass |
+| 4 | **Phase 4 — corpus-copy walkthroughs** — run controlled audits covering healthy, repairable, ambiguous, deferred, irrelevant, registration, link, frontmatter, anvil-exclusion, absent-run-log, and run-log-guided cases. Corpus copies live at `C:\data-mybizz-mgt\tmp-doc-auditor-walkthroughs\` (the `tmp-` prefix makes them O3-exempt; outside all six corpora; removed after walkthroughs). | Walkthroughs pass |
 | 5 | **Phase 5 — operational verification** — perform an audit against the intended live scope, verify the terminal-state behaviour and detail-on-demand reporting, and confirm no unnecessary work is created. | Operational verification complete |
 | 6 | **Phase 6 — completion report** — record final implementation state, known limitations, and any decisions intentionally left outside the skill. | Completion accepted |
+| 7 | **Phase 7 — documentation suite** — populate the three currently empty documents in `C:\mybizz\mybizz-config-docs\mb-doc-auditor\`: `doc-auditor-config.md` (the spec — single source of expected values), `doc-auditor-reference.md`, and `doc-auditor-explainer.md`, following the maintainer examples (`doc-maintainer-config.md`, `doc-maintainer-reference.md`, `doc-maintainer-explainer.md`). Corpus two-field frontmatter; register row in the mybizz-config-docs register. | Suite matches examples |
+| 8 | **Phase 8 — config-management** — apply `mb-config-manager` to `mb-doc-auditor` per `C:\mybizz\prompts\config-setup-prompt.md` with `{system}` = `mb-doc-auditor`. Named first step: add the `mb-doc-auditor` row (state `WIP`) to `config-manager-register.md` — authority: developer instruction, doc-maintainer S-1 precedent. Then the prompt's Phases 0–5 (suite build-out to the 8-file standard, install `mb-config-doc-auditor` with hash pair, formal run #1, per-item gate, close-out). That prompt's standing rules apply verbatim. | Exam result + dispositions recorded |
 
 ## 20. What mb-doc-auditor must not do
 
