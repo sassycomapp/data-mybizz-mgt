@@ -1,12 +1,7 @@
 ---
-document: Master Task List — mybizz-OS
-doc-id: master-task-list
-state: Live
-date-created: 2026-08-05
-date-revised: 2026-09-11
-status: "Working document — open tasks only, in preferred execution order. Tasks only: history, evidence, and decisions live in canonical documents."
+title: "master-task-list"
+doc-id: "master-task-list"
 ---
-
 # Master Task List — mybizz-OS
 
 Open tasks for mybizz-OS-level work, in preferred execution order.

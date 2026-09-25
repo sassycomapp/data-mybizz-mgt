@@ -1,3 +1,7 @@
+---
+title: "Docs-Skills Implementation Plan — for execution, 2026-09-21"
+doc-id: "Docs-Skills Implementation Plan — for execution, 2026-09-21"
+---
 # Docs-Skills Implementation Plan — for execution, 2026-09-21
 
 Companion to: "Docs-Skills Architecture Proposal — for review, 2026-09-21.md" (this folder).

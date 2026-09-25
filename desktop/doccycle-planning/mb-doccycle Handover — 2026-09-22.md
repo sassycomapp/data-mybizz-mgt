@@ -1,10 +1,7 @@
 ---
-document: "mb-doccycle Handover — session bootstrap for WP2 onward"
-doc-id: mb-doccycle-handover
-state: Live
-date-created: 2026-09-22
+title: "mb-doccycle Handover — 2026-09-22"
+doc-id: "mb-doccycle Handover — 2026-09-22"
 ---
-
 # mb-doccycle Handover — 2026-09-22
 
 Bootstrap document for the next session. Read this first, then the two

@@ -1,10 +1,7 @@
 ---
-document: "data-mybizz-mgt — README"
-doc-id: README
-state: Live
-date-created: 2026-09-14
+title: "README"
+doc-id: "README"
 ---
-
 # data-mybizz-mgt — README
 
 The Mybizz management data folder — the desktop-level operating documents of

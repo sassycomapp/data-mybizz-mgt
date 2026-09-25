@@ -1,3 +1,7 @@
+---
+title: "docs-skills-problem-inventory-2026-09-21"
+doc-id: "docs-skills-problem-inventory-2026-09-21"
+---
 # Docs-Skills Problem Inventory — 2026-09-21
 
 Handoff document for the next session. Covers mb-docs-manager, mb-align-docs,

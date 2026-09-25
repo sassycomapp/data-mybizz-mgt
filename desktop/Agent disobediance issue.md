@@ -1,3 +1,7 @@
+---
+title: "Agent disobediance issue"
+doc-id: "Agent disobediance issue"
+---
 I can see where the real friction is coming in between us. 
 
 

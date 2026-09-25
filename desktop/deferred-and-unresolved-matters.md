@@ -1,11 +1,7 @@
 ---
-document: Deferred and Unresolved Matters
-doc-id: deferred-and-unresolved-matters
-state: Live
-date-created: 2026-09-17
-location: mybizz-os
+title: "deferred-and-unresolved-matters"
+doc-id: "deferred-and-unresolved-matters"
 ---
-
 # Deferred and Unresolved Matters
 
 ## Purpose of This Document

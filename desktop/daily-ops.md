@@ -1,10 +1,7 @@
 ---
-document: "Daily Operations — Quick Reference"
-doc-id: daily-ops
-state: Live
-date-created: 2026-09-17
+title: "daily-ops"
+doc-id: "daily-ops"
 ---
-
 # Daily Operations — Quick Reference
 
 ---
