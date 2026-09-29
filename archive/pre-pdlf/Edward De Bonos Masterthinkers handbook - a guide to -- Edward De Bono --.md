@@ -1,3 +1,7 @@
+---
+title: "Edward De Bonos Masterthinkers handbook - a guide to -- Edward De Bono --"
+doc-id: "mb-53da6445"
+---
 **Content**
 
 

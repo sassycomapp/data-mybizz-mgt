@@ -1,6 +1,6 @@
 ---
 title: "dev-makepdlf-todo"
-doc-id: "dev-makepdlf-todo"
+doc-id: "mb-13a3fbc9"
 ---
 # Active PDLF To-Do List
 
@@ -16,7 +16,7 @@ These steps currently model a staging/production environment split that does not
 
 Both testing checklists ([[chk-pdlf-self-test|Chk Pdlf Self Test]] exists; the earlier
 `chk-anvil-app-testing.md` was retired and is no longer on disk anywhere —
-verified 2026-09-18) are referenced from [[pol-testing-and-quality|pol-testing-and-quality]], but
+verified 2026-09-18) are referenced from [[policy-local/pol-testing-and-quality|pol-testing-and-quality]], but
 their checks are not yet built into the actual stepwise files that do
 testing work. Deferred to Phase D, when those step files are rebuilt.
 

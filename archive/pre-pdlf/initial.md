@@ -1,3 +1,7 @@
+---
+title: "initial"
+doc-id: "mb-08d4cd73"
+---
 Project Development Lifecycle Framework (PDLF)
 1. Ideation
 Generate many possible ideas and opportunities.

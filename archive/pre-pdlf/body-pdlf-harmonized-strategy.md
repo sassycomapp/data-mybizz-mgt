@@ -1,3 +1,7 @@
+---
+title: "body-pdlf-harmonized-strategy"
+doc-id: "mb-5d58f5bc"
+---
 # BODY-PDLF: Harmonized Contiguous Strategy for Software Planning & Development
 
 Date: 2026-06-30
