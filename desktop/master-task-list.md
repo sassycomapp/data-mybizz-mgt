@@ -1,12 +1,13 @@
 ---
 title: "master-task-list"
 doc-id: "mb-3052265b"
+updated: "2026-10-01"
 ---
 # Master Task List — mybizz-OS
 
 Open tasks for mybizz-OS-level work, in preferred execution order.
-makepdlf-project-library-specific work lives on [[dev-makepdlf-todo|Active PDLF To-Do List]];
-deferred matters on [[deferred-and-unresolved-matters|Deferred and Unresolved Matters]]. Completed items
+makepdlf-project-library-specific work lives on [[[data-mybizz-mgt:desktop/dev-makepdlf-todo|Active PDLF To-Do List]]](C:/data-mybizz-mgt/desktop/dev-makepdlf-todo.md);
+deferred matters on [[[data-mybizz-mgt:desktop/deferred-and-unresolved-matters|Deferred and Unresolved Matters]]](C:/data-mybizz-mgt/desktop/deferred-and-unresolved-matters.md). Completed items
 are reviewed below the line, then migrated to canonical docs and removed.
 
 ---

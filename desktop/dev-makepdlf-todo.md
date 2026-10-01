@@ -1,6 +1,7 @@
 ---
 title: "dev-makepdlf-todo"
 doc-id: "mb-13a3fbc9"
+updated: "2026-10-01"
 ---
 # Active PDLF To-Do List
 
@@ -10,13 +11,13 @@ Action items only. Completed and closed items are not tracked here.
 
 ### 1. Rebuild Steps 42, 42A, 43, 44
 
-These steps currently model a staging/production environment split that does not apply to this platform. Rebuild them around the actual publishing mechanism: a `develop` → `stable` GitHub merge, performed by the operator, outside PDLF's own pipeline. See [[adr-no-staging-environment-five-app-isolation|ADR No Staging Environment Five App Isolation]] for full reasoning. Deferred to Phase E.
+These steps currently model a staging/production environment split that does not apply to this platform. Rebuild them around the actual publishing mechanism: a `develop` → `stable` GitHub merge, performed by the operator, outside PDLF's own pipeline. See [[[makepdlf-project-library:adr-local/adr-no-staging-environment-five-app-isolation|ADR No Staging Environment Five App Isolation]]](C:/dev/dev-makepdlf/makepdlf-project-library/adr-local/adr-no-staging-environment-five-app-isolation.md) for full reasoning. Deferred to Phase E.
 
 ### 2. Integrate Suite A and Suite B into Steps 35A, 36, 37, 38, 39
 
-Both testing checklists ([[chk-pdlf-self-test|Chk Pdlf Self Test]] exists; the earlier
+Both testing checklists ([[[makepdlf-project-library:checklists-local/chk-pdlf-self-test|Chk Pdlf Self Test]]](C:/dev/dev-makepdlf/makepdlf-project-library/checklists-local/chk-pdlf-self-test.md) exists; the earlier
 `chk-anvil-app-testing.md` was retired and is no longer on disk anywhere —
-verified 2026-09-18) are referenced from [[policy-local/pol-testing-and-quality|pol-testing-and-quality]], but
+verified 2026-09-18) are referenced from [[[makepdlf-project-library:policy-local/pol-testing-and-quality|pol-testing-and-quality]]](C:/dev/dev-makepdlf/makepdlf-project-library/policy-local/pol-testing-and-quality.md), but
 their checks are not yet built into the actual stepwise files that do
 testing work. Deferred to Phase D, when those step files are rebuilt.
 
@@ -26,13 +27,13 @@ Approximately 20 placeholder files in `C:\dev\project-template\`. Confirmed non-
 
 ### 4. Define a recheck cadence for `project-library-global`
 
-Only one file ([[spec-testing-methodology-standards|Testing Methodology]]) has been reviewed out of 98. Confirmed mostly out of scope for dev-makepdlf's own housekeeping — most of it concerns the Anvil application brand, not PDLF. No action planned unless a specific need surfaces (e.g., building Suite B's next iteration, or a step file that references a specific global file).
+Only one file ([[[default:specifications-global/spec-testing-methodology-standards|Testing Methodology]]](C:/dev/project-library-global/specifications-global/spec-testing-methodology-standards.md)) has been reviewed out of 98. Confirmed mostly out of scope for dev-makepdlf's own housekeeping — most of it concerns the Anvil application brand, not PDLF. No action planned unless a specific need surfaces (e.g., building Suite B's next iteration, or a step file that references a specific global file).
 
 ### 5. Build the global-content query-fetch-apply sequence into relevant step files
 
 Rule and enforcement mechanism decided 2026-07-19 — see
-[[adr-global-content-discovery-and-application-discipline|ADR Global Content Discovery and Application Discipline]] and
-[[pol-memory-and-knowledge|Pol Memory and Knowledge]]. `project-library-global`'s GBrain registration is confirmed
+[[[makepdlf-project-library:adr-local/adr-global-content-discovery-and-application-discipline|ADR Global Content Discovery and Application Discipline]]](C:/dev/dev-makepdlf/makepdlf-project-library/adr-local/adr-global-content-discovery-and-application-discipline.md) and
+[[[makepdlf-project-library:policy-local/pol-memory-and-knowledge|Pol Memory and Knowledge]]](C:/dev/dev-makepdlf/makepdlf-project-library/policy-local/pol-memory-and-knowledge.md). `project-library-global`'s GBrain registration is confirmed
 working, so the mechanism is usable, not just designed. Remaining work: build the
 five-step sequence and citation requirement into each relevant step file (17, 20, 22, 26,
 27, 35, 35A, 37, 38, 41–45 at minimum) as that step is written or rebuilt. Deferred to
@@ -40,7 +41,7 @@ Phase B onward, same treatment as item 1.
 
 ### 6. Step 11 — include Cupcake setup for new projects
 
-Step 11 (project init) needs a real addition: running the appropriate `cupcake init` sequence as part of setting up a new project, matching the real, live pattern already established for `makepdlf-project-library`. Applies once a new PDLF-managed project actually starts — see [[cupcake-config|Cupcake Configuration]] for current project-init scope and status.
+Step 11 (project init) needs a real addition: running the appropriate `cupcake init` sequence as part of setting up a new project, matching the real, live pattern already established for `makepdlf-project-library`. Applies once a new PDLF-managed project actually starts — see [[[mybizz-config-docs:cupcake/cupcake-config|Cupcake Configuration]]](C:/mybizz/mybizz-config-docs/cupcake/cupcake-config.md) for current project-init scope and status.
 
 ### 7. Deterministic server-code dependency checker — hard gate
 
@@ -53,11 +54,11 @@ Two related, recurring per-step items, applied together as each new step file is
 - **Governed memory writes.** Every step's own housekeeping question ("sync/embed GBrain?") must invoke the real, governed pipeline (`mb-submit-memory`, using the `pdlf_step_sync` credential) rather than the older, ungoverned raw sync. Already applied to Steps 11, 12, 14, 15, 16. Needs applying to every step from 17 through 46 (excluding the retired Step 13) as each is actually built.
 - **Dream-cycle discipline.** At the end of every step, after the governed memory-write sequence, run: `gbrain dream` for real (never `--dry-run`), then `gbrain eval suspected-contradictions` immediately afterward (does not run automatically), then review the findings. Already applied to the same five steps (11, 12, 14, 15, 16). Same remaining scope: Steps 17–46 as each is built.
 
-The final, real end-to-end proof that this all works together in practice is tracked separately — see [[deferred-and-unresolved-matters|Deferred and Unresolved Matters]], Entry 2 — since it requires PDLF itself to be a real, running system before it can be tested.
+The final, real end-to-end proof that this all works together in practice is tracked separately — see [[[data-mybizz-mgt:desktop/deferred-and-unresolved-matters|Deferred and Unresolved Matters]]](C:/data-mybizz-mgt/desktop/deferred-and-unresolved-matters.md), Entry 2 — since it requires PDLF itself to be a real, running system before it can be tested.
 
 ### 9. Relook the testing suite implemented in PDLF
 
-Connects directly to Item 2 above (Suite A/Suite B integration into the testing step files) — review together, not separately. Real, preserved seed material exists from an earlier MB-3-CS testing iteration (test taxonomy, a working Anvil-context test technique, real Anvil/M3-specific pass/fail criteria) — see [[pdlf-testing-seed-material-README|Seed Material (from MB-3-CS)]] in `makepdlf-project-library` for what's there and how to use it when this work is actually picked up.
+Connects directly to Item 2 above (Suite A/Suite B integration into the testing step files) — review together, not separately. Real, preserved seed material exists from an earlier MB-3-CS testing iteration (test taxonomy, a working Anvil-context test technique, real Anvil/M3-specific pass/fail criteria) — see [[[makepdlf-project-library:docs-local/pdlf-testing-seed-material/pdlf-testing-seed-material-readme|Seed Material (from MB-3-CS)]]](C:/dev/dev-makepdlf/makepdlf-project-library/docs-local/pdlf-testing-seed-material/pdlf-testing-seed-material-README.md) in `makepdlf-project-library` for what's there and how to use it when this work is actually picked up.
 
 ---
 

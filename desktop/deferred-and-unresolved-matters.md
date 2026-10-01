@@ -1,6 +1,7 @@
 ---
 title: "deferred-and-unresolved-matters"
 doc-id: "mb-4a4ec31e"
+updated: "2026-10-01"
 ---
 # Deferred and Unresolved Matters
 
@@ -8,7 +9,7 @@ doc-id: "mb-4a4ec31e"
 
 A permanent register of matters that are **closed as active work** but
 **not fully resolved in substance** — too valuable to discard, not
-actionable enough to belong on [[master-task-list|mybizz-OS]].
+actionable enough to belong on [[[data-mybizz-mgt:desktop/master-task-list|mybizz-OS]]](C:/data-mybizz-mgt/desktop/master-task-list.md).
 
 Every entry exists for one of two reasons, and every entry must state
 which:
@@ -19,7 +20,7 @@ which:
    for the deferral stated.
 
 **This is not a task list.** Nothing here implies "this still needs to
-be done." If an item needs doing, it belongs in [[master-task-list|mybizz-OS]]
+be done." If an item needs doing, it belongs in [[[data-mybizz-mgt:desktop/master-task-list|mybizz-OS]]](C:/data-mybizz-mgt/desktop/master-task-list.md)
 instead.
 
 **Growth:** new entries are added over time as further qualifying
@@ -136,7 +137,7 @@ unrecognized tool name.
 
 Cupcake's current, live implementation — rule inventory, the grant
 system's real mechanics, known limitations, and the full incident
-history behind them — lives in [[cupcake-explainer|Mechanical Policy Enforcement for AI Coding Agents]], `cupcake-
+history behind them — lives in [[[mybizz-config-docs:cupcake/cupcake-explainer|Mechanical Policy Enforcement for AI Coding Agents]]](C:/mybizz/mybizz-config-docs/cupcake/cupcake-explainer.md), `cupcake-
 config.md`, and `cupcake-reference.md`. This entry retains only the
 reasoning and the items those documents don't cover.
 
@@ -177,9 +178,9 @@ awaits PDLF's real existence.
 ### Where else to look
 
 Memory Governor's full, current, built system — architecture,
-mechanics, real incidents — lives in [[memory-governor-explainer|Explainer]],
-[[memory-governor-config|Memory Governor Configuration]], and [[memory-governor-reference|Usage, Invocation, and Incident Response]]. The
+mechanics, real incidents — lives in [[[mybizz-config-docs:memory-governor/memory-governor-explainer|Explainer]]](C:/mybizz/mybizz-config-docs/memory-governor/memory-governor-explainer.md),
+[[[mybizz-config-docs:memory-governor/memory-governor-config|Memory Governor Configuration]]](C:/mybizz/mybizz-config-docs/memory-governor/memory-governor-config.md), and [[[mybizz-config-docs:memory-governor/memory-governor-reference|Usage, Invocation, and Incident Response]]](C:/mybizz/mybizz-config-docs/memory-governor/memory-governor-reference.md). The
 recurring, per-step work of actually wiring each new PDLF step into
 this system (which mechanism to call, when) is tracked on
-[[dev-makepdlf-todo|Active PDLF To-Do List]], not here — this entry concerns only the final,
+[[[data-mybizz-mgt:desktop/dev-makepdlf-todo|Active PDLF To-Do List]]](C:/data-mybizz-mgt/desktop/dev-makepdlf-todo.md), not here — this entry concerns only the final,
 one-time proof that the whole chain works together.
