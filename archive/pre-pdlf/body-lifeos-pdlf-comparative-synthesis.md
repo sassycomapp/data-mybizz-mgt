@@ -1,6 +1,7 @@
 ---
 title: "body-lifeos-pdlf-comparative-synthesis"
 doc-id: "mb-04a0302e"
+updated: "2026-10-01"
 ---
 # Comparative Synthesis: de Bono BODY × LifeOS/TELOS × PDLF/Software Architecture
 

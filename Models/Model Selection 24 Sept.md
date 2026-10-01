@@ -1,6 +1,7 @@
 ---
 title: "Model Selection 24 Sept"
 doc-id: "mb-9390b739"
+updated: "2026-10-01"
 ---
 | Perplexity<br/>Model   | Comparative reasoning strength | OpenRouter output cost / 1M | Comment  |
 | ---------------------- | ------------------------------ | --------------------------- | -------- |

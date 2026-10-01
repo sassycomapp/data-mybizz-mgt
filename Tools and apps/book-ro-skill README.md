@@ -1,6 +1,7 @@
 ---
 title: "book-ro-skill README"
 doc-id: "mb-68010600"
+updated: "2026-10-01"
 ---
 <p align="center">
   <img src="docs/assets/banner.webp" alt="Booklin, the book-to-skill wizard, holding an open book whose pages scatter into sparkles that settle into an ordered grid" width="100%">

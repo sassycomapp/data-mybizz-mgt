@@ -1,6 +1,7 @@
 ---
 title: "model inventory"
 doc-id: "mb-9377bd73"
+updated: "2026-10-01"
 date-created: 2026-09-29T103600+0200
 ---
 # Model Inventory

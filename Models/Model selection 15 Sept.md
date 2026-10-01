@@ -1,6 +1,7 @@
 ---
 title: "Model selection 15 Sept"
 doc-id: "mb-07b6be19"
+updated: "2026-10-01"
 ---
 If we treat the current frontier (top-tier reasoning models like o3-pro / o4-high / Gemini 2.5 Pro) as 100% efficient at reasoning, then a reasonable ballpark is:
 

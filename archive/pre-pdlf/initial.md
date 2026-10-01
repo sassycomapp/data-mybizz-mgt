@@ -1,6 +1,7 @@
 ---
 title: "initial"
 doc-id: "mb-08d4cd73"
+updated: "2026-10-01"
 ---
 Project Development Lifecycle Framework (PDLF)
 1. Ideation

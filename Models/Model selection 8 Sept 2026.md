@@ -1,6 +1,7 @@
 ---
 title: "Model selection 8 Sept 2026"
 doc-id: "mb-5695d3f0"
+updated: "2026-10-01"
 ---
 Based on your requirements (**under $1/M output, 1M context, strong reasoning + coding + instruction following + multi-turn**), here are the **two best models** on OpenRouter:
 

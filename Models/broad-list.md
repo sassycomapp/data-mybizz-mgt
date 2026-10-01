@@ -1,6 +1,7 @@
 ---
 title: "broad-list"
 doc-id: "mb-7a250b0a"
+updated: "2026-10-01"
 ---
 \[R1] GLM 5.3 ;  Context 1M; $1.15 / **$3.50**per 1M
 

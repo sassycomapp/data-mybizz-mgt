@@ -1,6 +1,7 @@
 ---
 title: "Strix + OpenCode + Podman on WSL"
 doc-id: "mb-54d88dcc"
+updated: "2026-10-01"
 ---
 https://github.com/usestrix/strix
 
