@@ -1,7 +1,7 @@
 ---
 title: "README"
 doc-id: "mb-8436565e"
-updated: "2026-10-01"
+updated: "2026-10-03"
 ---
 # data-mybizz-mgt — README
 
@@ -26,8 +26,7 @@ Related folders that no longer live here: `Budget/` moved to `C:\_data-mybizz-ex
 
 ## Key documents
 
-- [[[mybizz-os-docs:os-reference-docs/mybizz-scope-list|Mybizz Scope List]]](C:/mybizz/mybizz-os-docs/os-reference-docs/mybizz-scope-list.md) — the scope scaffold. Read at Phase 0 of every
-  `mb-doccycle` run; wins over every other document on scope. Lives at
+- [[[mybizz-os-docs:os-reference-docs/mybizz-scope-list|Mybizz Scope List]]](C:/mybizz/mybizz-os-docs/os-reference-docs/mybizz-scope-list.md) — the scope scaffold. Lives at
   `C:\mybizz\mybizz-os-docs\os-reference-docs\`.
 - [[[mybizz-config-docs:facts/2026-09-15-session-numbers-from-sessions-log|session numbers come from the sessions log]]](C:/mybizz/mybizz-config-docs/facts/2026-09-15-session-numbers-from-sessions-log.md) — the sessions index; one row per closed session
   (session open/close routine). Lives at `C:\mybizz\logs\sessions-log\`.
@@ -42,11 +41,10 @@ Related folders that no longer live here: `Budget/` moved to `C:\_data-mybizz-ex
 The folder was renamed from `C:\_data-mybizz-mgt` to `C:\data-mybizz-mgt`
 on 2026-09-14 to drop the leading underscore — the underscore was invalid
 in GBrain source ids and awkward everywhere else. References elsewhere in
-the corpus may still carry the old path until the document-management
-skills sweep them.
+the corpus may still carry the old path.
 
 ## Kept fresh by
 
-`mb-doccycle` owns document management for this folder (register The use of registers has been discontinued. Please review
-membership, cross-references, wikilinks). `register-local.md` The use of registers has been discontinued. Please review is the
-append-only document register The use of registers has been discontinued. Please review.
+This README is kept accurate by /mb-project-docs during close-out
+([[[mybizz-os-docs:operating-procedures/close-out-process]]](C:/mybizz/mybizz-os-docs/operating-procedures/close-out-process.md)); the repositories are committed, GBrain-updated and
+pushed by commit-all.sh ([[[mybizz-os-docs:operating-procedures/commit-all-repositories]]](C:/mybizz/mybizz-os-docs/operating-procedures/commit-all-repositories.md)).
