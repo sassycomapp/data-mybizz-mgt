@@ -1,13 +1,13 @@
 ---
 title: "deferred-and-unresolved-matters"
 doc-id: "mb-4a4ec31e"
-updated: "2026-10-01"
+updated: "2026-10-05"
 ---
 # Deferred and Unresolved Matters
 
 ## Purpose of This Document
 
-A permanent register The use of registers has been discontinued. Please review of matters that are **closed as active work** but
+A permanent register of matters that are **closed as active work** but
 **not fully resolved in substance** — too valuable to discard, not
 actionable enough to belong on [[[data-mybizz-mgt:desktop/master-task-list|mybizz-OS]]](C:/data-mybizz-mgt/desktop/master-task-list.md).
 

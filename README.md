@@ -1,7 +1,7 @@
 ---
 title: "README"
 doc-id: "mb-8436565e"
-updated: "2026-10-03"
+updated: "2026-10-05"
 ---
 # data-mybizz-mgt — README
 
@@ -18,7 +18,6 @@ the control surface the skills and agents read from and write to.
 | `WIP/` | Working files |
 | `archive/` | Archived material |
 | `temp/` | Temporary files |
-| `register-local.md` The use of registers has been discontinued. Please review | Append-only document register |
 | `README.md` | This file |
 
 Related folders that no longer live here: `Budget/` moved to `C:\_data-mybizz-exempt\Budget`
