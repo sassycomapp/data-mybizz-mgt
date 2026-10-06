@@ -1,8 +1,11 @@
 ---
+
 title: "video-creation-suite"
 doc-id: "mb-2b134449"
-updated: "2026-10-04"
+updated: "2026-10-06"
+
 ---
+
 video-creation-suite
 
 The listed tools form a **credible, capable portfolio**, budo not treat all of them as equal “primary” tools. The suite becomes strong when you assign clear roles: one canonical diagram/source layer, one flexible everyday video pipeline, one high-rigor long-form pipeline, and a few specialised animation skills.[[github](https://github.com/prajwal-y/video_explainer)][[github](https://github.com/iart-ai/explainer-video-skills)][[github](https://github.com/Vincentwei1021/anything2explainer)]
