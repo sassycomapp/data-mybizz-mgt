@@ -1,7 +1,7 @@
 ---
 title: "README"
 doc-id: "mb-8436565e"
-updated: "2026-10-05"
+updated: "2026-10-07"
 ---
 # data-mybizz-mgt — README
 
@@ -45,5 +45,5 @@ the corpus may still carry the old path.
 ## Kept fresh by
 
 This README is kept accurate by /mb-project-docs during close-out
-([[[mybizz-os-docs:operating-procedures/close-out-process]]](C:/mybizz/mybizz-os-docs/operating-procedures/close-out-process.md)); the repositories are committed, GBrain-updated and
+(close-out-process); the repositories are committed, GBrain-updated and
 pushed by commit-all.sh ([[[mybizz-os-docs:operating-procedures/commit-all-repositories]]](C:/mybizz/mybizz-os-docs/operating-procedures/commit-all-repositories.md)).
