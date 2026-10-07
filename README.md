@@ -27,7 +27,7 @@ Related folders that no longer live here: `Budget/` moved to `C:\_data-mybizz-ex
 
 - [[[mybizz-os-docs:os-reference-docs/mybizz-scope-list|Mybizz Scope List]]](C:/mybizz/mybizz-os-docs/os-reference-docs/mybizz-scope-list.md) — the scope scaffold. Lives at
   `C:\mybizz\mybizz-os-docs\os-reference-docs\`.
-- [[[mybizz-config-docs:facts/2026-09-15-session-numbers-from-sessions-log|session numbers come from the sessions log]]](C:/mybizz/mybizz-config-docs/facts/2026-09-15-session-numbers-from-sessions-log.md) — the sessions index; one row per closed session
+- session numbers come from the sessions log — the sessions index; one row per closed session
   (session open/close routine). Lives at `C:\mybizz\logs\sessions-log\`.
 - `facts-log.md` — the authoritative index of saved durable facts
   (fact save/recall routine). Lives at `C:\mybizz\logs\gbrain-logs\facts-log\`.
