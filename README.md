@@ -27,10 +27,6 @@ Related folders that no longer live here: `Budget/` moved to `C:\_data-mybizz-ex
 
 - [[[mybizz-os-docs:os-reference-docs/mybizz-scope-list|Mybizz Scope List]]](C:/mybizz/mybizz-os-docs/os-reference-docs/mybizz-scope-list.md) — the scope scaffold. Lives at
   `C:\mybizz\mybizz-os-docs\os-reference-docs\`.
-- session numbers come from the sessions log — the sessions index; one row per closed session
-  (session open/close routine). Lives at `C:\mybizz\logs\sessions-log\`.
-- `facts-log.md` — the authoritative index of saved durable facts
-  (fact save/recall routine). Lives at `C:\mybizz\logs\gbrain-logs\facts-log\`.
 - [[[mybizz-os-docs:os-reference-docs/repo-organization|Repo organization]]](C:/mybizz/mybizz-os-docs/os-reference-docs/repo-organization.md) — the correlation table of GBrain sources, GitHub
   repositories, and local paths (replaced `Repo organization.xlsx`). Lives at
   `C:\mybizz\mybizz-os-docs\os-reference-docs\`.
@@ -45,5 +41,5 @@ the corpus may still carry the old path.
 ## Kept fresh by
 
 This README is kept accurate by /mb-project-docs during close-out
-(close-out-process); the repositories are committed, GBrain-updated and
+(`/mb-close-out`); the repositories are committed, GBrain-updated and
 pushed by commit-all.sh ([[[mybizz-os-docs:operating-procedures/commit-all-repositories]]](C:/mybizz/mybizz-os-docs/operating-procedures/commit-all-repositories.md)).
