@@ -5,7 +5,7 @@ updated: "2026-10-07"
 ---
 # Documentation Anomalies — Task List
 
-Version 4 — 2026-10-07. Section 1 is decided. Every finding (items 1–42) is kept, with its original number. The list is ordered for execution: dependencies first, then the quickest fixes, then the most complicated. A task that depends on another names it; that dependency is always in an earlier section.
+Version 5 — 2026-10-07. Sections 1 and 2 are done. Every finding (items 1–42) is kept, with its original number. The list is ordered for execution: dependencies first, then the quickest fixes, then the most complicated. A task that depends on another names it; that dependency is always in an earlier section.
 
 Run commit all once at the end of each section, not after every task.
 
@@ -101,7 +101,7 @@ Steps:
 
 Items:
 
-  - **Item 40.** GBrain (all sources). Finding: GBrain's writer model is switched off and no source has an owner (`claim_required` on every source). Direct page writes (`gbrain capture`, `put_page`) are refused with `owner_unavailable`. Claiming a source fences ordinary sync until a full activation, so commit all's sync would stop. Not a documentation fault: a GBrain setup decision, tied to the upgrade question. Correction: decide, together with the GBrain upgrade, whether to adopt the writer model; until then, session pages are written as files and imported by commit all.
+  - **Item 40.** GBrain (all sources). Finding: GBrain's writer model is switched off and no source has an owner (`claim_required` on every source). Direct page writes (`gbrain capture`, `put_page`) are refused with `owner_unavailable`; fact writes stored in the database (`forget`, verified 2026-10-07) are not affected. Claiming a source fences ordinary sync until a full activation, so commit all's sync would stop. Not a documentation fault: a GBrain setup decision, tied to the upgrade question. Correction: decide, together with the GBrain upgrade, whether to adopt the writer model; until then, session pages are written as files and imported by commit all.
 
 Steps:
 
@@ -115,6 +115,8 @@ Steps:
 
 ### 2.1 — Retire the session-numbers fact in GBrain
 
+**DONE 2026-10-07.** Fact 63 expired in `memory-governor-code`, with its reason recorded.
+
 Items:
 
   - **Item 36.** `C:\mybizz\mybizz-config-docs\facts\2026-09-15-session-numbers-from-sessions-log.md` (a governed fact). Finding: States that session numbers come from the sessions log. Session numbers no longer exist: `/mb-close-out` names each page `sessions/<YYYY-MM-DD>-<short-slug>`, and past sessions are found by topic, not number. Existing numbered pages keep their names. Correction: Retire the fact (not rewrite it): expire it in GBrain by its fact number, and delete the fact file.
@@ -126,6 +128,8 @@ Steps:
 
 ### 2.2 — Rebuild the docmap
 
+**DONE 2026-10-07.**
+
 Items:
 
   - **Item 37.** `C:\dev\dev-root\docmap.md`, line 31. Finding: Folder-tree row for `sessions-log/`, a folder that no longer exists. Correction: Run `build-docmap.py --write`, which removes entries that no longer exist, then commit all.
@@ -136,11 +140,15 @@ Steps:
 
 ### 2.3 — Remove `.roots` from the commit-all procedure's tools table
 
+**DONE 2026-10-07.**
+
 Items:
 
   - **Item 11.** `commit-all-repositories.md`. Finding: Tools table lists `.roots`. Correction: Remove `.roots`.
 
 ### 2.4 — Remove the source count from repository organisation
+
+**DONE 2026-10-07.**
 
 Items:
 
@@ -148,11 +156,15 @@ Items:
 
 ### 2.5 — Correct the repository count in the global AGENTS.md
 
+**DONE 2026-10-07.**
+
 Items:
 
   - **Item 39.** `~/.config/opencode/AGENTS.md`, "Facts across documents". Finding: Says "the eight documentation repositories". Correction: Replace with "the documentation repositories on the commit-all list".
 
 ### 2.6 — Add the GBrain sync rule outside GStack's block in the global AGENTS.md
+
+**DONE 2026-10-07.**
 
 Items:
 
@@ -160,11 +172,15 @@ Items:
 
 ### 2.7 — Remove the two logs from the data-mybizz-mgt README
 
+**DONE 2026-10-07.**
+
 Items:
 
   - **Item 35.** `C:\data-mybizz-mgt\README.md`, lines 30–33. Finding: Describes both logs as current, with their locations. Correction: Remove the two entries.
 
 ### 2.8 — Remove the resolved open question from the mb-project-docs explainer
+
+**DONE 2026-10-07.**
 
 Items:
 
@@ -172,11 +188,15 @@ Items:
 
 ### 2.9 — Correct the close-out step number in the mb-project-docs documents
 
+**DONE 2026-10-07.**
+
 Items:
 
   - **Item 19.** `project-docs-reference.md`, `project-docs-config.md`. Finding: Say the close-out procedure invokes the skill at "Step 2a"; in `/mb-close-out` it is Step 3. Correction: Update the step reference.
 
 ### 2.10 — Four corrections in daily-ops
+
+**DONE 2026-10-07.**
 
 Items:
 
@@ -187,11 +207,15 @@ Items:
 
 ### 2.11 — Correct the scope list's notes and duplicate entry
 
+**DONE 2026-10-07.**
+
 Items:
 
   - **Item 25.** `mybizz-scope-list.md`. Finding: Notes mention only mb4ecom as an in-scope placeholder; `C:\dev\project-template` is listed twice (private data, and disposable/template). Correction: Mention mb5pdlf; list the template once.
 
 ### 2.12 — Apply the frontmatter re-certification
+
+**DONE 2026-10-07.**
 
 *Depends on: task 1.5.*
 
