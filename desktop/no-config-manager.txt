@@ -1,0 +1,10 @@
+no-config-manager
+
+I have taken a decision to not run config manager on the following skills:
+
+C:\mybizz\mybizz-config-docs\mb-close-out
+C:\mybizz\mybizz-config-docs\mb-compile-rules
+C:\mybizz\mybizz-config-docs\mb-project-docs
+C:\mybizz\mybizz-config-docs\mb-doc-check
+
+The risk is too high of the open code agent screwing it up
