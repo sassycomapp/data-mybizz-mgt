@@ -1,7 +1,7 @@
 ---
 title: "README"
 doc-id: "mb-8436565e"
-updated: "2026-10-07"
+updated: "2026-10-10"
 ---
 # data-mybizz-mgt — README
 
@@ -14,7 +14,7 @@ the control surface the skills and agents read from and write to.
 
 | Item | Purpose |
 |---|---|
-| `desktop/` | Operating documents — daily ops, master task list, deferred-and-unresolved-matters, dev-makepdlf-todo |
+| `desktop/` | Operating documents — daily ops, master task list, deferred-and-unresolved-matters |
 | `WIP/` | Working files |
 | `archive/` | Archived material |
 | `temp/` | Temporary files |
