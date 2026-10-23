@@ -1,7 +1,7 @@
 ---
 title: "developers-duties"
 doc-id: "mb-85e657ca"
-updated: "2026-10-20"
+updated: "2026-10-23"
 ---
 # Developer's duties
 
@@ -55,3 +55,10 @@ The duties only the developer can carry out. Each one says when it applies, what
 ## Once-off to-do
 
 1. **PDLF build-plan audit (new session).** Check that the PDLF steps cover every step the build needs, and that each step uses the right installed skills, including `secure-software-engineering` and `security-audit-methodology`. Add a "PDLF steps" column to `C:\mybizz\mybizz-os-docs\os-reference-docs\skills-catalog.md`, recording which steps use each skill. The PDLF step documents are the authority; the column only mirrors them.
+
+2. **Fix the session-resume gap in `mb-sysdoc-creator`.** The skill says an interrupted run can resume (its Section 2), and Phase 10 moves the run record out of `in-progress\`, but no phase ever writes the run record into `in-progress\`, so there is nothing to resume from. Also, Section 3's `REPORT_REJECTED` wording does not match Phase 5, which returns to Phase 3.
+   - OpenCode web UI, build mode: ask Claude for the prompt that corrects the skill source and its documents.
+
+3. **Clean up PostgreSQL.** Windows has a duplicate `PostgreSQL` service, a `pgvector_user` role and leftover test databases in the `postgres` database; the WSL PostgreSQL databases have never been listed in full. The ledger (`pdlf`, Windows, port 5433) and GBrain (`gbrain`, WSL, port 5432) are the only databases in use.
+   - Ask Claude for the commands: first a read-only census of both servers, then the removals you approve.
+

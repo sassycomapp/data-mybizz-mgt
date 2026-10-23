@@ -1,7 +1,7 @@
 ---
 title: "model inventory"
 doc-id: "mb-9377bd73"
-updated: "2026-10-01"
+updated: "2026-10-23"
 date-created: 2026-09-29T103600+0200
 ---
 # Model Inventory
@@ -32,7 +32,7 @@ and gbrain audit logs on 2026-09-29.
 - **Embedding** — `~/.gbrain/config.json`: `embedding_model: openai:text-embedding-3-large`,
   `embedding_dimensions: 1536`. Confirmed by `gbrain config show` and
   `gbrain-explainer.md`. Binding constraint per
-  `C:\dev\project-library-global\adr-global\adr-openai-embedding-provider.md`:
+  `C:\mybizz\mybizz-os-docs\os-decisions\adr-openai-embedding-provider.md`:
   OpenAI must remain the embedding provider (Anthropic cannot perform embeddings
   at all; a provider switch requires re-embedding the entire corpus).
 - **Query expansion / chat** — `~/.gbrain/config.json`:
