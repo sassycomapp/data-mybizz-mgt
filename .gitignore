@@ -1,2 +1,7 @@
 Models/models 24 sept.xlsx
 /desktop/GoogleDriveSetup.exe
+
+# Archives, installers and videos stay on the PC only
+*.zip
+*.exe
+*.mp4

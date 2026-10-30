@@ -1,0 +1,28 @@
+https://github.com/DaanKieft/ai-influencer
+https://www.youtube.com/watch?v=jZJjop9VsxQ
+
+Here are your quick, step-by-step instructions for starting up and shutting down your local AI Influencer app whenever you want to use it.
+
+Startup Instructions (How to run it)
+Open your WSL terminal (your Ubuntu or Linux terminal).
+
+Jump straight into your project folder by typing:
+
+Bash
+cd ~/ai-influencer/ai-influencer-main
+Start the local server by typing:
+
+Bash
+npm run dev
+Look at the text output in your terminal. It will give you a local link that looks like this:http://localhost:5173/
+
+Open Google Chrome, click or paste that link into your address bar, and your influencer dashboard will load right up!
+
+Shutdown Instructions (How to close it safely)
+Go back to your WSL terminal window where the server is running.
+
+Press Ctrl + C on your keyboard. This stops the local Node server and shuts down the background process safely.
+
+You can then close your WSL terminal window and close your browser tab.
+
+That is all there is to it! Whenever you want to use it again in the future, just follow the 5 quick startup steps above.

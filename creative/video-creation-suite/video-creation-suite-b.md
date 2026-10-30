@@ -1,7 +1,7 @@
 ---
 title: "video-creation-suite"
-doc-id: "mb-2b134449"
-updated: "2026-10-20"
+doc-id: "mb-6c4f6600"
+updated: "2026-10-30"
 ---
 # Video creation suite
 
