@@ -1,7 +1,7 @@
 ---
 title: "developers-duties"
 doc-id: "mb-85e657ca"
-updated: "2026-11-02"
+updated: "2026-11-03"
 ---
 # Developer's duties
 
@@ -51,6 +51,10 @@ The duties only the developer can carry out. Each one says when it applies, what
     - Web UI: open `projects/<name>`.
 
 13. **To start the OpenCode web UI:** `cd ~ && opencode web --hostname 0.0.0.0`
+
+14. **Whenever the Anvil editor shows an app out of sync with GitHub: choose Merge changes.**
+    - Anvil editor: in the out-of-sync pop-up, click **Merge changes**. Never click **Discard the remote changes**.
+    - Why: Discard the remote changes overwrites GitHub with the editor's copy, and every commit made from the PC since is lost from GitHub. Merge changes keeps both.
 
 ## Once-off to-do
 
