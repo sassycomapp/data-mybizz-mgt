@@ -2,7 +2,7 @@
 
 title: "developers-duties"
 doc-id: "mb-85e657ca"
-updated: "2026-11-10"
+updated: "2026-11-11"
 
 ---
 
@@ -76,3 +76,7 @@ The duties only the developer can carry out. Each one says when it applies, what
 
 1. **Clean up PostgreSQL.** Windows has a duplicate `PostgreSQL` service, a `pgvector_user` role and leftover test databases in the `postgres` database; the WSL PostgreSQL databases have never been listed in full. The ledger (`pdlf`, Windows, port 5433) and GBrain (`gbrain`, WSL, port 5432) are the only databases in use.
    - Ask Claude for the commands: first a read-only census of both servers, then the removals you approve.
+
+2. **When the Cyber Essentials certificate is issued (before 1 April 2027): add the Cyber Essentials statement and badge.**
+   - Ask Claude to add the statement and the badge to the Mybizz marketing website and to the client service agreement of each business (`C:\dev\dev-mb-3-cs\mb-3-cs-project-library\legal-local\client-service-agreement.md` and the project template's copy), with the certificate number and its expiry date.
+   - Why: the badge may only be shown once the certificate exists; this is Budget.md task 34 (`C:\data-mybizz-mgt\business\Budget.md`).
