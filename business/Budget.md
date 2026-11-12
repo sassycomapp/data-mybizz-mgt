@@ -1,7 +1,7 @@
 ---
 title: "Budget"
 doc-id: "mb-3afb1c99"
-updated: "2026-11-11"
+updated: "2026-11-12"
 ---
 # Budget
 
@@ -24,47 +24,51 @@ All amounts are GBP per month unless stated otherwise. Supplier prices are conve
 | Companies House confirmation statement, filed online: £50 a year | £4.17 |
 | FreeAgent accounting software, limited company plan: files the VAT returns, the annual accounts and the company tax return | £33.00 |
 | UK address package: the registered office and the director's service address from one provider, with official mail scanned and emailed; about £60 a year (budget figure, replaced by the chosen provider's price) | £5.00 |
-| Marketing: paid search and social advertising, from April 2027 | £100.00 |
-| **Total** | **£336.49** |
+| Marketing: paid search and social advertising, a budget allowance spent as results justify; £350 a month from April 2027, and £250 a month in February and March 2027 to build interest before launch | £350.00 |
+| **Total** | **£586.49** |
 
 One-off costs: company registration at Companies House, £100; Wise Business account set-up, £50. Paid at the start of the year: Cyber Essentials £320, the ICO fee £47 and the address package £60.
 
 ## 2. Client-Related Costs
 
-**Lean start, scaled with growth.** The database and the insurance start small and step up as clients join. Break-even is 7 clients.
+**Scaled with growth.** The database runs with its standby from go-live and grows in size as clients join. The insurance covers rise at client 25, and part-time support starts at client 20. The table uses the monthly plan; the annual plan and the setup fee are in section 3. Break-even is 9 clients.
 
-| | Escalates with | 1 client | Break-even (7) | 25 clients | 50 clients | 60 clients | 100 clients |
+| | Escalates with | 1 client | Break-even (9) | 25 clients | 50 clients | 60 clients | 100 clients |
 |---|---|---|---|---|---|---|---|
-| **Revenue** | Each client (£79) | **£79.00** | **£553.00** | **£1,975.00** | **£3,950.00** | **£4,740.00** | **£7,900.00** |
+| **Revenue** | Each client (£119) | **£119.00** | **£1,071.00** | **£2,975.00** | **£5,950.00** | **£7,140.00** | **£11,900.00** |
 | *Costs* | | | | | | | |
-| Client containers | Each client (£9.00) | £9.00 | £63.00 | £225.00 | £450.00 | £540.00 | £900.00 |
-| Database | Steps up at clients 12, 25 and 60 | £22.50 | £22.50 | £195.00 | £195.00 | £390.00 | £390.00 |
-| Email sending | Each client (£1.00) | £1.00 | £7.00 | £25.00 | £50.00 | £60.00 | £100.00 |
-| AI writing and insight | Each client (£0.50) | £0.50 | £3.50 | £12.50 | £25.00 | £30.00 | £50.00 |
-| Speech to text | Each client (£0.10) | £0.10 | £0.70 | £2.50 | £5.00 | £6.00 | £10.00 |
-| Text to speech | Each client (£5.00) | £5.00 | £35.00 | £125.00 | £250.00 | £300.00 | £500.00 |
-| Data transfer over the allowance | Each client (£1.00) | £1.00 | £7.00 | £25.00 | £50.00 | £60.00 | £100.00 |
-| Paddle fee | Each client (£4.33) | £4.33 | £30.31 | £108.25 | £216.50 | £259.80 | £433.00 |
-| **Total client-related costs** | | **£43.43** | **£169.01** | **£718.25** | **£1,241.50** | **£1,645.80** | **£2,483.00** |
-| **Gross profit** | | **£35.57** | **£383.99** | **£1,256.75** | **£2,708.50** | **£3,094.20** | **£5,417.00** |
-| Mybizz fixed costs (section 1) | Fixed | £336.49 | £336.49 | £336.49 | £336.49 | £336.49 | £336.49 |
+| Client containers | Each client (£9.00) | £9.00 | £81.00 | £225.00 | £450.00 | £540.00 | £900.00 |
+| Database | Advanced with a standby from go-live; steps up at clients 60 and 130 | £195.00 | £195.00 | £195.00 | £195.00 | £390.00 | £390.00 |
+| Email sending | Each client (£1.00) | £1.00 | £9.00 | £25.00 | £50.00 | £60.00 | £100.00 |
+| AI writing and insight | Each client (£0.50) | £0.50 | £4.50 | £12.50 | £25.00 | £30.00 | £50.00 |
+| Speech to text | Each client (£0.10) | £0.10 | £0.90 | £2.50 | £5.00 | £6.00 | £10.00 |
+| Text to speech | Each client (£5.00) | £5.00 | £45.00 | £125.00 | £250.00 | £300.00 | £500.00 |
+| Data transfer over the allowance | Each client (£1.00) | £1.00 | £9.00 | £25.00 | £50.00 | £60.00 | £100.00 |
+| Paddle fee | Each client (£6.33) | £6.33 | £56.97 | £158.25 | £316.50 | £379.80 | £633.00 |
+| **Total client-related costs** | | **£217.93** | **£401.37** | **£768.25** | **£1,341.50** | **£1,765.80** | **£2,683.00** |
+| **Gross profit** | | **−£98.93** | **£669.63** | **£2,206.75** | **£4,608.50** | **£5,374.20** | **£9,217.00** |
+| Mybizz fixed costs (section 1) | Fixed | £586.49 | £586.49 | £586.49 | £586.49 | £586.49 | £586.49 |
 | Insurance raise | Steps up at client 25 | £0.00 | £0.00 | £66.67 | £66.67 | £66.67 | £66.67 |
-| **Net profit** | | **−£300.92** | **£47.50** | **£853.59** | **£2,305.34** | **£2,691.04** | **£5,013.84** |
+| Part-time support | Starts at client 20 | £0.00 | £0.00 | £1,000.00 | £1,000.00 | £1,000.00 | £1,000.00 |
+| **Net profit** | | **−£685.42** | **£83.14** | **£553.59** | **£2,955.34** | **£3,721.04** | **£7,563.84** |
+
+Part-time support costs £1,000 a month and starts at client 20. At 20 clients the gross profit covers the fixed costs and the support, so the business stays profitable at every client number from break-even onwards.
 
 ### Escalation points
 
-| Trigger | Action by App 5 | Cost change |
+| Trigger | Action | Cost change |
 |---|---|---|
-| Client 12 | Raises the Standard database from 2 GiB to 4 GiB in the next maintenance window | Database from £22.50 to £45.00 |
-| Client 25 | Messages David; once he approves, **Rebuild** moves every client into a new Advanced database with a standby, 8 GiB, in the next maintenance window. David raises the insurance covers to £1m professional indemnity and £500,000 cyber liability | Database from £45.00 to £195.00; insurance from £75.00 to £141.67 |
-| Client 60 | Raises the Advanced database from 8 GiB to 16 GiB in the next maintenance window | Database from £195.00 to £390.00 |
-| A client's container passes 80% memory use | Raises that client's container from 1 GiB to 2 GiB | That client's container from £9.00 to £18.75 |
+| Client 20 | App 5 messages David to engage part-time support. David buys employers' liability insurance before the support person starts | Part-time support of £1,000.00 a month |
+| Client 25 | App 5 messages David to raise the insurance covers to £1m professional indemnity and £500,000 cyber liability | Insurance from £75.00 to £141.67 |
+| Client 60 | App 5 raises the Advanced database from 8 GiB to 16 GiB in the next maintenance window | Database from £195.00 to £390.00 |
+| Client 130 | App 5 raises the Advanced database from 16 GiB to 32 GiB in the next maintenance window | Database from £390.00 to about £780.00 |
+| A client's container passes 80% memory use | App 5 raises that client's container from 1 GiB to 2 GiB | That client's container from £9.00 to £18.75 |
 | Cluster storage passes its plan's included storage | DigitalOcean's storage autoscaling adds storage | £0.09 per GiB per month added |
-| A client adds staff | None | None: staff are unlimited within the £79 price |
+| A client adds staff | None | None: staff are unlimited within the £119 price |
 
 ### Highest cost of one client
 
-With every fair-use limit of section 4 reached, one client costs at most £52.98 a month: container £18.75, email £3.75, AI and voice £16.80, data transfer £5.25, Paddle fee £4.33 and a database share of £3.90. Each client's revenue of £79 covers this.
+With every fair-use limit of section 4 reached, one client costs at most £54.78 a month: container £18.75, email £3.75, AI and voice £16.80, data transfer £5.25, Paddle fee £6.33 and a database share of £3.90. Each client's revenue of £119 covers this.
 
 ## 3. Basis of the Figures
 
@@ -72,29 +76,28 @@ With every fair-use limit of section 4 reached, one client costs at most £52.98
 
 - Mybizz-Live Ltd is registered for VAT from the day it is incorporated.
 - Every supplier price in this budget excludes VAT. Overseas suppliers charge no VAT to a VAT-registered business, and VAT charged by UK suppliers is reclaimed on the quarterly VAT return.
-- Paddle's payouts to Mybizz carry no VAT, because Paddle accounts for the VAT itself. Each client's £79 reaches Mybizz in full, less Paddle's fee.
+- Paddle's payouts to Mybizz carry no VAT, because Paddle accounts for the VAT itself. Each client's payment reaches Mybizz in full, less Paddle's fee.
 - Insurance carries Insurance Premium Tax instead of VAT, which cannot be reclaimed and is included in the insurance line.
 
 ### Database
 
 - Connections: 3 per client. 100 clients use 300 connections.
-- The database grows in four stages, all PostgreSQL version 18, in London:
+- The database grows in three stages, all PostgreSQL version 18, in London, each with a main server and a standby:
 
 | Stage | Clients | Database | Connections | Holds | Price |
 |---|---|---|---|---|---|
-| 1 | 1 to 11 | Standard Edition, 2 GiB, one server | 47 | 15 clients | £22.50 |
-| 2 | 12 to 24 | Standard Edition, 4 GiB, one server | 97 | 32 clients | £45.00 |
-| 3 | 25 to 59 | Advanced Edition, 8 GiB, a main server and a standby | 197 | 65 clients | £195.00 |
-| 4 | 60 and more | Advanced Edition, 16 GiB, a main server and a standby | 397 | 132 clients | about £390.00, an estimate until DigitalOcean's control panel shows the price |
+| 1 | 1 to 59 | Advanced Edition, 8 GiB, a main server and a standby | 197 | 65 clients | £195.00 |
+| 2 | 60 to 129 | Advanced Edition, 16 GiB, a main server and a standby | 397 | 132 clients | about £390.00, an estimate until DigitalOcean's control panel shows the price |
+| 3 | 130 and more | Advanced Edition, 32 GiB, a main server and a standby | 797 | 265 clients | about £780.00, an estimate until DigitalOcean's control panel shows the price |
 
-- A database's edition is fixed when it is created; its size can be raised at any time. The move from Standard to Advanced at client 25 is made by App 5's **Rebuild** action, which builds the new database and moves every client into it.
-- A Standard database cannot have a standby. Until client 25, if the database server fails, DigitalOcean restores the database from its backups, and clients may be offline for up to a few hours.
+- The database is created as an Advanced database with its standby before go-live; its size is raised at any time without moving any client.
+- The standby is kept up to date with the main server. If the main server fails, DigitalOcean switches to the standby automatically, and clients are back within minutes.
 - Storage autoscaling is on.
 
 ### Backups and uptime
 
 - Daily backups and 7-day point-in-time recovery are included in the cluster price.
-- Uptime commitment: 99.95% once the Advanced database with its standby runs, from client 25.
+- Uptime commitment: 99.95% from go-live, carried by the Advanced database with its standby.
 - Weekly maintenance window: Sunday 06:00 UK time (07:00 Europe, 01:00 New York, Saturday 22:00 Los Angeles).
 - Mybizz's nightly copy of each client into the client's own storage continues as designed.
 
@@ -106,8 +109,11 @@ With every fair-use limit of section 4 reached, one client costs at most £52.98
 
 ### Revenue
 
-- £79 per client per month. The fixed local prices in the other currencies are set close to £79.
-- Paddle's fee is 5% of the price plus its fixed fee per payment: £4.33 per client.
+- Monthly plan: £119 per client per month. The fixed local prices in the other currencies are set close to £119.
+- Annual plan: £1,190 a year, paid up front, which is 12 months for the price of 10.
+- Done-for-you setup: an optional one-off service at £119, in which Mybizz sets up the client's application. The founder delivers it, at no cash cost.
+- Referral credit: a client on the annual plan who refers a new client that buys the annual plan receives one month's price off its next annual renewal. A renewal carries at most 5 credits, so the referring client always pays more than its yearly cost to Mybizz of about £293 (container, usage and database share). A credit is never paid out in cash.
+- Paddle's fee is 5% of each payment plus its fixed fee per payment: £6.33 on a monthly payment of £119 and £59.88 on an annual payment of £1,190.
 
 ### Usage
 
@@ -144,7 +150,7 @@ Each recurring maintenance point is carried out by App 5 or by a scheduled job. 
 | Maintenance point | Frequency | Carried out by | Automation |
 |---|---|---|---|
 | Client container size | On a memory alert | App 5 | A container above 80% memory use is raised to 2 GiB. |
-| Database size | At clients 12, 25 and 60 | App 5 | The database is raised to 4 GiB at client 12, moved into the Advanced database with its standby at client 25 once David approves, and raised to 16 GiB at client 60, each in the Sunday maintenance window. |
+| Database size | At clients 60 and 130 | App 5 | The database is raised to 16 GiB at client 60 and to 32 GiB at client 130, each in the Sunday maintenance window. |
 | Database storage | Continuous | DigitalOcean | Storage autoscaling adds storage before the disk fills. |
 | Fair-use limits | Continuous, and daily for sizes and totals | App 5 | Each limit in section 4 is measured and enforced. |
 | New client | Each registration | App 5 | The **New client** action runs when the client completes registration and its Cloudflare set-up. |
@@ -223,12 +229,12 @@ Each recurring maintenance point is carried out by App 5 or by a scheduled job. 
 
 | # | Task |
 |---|---|
-| 1 | Hosting specification, database section: the four database stages (Standard 2 GiB, Standard 4 GiB at client 12, Advanced with a standby at client 25, Advanced 16 GiB at client 60), PostgreSQL version 18, storage autoscaling, the capacity table, and every client's database address using TLS with full verification and `prepareThreshold=0`. |
-| 2 | Hosting specification: the uptime section; the pre-launch conditions, with a test that the App Server reconnects by itself when its database connection is cut; the cost table on the lean start; the Sunday 06:00 UK maintenance window. |
+| 1 | Hosting specification, database section: the three database stages (Advanced 8 GiB with a standby from go-live, 16 GiB at client 60, 32 GiB at client 130), PostgreSQL version 18, storage autoscaling, the capacity table, and every client's database address using TLS with full verification and `prepareThreshold=0`. |
+| 2 | Hosting specification: the uptime section; the pre-launch conditions, with a test that the App Server reconnects by itself when its database connection is cut; the cost table of section 2; the Sunday 06:00 UK maintenance window. |
 | 3 | Hosting specification: each client database user created with a connection limit of 3, a 60-second query limit and a 120-second idle-transaction limit. |
-| 4 | Billing specification: the cash-flow section on the lean start, with the £7.60 usage budget per client and the highest cost of one client. |
+| 4 | Billing specification: the cash-flow section, with the £7.60 usage budget per client and the highest cost of one client. |
 | 5 | New decision record, fair-use limits: every limit of section 4, how App 5 measures and enforces it, and the notifications to the client and David. |
-| 6 | New decision record, automatic resizing: App 5 raises a client's container to 2 GiB and the cluster to 16 GiB, the trigger for each, the largest size App 5 may choose, and the notification to David. |
+| 6 | New decision record, automatic resizing: App 5 raises a client's container to 2 GiB and the cluster to 16 GiB and 32 GiB, the trigger for each, the largest size App 5 may choose, and the notification to David. |
 | 7 | Management visibility decision record and the App 5 design: App 5's connection to DigitalOcean, the scheduled checks, both resize actions, the fair-use enforcement, the **Suspend** and **Rebuild** actions, the audit record, the daily summary and the immediate messages. |
 | 8 | Release decision record and hosting specification: the staged roll-out with health checks and automatic rollback, and the registry clean-up at every release. |
 | 9 | Integration specification: the SES tenant reputation policy per client, the two CloudWatch alarms, the monthly email caps per client, and the 7-day deletion of received email files from S3. |
@@ -237,7 +243,7 @@ Each recurring maintenance point is carried out by App 5 or by a scheduled job. 
 | 12 | Observability decision record: App 5's status endpoint, the DigitalOcean Uptime check, the daily domain and certificate check, and the data transfer and client storage checks. |
 | 13 | Security documents: the two DigitalOcean access keys and their custom scopes, the yearly rotation, and the `abuse@mybizz.live` address. |
 | 14 | Client activation runbook: each client's database and database user created in the database with the settings of tasks 1 and 3. |
-| 15 | Rebuild procedure: App 5's **Rebuild** action, restoring every client into a new database and new containers in another region, and moving every client into the Advanced database at client 25. |
+| 15 | Rebuild procedure: App 5's **Rebuild** action, restoring every client into a new database and new containers in another region. |
 | 16 | Security documents: hardware security keys required on every cloud service Mybizz uses, as Cyber Essentials requires, and AWS's root user kept unused. |
 | 17 | Hosting specification and client activation runbook: the cluster's trusted sources limited to DigitalOcean containers; the provisioning job inside DigitalOcean that creates each client's database user and its limits; each container's heartbeat carrying its database size. |
 | 18 | Client R2 storage decision record: each client's backup copies locked for their whole retention period. |
@@ -247,7 +253,7 @@ Each recurring maintenance point is carried out by App 5 or by a scheduled job. 
 | 22 | Release decision record and App 5 design: high and critical image findings released within 14 days of the vendor's fix, with App 5's messages on days 7 and 10; base image and Java runtime kept on vendor-supported versions; a build containing end-of-life software fails; App 5 records the Cyber Essentials certificate dates and sends the renewal reminder 60 days before expiry. |
 | 23 | New decision record, business insurance: the one combined policy (technology professional indemnity £1m, cyber liability £500,000, public liability £1m) and why each cover and limit; employers' liability bought before anyone other than David works for Mybizz; each policy condition listed with the safeguard that meets it and the test that checks it; yearly renewal answered from the Cyber Essentials compliance document. |
 | 24 | New policy, incident response, with its runbook: how an incident is recognised, contained and recorded in App 5; the call to the insurer's incident line before any outside supplier is engaged; the report to the Information Commissioner's Office within 72 hours of a personal data breach; notice to affected clients without undue delay; evidence kept for the insurer. |
-| 25 | Billing specification: every fixed cost of section 1, VAT registration from incorporation, Paddle payouts without VAT, and break-even at 7 clients. Security documents and the Cyber Essentials compliance document: cross-references to the insurance decision record and the incident response policy. |
+| 25 | Billing specification: every fixed cost of section 1, VAT registration from incorporation, Paddle payouts without VAT, and break-even at 9 clients. Security documents and the Cyber Essentials compliance document: cross-references to the insurance decision record and the incident response policy. |
 | 26 | App 5 design: the insurance policy dates and the renewal reminder 30 days before expiry; the statutory deadline calendar read daily from FreeAgent's tax timeline, plus the confirmation statement date held in App 5, with a reminder 30 days before each deadline; the daily Wise bank feed check and the 90-day consent reminder; the incident record with its timeline (detected, contained, insurer called, Information Commissioner's Office reported, clients notified). |
 | 27 | New decision record, company compliance: Mybizz-Live Ltd's statutory obligations and how each is met (VAT registration from incorporation and the quarterly VAT return, the confirmation statement, the annual accounts and the company tax return filed from FreeAgent, the ICO fee by direct debit, the UK registered office), each deadline, and the App 5 reminder for each. |
 | 28 | New decision record, FreeAgent integration: App 5 connects to FreeAgent's API through its own FreeAgent user at the lowest access level that reads the tax timeline, and only ever reads; what App 5 reads (the tax timeline, Corporation Tax returns, bank transactions for the bank feed check, monthly income and costs for the daily summary); the stored credentials in App 5's Vault; what happens when the connection fails (App 5 messages David). |
@@ -256,7 +262,7 @@ Each recurring maintenance point is carried out by App 5 or by a scheduled job. 
 
 | # | Task |
 |---|---|
-| 29 | Concept document: the cost and profit figures on the lean start. |
+| 29 | Concept document: the cost and profit figures of section 2. |
 | 30 | Architecture reference and explainer: App 5's automatic resizing, fair-use enforcement and notifications. |
 | 31 | Business, product and software requirements documents and the test specification: the resize, fair-use and notification requirements, each with its test. |
 | 32 | Client service agreement, in mb-3-cs and in the project template: the fair-use limits of section 4 and the acceptable-use terms. |
@@ -270,7 +276,7 @@ Each recurring maintenance point is carried out by App 5 or by a scheduled job. 
 
 | # | Task |
 |---|---|
-| 38 | Step 11, App 3 run: the DigitalOcean project, the Standard database, storage autoscaling and trusted sources, the provisioning job, the registry and the test instance, each one checked. |
+| 38 | Step 11, App 3 run: the DigitalOcean project, the Advanced database with its standby, storage autoscaling and trusted sources, the provisioning job, the registry and the test instance, each one checked. |
 | 39 | Step 11, App 5 run: the two DigitalOcean access keys stored in App 5's Vault and checked; the DigitalOcean Uptime check on App 5's status endpoint; the two CloudWatch alarms; the Groq spend limit. |
 | 40 | Test suite: the resize decisions and every fair-use limit tested against simulated suppliers; the App Server's reconnection tested after its database connection is cut; a check that the cluster is Advanced with a standby; a check that each client database user carries its three limits; a check that the cluster refuses connections from outside DigitalOcean; a check that a locked backup cannot be deleted; a check that an unsigned image is refused. |
 | 41 | `{slug}-app4` repository: the GitHub Actions workflows that scan the release image weekly and at every build, sign each image, report to App 5, and clean the registry at every release. |
@@ -296,3 +302,20 @@ Each recurring maintenance point is carried out by App 5 or by a scheduled job. 
 | 56 | Renew Cyber Essentials each year when App 5's reminder arrives. |
 | 57 | Before the first paying client: buy the combined policy (technology professional indemnity £1m, cyber liability £500,000, public liability £1m) from one insurer, answering the proposal form from the Cyber Essentials compliance document. Enter the policy dates and the insurer's incident line in App 5 and in the incident response runbook. |
 | 58 | Renew the insurance policy each year when App 5's reminder arrives. |
+
+### Pricing, plans and the database standby (Claude)
+
+| # | Task |
+|---|---|
+| 59 | Billing specification: the £119 monthly price with its fixed local prices; the annual plan at £1,190 a year, paid up front; the done-for-you setup at £119 as a one-off Paddle price; the referral credit applied as a discount on the referring client's next annual renewal, at most 5 credits per renewal and never paid in cash; break-even at 9 clients. |
+| 60 | Hosting specification, deployment specification, automatic resizing decision record and client activation runbook: the Advanced database with its standby from go-live, raised to 16 GiB at client 60 and 32 GiB at client 130; uptime of 99.95% from go-live. |
+| 61 | Mybizz CS concept, business and product requirements, software requirements, brand profile, feature list, capacity and plan tiers, and client service agreement: the £119 price, the annual plan, the done-for-you setup and the referral offer. |
+| 62 | App 5 design: the referral record of which annual client referred which new annual client, the credit applied at the referring client's renewal with the cap of 5, and the message to David at client 20 to engage part-time support. |
+| 63 | Test suite: the referral credit cap of 5 per renewal; the database standby present from go-live. |
+
+### David (pricing and growth)
+
+| # | Task |
+|---|---|
+| 64 | In Paddle, create the annual price of £1,190 and the done-for-you setup at £119, with the fixed local prices of the billing specification. |
+| 65 | At client 20, when App 5's message arrives: engage part-time support at £1,000 a month, after buying employers' liability insurance. |

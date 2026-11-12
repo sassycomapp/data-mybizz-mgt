@@ -5,3 +5,6 @@ Models/models 24 sept.xlsx
 *.zip
 *.exe
 *.mp4
+
+# Office lock files created while a document is open
+~$*

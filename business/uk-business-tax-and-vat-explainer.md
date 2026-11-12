@@ -1,7 +1,7 @@
 ---
 title: "uk-business-tax-and-vat-explainer"
 doc-id: "mb-6450d886"
-updated: "2026-11-11"
+updated: "2026-11-12"
 ---
 # UK Business Tax and VAT Explainer
 
@@ -52,7 +52,7 @@ VAT (Value Added Tax) is a tax on sales of goods and services. A VAT-registered 
 
 Registration is compulsory once a business's UK taxable sales pass £90,000 in 12 months. Mybizz-Live Ltd registers voluntarily from the day it is incorporated, because registration removes VAT from its costs and adds no VAT to its sales:
 
-- **Sales:** Mybizz-Live Ltd sells every subscription to Paddle. Paddle confirms that sellers charge Paddle no VAT on payouts, because Paddle accounts for that VAT itself. Each client's £79 reaches Mybizz-Live Ltd in full, less Paddle's fee.
+- **Sales:** Mybizz-Live Ltd sells every subscription to Paddle. Paddle confirms that sellers charge Paddle no VAT on payouts, because Paddle accounts for that VAT itself. Each client's payment reaches Mybizz-Live Ltd in full, less Paddle's fee.
 - **Overseas suppliers:** DigitalOcean, Anvil, AWS, Cloudflare and Groq charge no VAT to a business that gives them a UK VAT number. Mybizz-Live Ltd records the VAT on these services itself under the reverse charge: the VAT is entered as both owed and reclaimed on the same return, so the net amount is nil.
 - **UK suppliers:** VAT charged by UK suppliers, such as FreeAgent, is reclaimed on the VAT return.
 - **Insurance:** insurance carries Insurance Premium Tax instead of VAT. It cannot be reclaimed.
