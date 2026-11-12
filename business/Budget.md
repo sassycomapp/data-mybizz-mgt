@@ -31,7 +31,7 @@ One-off costs: company registration at Companies House, £100; Wise Business acc
 
 ## 2. Client-Related Costs
 
-**Scaled with growth.** The database runs with its standby from go-live and grows in size as clients join. The insurance covers rise at client 25, and part-time support starts at client 20. The table uses the monthly plan; the annual plan and the setup fee are in section 3. Break-even is 9 clients.
+**Scaled with growth.** The database runs with its standby from go-live and grows in size as clients join. The insurance covers rise at client 25, and part-time support starts at client 20. The table uses the monthly plan; the annual plan and assisted setup are in section 3. Break-even is 9 clients.
 
 | | Escalates with | 1 client | Break-even (9) | 25 clients | 50 clients | 60 clients | 100 clients |
 |---|---|---|---|---|---|---|---|
@@ -111,7 +111,7 @@ With every fair-use limit of section 4 reached, one client costs at most £54.78
 
 - Monthly plan: £119 per client per month. The fixed local prices in the other currencies are set close to £119.
 - Annual plan: £1,190 a year, paid up front, which is 12 months for the price of 10.
-- Done-for-you setup: an optional one-off service at £119, in which Mybizz sets up the client's application. The founder delivers it, at no cash cost.
+- Assisted setup: an optional one-off service at £119, in which Mybizz sets up the client's application. The founder delivers it, at no cash cost.
 - Referral credit: a client on the annual plan who refers a new client that buys the annual plan receives one month's price off its next annual renewal. A renewal carries at most 5 credits, so the referring client always pays more than its yearly cost to Mybizz of about £293 (container, usage and database share). A credit is never paid out in cash.
 - Paddle's fee is 5% of each payment plus its fixed fee per payment: £6.33 on a monthly payment of £119 and £59.88 on an annual payment of £1,190.
 
@@ -307,9 +307,9 @@ Each recurring maintenance point is carried out by App 5 or by a scheduled job. 
 
 | # | Task |
 |---|---|
-| 59 | Billing specification: the £119 monthly price with its fixed local prices; the annual plan at £1,190 a year, paid up front; the done-for-you setup at £119 as a one-off Paddle price; the referral credit applied as a discount on the referring client's next annual renewal, at most 5 credits per renewal and never paid in cash; break-even at 9 clients. |
+| 59 | Billing specification: the £119 monthly price with its fixed local prices; the annual plan at £1,190 a year, paid up front; assisted setup at £119 as a one-off Paddle price; the referral credit applied as a discount on the referring client's next annual renewal, at most 5 credits per renewal and never paid in cash; break-even at 9 clients. |
 | 60 | Hosting specification, deployment specification, automatic resizing decision record and client activation runbook: the Advanced database with its standby from go-live, raised to 16 GiB at client 60 and 32 GiB at client 130; uptime of 99.95% from go-live. |
-| 61 | Mybizz CS concept, business and product requirements, software requirements, brand profile, feature list, capacity and plan tiers, and client service agreement: the £119 price, the annual plan, the done-for-you setup and the referral offer. |
+| 61 | Mybizz CS concept, business and product requirements, software requirements, brand profile, feature list, capacity and plan tiers, and client service agreement: the £119 price, the annual plan, assisted setup and the referral offer. |
 | 62 | App 5 design: the referral record of which annual client referred which new annual client, the credit applied at the referring client's renewal with the cap of 5, and the message to David at client 20 to engage part-time support. |
 | 63 | Test suite: the referral credit cap of 5 per renewal; the database standby present from go-live. |
 
@@ -317,5 +317,5 @@ Each recurring maintenance point is carried out by App 5 or by a scheduled job. 
 
 | # | Task |
 |---|---|
-| 64 | In Paddle, create the annual price of £1,190 and the done-for-you setup at £119, with the fixed local prices of the billing specification. |
+| 64 | In Paddle, create the annual price of £1,190 and assisted setup at £119, with the fixed local prices of the billing specification. |
 | 65 | At client 20, when App 5's message arrives: engage part-time support at £1,000 a month, after buying employers' liability insurance. |

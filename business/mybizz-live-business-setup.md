@@ -106,7 +106,7 @@ These steps make up step 11 of section 4.
 | 2 | Create the Paddle seller account for Mybizz-Live Ltd with the company number, registered office, VAT number and David's identity. |
 | 3 | Add and verify `mybizz.live` as the domain allowed to open the checkout. |
 | 4 | Set the payout account to the Wise GBP account, with payouts in GBP. |
-| 5 | Create the Mybizz subscription with two prices, £119 a month and £1,190 a year, and the done-for-you setup as a one-off price of £119, each with the fixed local prices in the other currencies of the billing specification. |
+| 5 | Create the Mybizz subscription with two prices, £119 a month and £1,190 a year, and assisted setup as a one-off price of £119, each with the fixed local prices in the other currencies of the billing specification. |
 | 6 | Brand the checkout and the receipts with the Mybizz logo and colours. |
 | 7 | Point Paddle's notifications (webhooks) at App 5, which acts on each new subscription, renewal, failed payment and cancellation, including suspension on day 7 and exit on day 37 after a failed payment, and applies each referral credit as a discount on the referring client's next annual renewal. |
 | 8 | Make one test purchase in Paddle's test environment, and check that App 5 records it and that the receipt arrives. |
