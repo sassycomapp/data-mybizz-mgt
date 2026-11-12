@@ -1,8 +1,11 @@
 ---
+
 title: "marketing-strategy"
 doc-id: "mb-7d7a0bb0"
 updated: "2026-11-12"
+
 ---
+
 Marketing Strategy
 
 The best collective term is **unconventional marketing** (also called **non-traditional marketing**). It covers tactics that depart from standard advertising—such as guerrilla, ambush, ambient, viral, buzz, stealth, and street marketing—to gain attention, engagement, or word-of-mouth with relatively low spend.[[preprints](https://www.preprints.org/manuscript/202303.0169)][[aak.slu](http://aak.slu.cz/pdfs/aak/2014/03/08.pdf)]
