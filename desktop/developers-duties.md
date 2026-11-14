@@ -72,6 +72,12 @@ The duties only the developer can carry out. Each one says when it applies, what
 15. **Update Brand Profile**
     “When a canonical document named in the brand profile changes, update the brand profile.”
 
+16. **Once a month, and before any disk or WSL maintenance: export Ubuntu to Google Drive.**
+    
+    - Windows PowerShell: `cd $HOME; wsl --shutdown; wsl --export Ubuntu "G:\My Drive\ubuntu-backup.tar"`
+    - Pass: PowerShell prints "The operation completed successfully." and Google Drive shows the file synced.
+    - Why: everything in Ubuntu, including the PDLF ledger, GBrain and the local clones, lives in one virtual disk file on the PC. The export is its only copy off the PC, and each export replaces the previous one.
+
 ## Once-off to-do
 
 1. **Clean up PostgreSQL.** Windows has a duplicate `PostgreSQL` service, a `pgvector_user` role and leftover test databases in the `postgres` database; the WSL PostgreSQL databases have never been listed in full. The ledger (`pdlf`, Windows, port 5433) and GBrain (`gbrain`, WSL, port 5432) are the only databases in use.
