@@ -16,7 +16,7 @@ The duties only the developer can carry out. Each one says when it applies, what
    
    - OpenCode web UI, build mode: `/mb-memory-system-diagnostic`. Answer yes at every gate, including the dream cycle at the end.
    - Then commit the memory-governor repository (duty 2), because the diagnostic writes into its register.
-   - Why: autopilot is off by decision, so GBrain's dream cycle runs only by hand. How Morning Tasks works: `morning-tasks-explainer.md`, beside this file.
+   - Why: autopilot is off by decision, so GBrain's dream cycle runs only by hand. How Morning Tasks works: [[[mybizz-os-docs:operating-procedures/morning-tasks-explainer]]](C:/mybizz/mybizz-os-docs/operating-procedures/morning-tasks-explainer.md).
 
 2. **After any change in the memory-governor repository: commit it by hand.** commit-all does not cover it.
    

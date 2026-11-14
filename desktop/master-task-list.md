@@ -14,4 +14,3 @@ are reviewed below the line, then migrated to canonical docs and removed.
 
 # Task list
 
-- [ ] **dev-root docmap.** `C:\dev\dev-root\docmap.md` is a mybizz-os document, rebuilt by `scripts/build-docmap.py`. Decide where it belongs; moving it means changing the path in `build-docmap.py` too.
