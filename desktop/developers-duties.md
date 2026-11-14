@@ -12,11 +12,11 @@ The duties only the developer can carry out. Each one says when it applies, what
 
 ## Recurring
 
-1. **Every week, after the Sunday backup: dream cycle.**
+1. **When the Morning Tasks pop-up says the dream cycle is due: run it.**
    
    - OpenCode web UI, build mode: `/mb-memory-system-diagnostic`. Answer yes at every gate, including the dream cycle at the end.
    - Then commit the memory-governor repository (duty 2), because the diagnostic writes into its register.
-   - Why: autopilot is off by decision, so GBrain's dream cycle runs only by hand.
+   - Why: autopilot is off by decision, so GBrain's dream cycle runs only by hand. How Morning Tasks works: `morning-tasks-explainer.md`, beside this file.
 
 2. **After any change in the memory-governor repository: commit it by hand.** commit-all does not cover it.
    
@@ -71,12 +71,6 @@ The duties only the developer can carry out. Each one says when it applies, what
     - Why: Discard the remote changes overwrites GitHub with the editor's copy, and every commit made from the PC since is lost from GitHub. Merge changes keeps both.
 15. **Update Brand Profile**
     “When a canonical document named in the brand profile changes, update the brand profile.”
-
-16. **Once a month, and before any disk or WSL maintenance: export Ubuntu to Google Drive.**
-    
-    - Windows PowerShell: `cd $HOME; wsl --shutdown; wsl --export Ubuntu "G:\My Drive\ubuntu-backup.tar"`
-    - Pass: PowerShell prints "The operation completed successfully." and Google Drive shows the file synced.
-    - Why: everything in Ubuntu, including the PDLF ledger, GBrain and the local clones, lives in one virtual disk file on the PC. The export is its only copy off the PC, and each export replaces the previous one.
 
 ## Once-off to-do
 
