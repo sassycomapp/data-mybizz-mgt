@@ -1,0 +1,79 @@
+# Mybizz Capital and Media Concept Plan
+
+Mybizz-Live is the company to be registered in the UK
+Mybizz is a suite of online business management platforms, the first of which is Mybizz CS Which serves the consulting and services vertical. Others to follow include an e-commerce platform based on medusa.js and the third serves the education and train vertical Allowing clients to build training, education, and courses type businesses
+
+"Front desk assistant" The first ancient site which I am building, and it will be the first member of Mybizz-Agency. It is also the MVP of MyBiz CS
+
+MyBizz Agency is a project group Within Mybizz-Live
+
+## Objective
+
+Raise the capital for Mybizz CS without a loan, and build an audience before Mybizz CS launches on 1 April 2027.
+
+- **Capital** comes from Front Desk Assistant sales: built and released quickly, before any marketing, and sold in person locally and online.
+- **The Front Desk Assistant is the start of the Mybizz Agency:** deliverable agents, meaning agents that deliver work, not merely report on it.
+- **Audience** comes from social media channels, filled quickly with content and free business-assistance material related directly and indirectly to Mybizz.
+- **Mybizz CS stays a standalone app** with its own built-in agents; the Front Desk Assistant is a separate Project in the same business and never becomes a Mybizz CS add-on. It is in fact the MVP for Mybizz CS
+
+## Personal brand
+
+The brand is the founder: a project manager who set up and ran life-support operations in remote places, from the Congo jungle to Antarctica, now building business software with AI.
+
+- **Relatable and personal:** lived examples from remote sites and from the build itself; relatable beats impressive.
+- **A personal playbook:** how a remote sites Project manager, not a programmer, builds and runs a software business with AI.
+- **Friendships with the audience:** replies, conversations and community, not broadcast only.
+- **An ecosystem:** products and services together with the personal brand, which is what earns the money.
+
+## Principles
+
+- **Credo:** simple, secure, robust, fit for purpose.
+- **Fast value:** every product gives the user a useful result Immediately.
+- **Build and release first:** the first agent (Front desk assistant) ships quickly, then marketing starts while the agents are sold in person.
+- **10% product, 90% marketing** once the first agent is out: at least 6 hours a day go to marketing. 14 hour workday.
+- **The biggest competitor is indifference:** content must earn attention in its first ten seconds.
+- **System agnostic and self-contained:** every agent runs in its own setup, works with any client's systems, and never depends on a client's messy environment.
+- **Self-deployable:** a client sets up an agent with a wizard, without help.
+- **Free material draws the audience:** business-assistance material and short courses are given away.
+- **Adapt, never copy:** take the structure of proven videos (hook, pacing, format), never their words. Emulate content that has gone viral
+- **Outreach that keeps accounts safe:** about 20 to 30 personal messages a day per platform, raised only as the accounts mature.
+
+## The four streams
+
+1. **Mybizz agency: the capital engine and the start of the Agent Automation Agency.**
+2. **Media: the audience engine.**
+   - **Short form** on YouTube Shorts, Facebook and TikTok, under 45 seconds, as text-on-video, video or image carousels; these drive viewers to the long-form channels.
+   - **Long form** on YouTube, LinkedIn and Instagram, in three lines: A builds views and subscribers; B pairs content with offers; C builds a community with courses and workshops.
+   - **Free material:** a large stream of business-assistance material and short courses, given away to draw the audience.
+   - **Topics:** AI, automation, starting and running a business, and making money with AI.
+   - **Repurposing:** each long piece is cut into shorts, carousels, posts and AI podcasts.
+   - **Faceless and avatar channels** run beside the personal channel.
+   - **Community funnel:** YouTube and Instagram lead into a Skool community.
+3. **Mybizz pre-launch: the launch engine.**
+   - Lead magnets (free audits, templates and checklists) collect a waiting list.
+   - A founding-member offer gives early Mybizz clients a reduced price.
+   - Mybizz is a standalone app with its own built-in agents.
+4. **Later ventures: once Mybizz is live.**
+   - **Digital info products and a paid community,** grown from the content and the Skool community.
+
+
+
+## Recently discovered tools
+
+Open-source tools, run on Mybizz's own setup wherever possible, with each tool's fit confirmed in the concept design.
+
+| Tool                                                     | Role                                                |
+| -------------------------------------------------------- | --------------------------------------------------- |
+|                                                          |                                                     |
+| Hermes Agent (Nous Research)                             | Candidate agent framework for the assistant agents  |
+|                                                          |                                                     |
+| [Postiz](https://github.com/gitroomhq/postiz-app)        | Schedules posts across every channel                |
+| AI YouTube Shorts Generator                              | Cuts long videos into shorts                        |
+| [VideoLingo](https://github.com/Huanshere/VideoLingo)    | Subtitles and translates videos for other markets   |
+| [Ghost](https://github.com/TryGhost/Ghost)               | Blog, newsletter and the free material library      |
+| [OpenSEO](https://github.com/every-app/open-seo)         | Helps the blog and videos get found in search       |
+| [REA](https://github.com/morluto/rea)                    | Studies how proven content and products are built   |
+| Skool                                                    | Paid and free community, and the short courses      |
+| [APEX Agents](https://github.com/EnvCommons/APEX-Agents) | Reference for agent platforms, to study and emulate |
+
+## 
