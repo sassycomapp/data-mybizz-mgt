@@ -1,6 +1,7 @@
 ---
 title: "fda-operations-plan"
 updated: "2026-11-16"
+doc-id: "mb-458de800"
 ---
 # Mybizz FDA — Operations Plan
 
@@ -33,9 +34,6 @@ The Mybizz management app (App 5) and scheduled jobs on each client's copy do th
 - Approve each release.
 - Answer support emails within one working day; within four hours when a client cannot work at all.
 - Act on reports to `abuse@mybizz.live`, using App 5's Suspend action.
-- Renew access keys once a year when App 5 prompts (about 10 minutes).
-- Keep a valid payment card on Hetzner, Anvil, Amazon Web Services, Groq and Cloudflare.
-- Keep two hardware security keys: one carried daily, one stored safely.
 - Keep the outreach going: the routine in `fda-sniper-outreach-kit.md`.
 
 ---
@@ -56,16 +54,13 @@ The Mybizz management app (App 5) and scheduled jobs on each client's copy do th
 
 ## 4. Launch Steps
 
-### Stage 1 — Mybizz FDA launch (sole proprietor)
+### Mybizz FDA launch
 1. **Servers:** set up the Hetzner application server, the database pair, Caddy, monitoring and the provisioning runner; test a full backup and restore.
 2. **Email:** set up Amazon SES for `in.fda.mybizz.live` and `reply.fda.mybizz.live`.
 3. **Google:** submit Mybizz FDA's calendar access for Google verification.
-4. **Security:** hardware security keys on Hetzner, Cloudflare, GitHub, Anvil, Amazon Web Services, Groq and Paddle; set up `abuse@mybizz.live`.
-5. **Paddle:** publish the legal texts on mybizz.live and complete Paddle's sole-proprietor verification with the £45 price.
+4. **Abuse address:** set up `abuse@mybizz.live`.
+5. **Paddle:** add the £45 Mybizz FDA price in Paddle, once the company steps in `business/mybizz-live-business-plan.md` are done.
 6. **Mybizz's own front desk:** run Mybizz's own Mybizz FDA copy on mybizz.live so prospects can test it.
 7. **Final checks:** run a test enquiry on every launch channel; confirm STOP stops every automatic message; confirm approvals record who gave them.
 
-### Stage 2 — Mybizz-Live Ltd
-8. **Company:** register Mybizz-Live Ltd from Mybizz FDA's income, open Wise Business and set up accounting.
-9. **Paddle and legal texts:** move Paddle and every legal text to Mybizz-Live Ltd.
-10. **WhatsApp:** verify Mybizz-Live Ltd with Meta as a Tech Provider; switch WhatsApp on for every client from App 5.
+The WhatsApp channel is switched on for every client once Mybizz-Live Ltd is registered and verified by Meta; the company steps are in `business/mybizz-live-business-plan.md`.

@@ -1,8 +1,9 @@
 ---
-title: "fda-sole-proprietor-launch-guide"
+title: "mybizz-live-launch-and-banking-guide"
 updated: "2026-11-16"
+doc-id: "mb-c48c9917"
 ---
-# Mybizz FDA — Sole Proprietor Launch and Banking Guide
+# Mybizz-Live — Launch and Banking Guide (Sole Proprietor to Mybizz-Live Ltd)
 
 **Purpose:** A practical reference explaining how to legally sell **Mybizz FDA** globally from South Africa as a sole proprietor, pass **Paddle** verification, handle **Wise** banking, and stay compliant with **SARS** and **SARB** before incorporating **Mybizz-Live Ltd** in the UK.
 
@@ -68,7 +69,7 @@ You **can** open a **Wise Personal Account** right now as a South African reside
 
 ## 5. Transitioning Later to Mybizz-Live Ltd (UK)
 
-Once Mybizz FDA sales build the cash reserve set out in `fda-forecast.xlsx` and you are ready to incorporate **Mybizz-Live Ltd** in the UK:
+Once Mybizz FDA sales build the cash reserve set out in `mybizz-live-budget.xlsx` and you are ready to incorporate **Mybizz-Live Ltd** in the UK:
 
 1. **Incorporate in the UK:** Register `Mybizz-Live Ltd` at Companies House (~£50–£100 via an online formation agent with a UK registered office address).
 2. **Open Wise Business (UK):** Register Wise Business using your UK Certificate of Incorporation to get full UK GBP, EU EUR, and US USD business banking details.

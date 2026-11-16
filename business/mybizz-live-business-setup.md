@@ -1,7 +1,7 @@
 ---
 title: "mybizz-live-business-setup"
 doc-id: "mb-2119df24"
-updated: "2026-11-12"
+updated: "2026-11-16"
 ---
 # Mybizz-Live Business Setup
 
@@ -67,7 +67,7 @@ Every step is David's. The steps run in this order.
 | 7 | Register for Corporation Tax | HMRC posts the company's Unique Taxpayer Reference to the registered office after incorporation. Register for Corporation Tax online with that reference, within 3 months of the company starting business. | Free |
 | 8 | Pay the ICO fee | Register with the Information Commissioner's Office as a tier 1 organisation and pay by direct debit. The law requires this fee from every company that holds personal data. | £47 a year |
 | 9 | Set up FreeAgent | Subscribe to FreeAgent's limited company plan. Enter the company number, VAT number, Corporation Tax reference and year end. Connect the Wise GBP balance as a bank feed. | £33 a month |
-| 10 | Enter the VAT number on every supplier account | Add the VAT number to DigitalOcean, Anvil, AWS, Cloudflare, Groq, Paddle and every other supplier, so no supplier charges VAT. | Free |
+| 10 | Enter the VAT number on every supplier account | Add the VAT number to Hetzner, Anvil, AWS, Cloudflare, Groq, Paddle and every other supplier, so no supplier charges VAT. | Free |
 | 11 | Become a Paddle seller | Set up Paddle as section 5 describes. | Paddle's fee per payment only |
 | 12 | Connect FreeAgent to App 5 | In FreeAgent, create a separate user for App 5 at the lowest access level that reads the tax timeline. Approve App 5's connection to FreeAgent through that user. Enter the confirmation statement date in App 5. App 5 only reads from FreeAgent and never changes anything there. | Free |
 

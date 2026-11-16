@@ -1,6 +1,7 @@
 ---
 title: "fda-marketing-plan"
 updated: "2026-11-16"
+doc-id: "mb-2d1055ee"
 ---
 # Mybizz FDA — Marketing Plan
 
@@ -13,10 +14,8 @@ updated: "2026-11-16"
 
 ## 1. The Aim
 
-Mybizz FDA's sales fund Mybizz-Live Ltd and the build of Mybizz CS. There is no loan and no start-up capital, so every step is paid for by the step before it.
-
-- About **5 clients** cover Mybizz FDA's fixed monthly costs.
-- The forecast (`fda-forecast.xlsx`) reaches about **42 clients** and about **£17,000** of cash by April 2028.
+- Win about **5 paying clients** first, then grow steadily by personal, one-to-one outreach.
+- The funding targets that Mybizz FDA's sales serve are in `business/mybizz-live-business-plan.md`.
 
 ---
 

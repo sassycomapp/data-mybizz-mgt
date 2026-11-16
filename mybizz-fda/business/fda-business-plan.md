@@ -1,6 +1,7 @@
 ---
 title: "fda-business-plan"
 updated: "2026-11-16"
+doc-id: "mb-0defdbae"
 ---
 # Mybizz FDA — Business Plan
 
@@ -12,44 +13,12 @@ updated: "2026-11-16"
 
 Mybizz FDA is an AI front desk for consulting and service businesses. It answers every enquiry in the client's voice, books the meeting and follows up, on email, website, WhatsApp and SMS, with the client in control.
 
-Mybizz FDA has two jobs:
-
-1. **A product in its own right:** one fixed price of £45 a month, with the whole team included.
-2. **The funding engine of Mybizz:** Mybizz FDA's income pays for the registration of Mybizz-Live Ltd and the build of Mybizz CS. Mybizz has no lender, no loan and no start-up capital.
-
-Mybizz FDA is also the proof of concept of Mybizz CS. The two are separate products with separate sign-ups.
-
-| Key figure (forecast, Jan 2027 – Apr 2028) | Value |
-|---|---|
-| Funding | Self-funded from sales; no loans |
-| Price | £45 a month per client |
-| Clients needed to cover fixed monthly costs | about 5 |
-| Active clients at April 2028 | about 42 |
-| Revenue over 16 months | about £22,100 |
-| Net profit over 16 months | about £17,200 |
-| Cash available for Mybizz-Live Ltd and Mybizz CS at April 2028 | about £17,000 |
-
-The full model is `fda-forecast.xlsx`. Every figure above recalculates when its inputs change.
+- **Price:** one fixed price of £45 a month, with the whole team included.
+- **Place in Mybizz:** Mybizz FDA is the proof of concept of Mybizz CS. The two are separate products with separate sign-ups. The company plan, funding and budget are in `business/mybizz-live-business-plan.md`.
 
 ---
 
-## 2. The Business
-
-| Item | Detail |
-|---|---|
-| Operator | David trading as Mybizz, a sole proprietor, until Mybizz-Live Ltd is registered; Mybizz-Live Ltd from then on |
-| Brand and web address | Mybizz, mybizz.live |
-| Product | Mybizz FDA |
-| Merchant of record | Paddle (checkout, sales tax and VAT, invoices) |
-| Banking | Wise |
-| Hosting | Mybizz's own Hetzner Cloud servers in the EU |
-
-### The founder
-The founder spent most of his working life setting up and running life-support operations at remote sites, from the Congo jungle to Antarctica, where systems had to be simple, self-contained and dependable. Mybizz FDA applies the same discipline to a small business's front desk: no enquiry goes unanswered.
-
----
-
-## 3. The Problem
+## 2. The Problem
 
 - Enquiries arrive by email, website, WhatsApp and SMS and wait hours for a reply, while the customer contacts a competitor.
 - The person who should reply is busy delivering work.
@@ -59,7 +28,7 @@ The founder spent most of his working life setting up and running life-support o
 
 ---
 
-## 4. The Product
+## 3. The Product
 
 - Every enquiry from every channel arrives in one action queue, sorted, with a reply drafted in the client's voice and in the customer's language.
 - New clients start in approve-before-send mode: a team member approves each reply with one click, and every approval records who gave it.
@@ -77,7 +46,7 @@ The full product definition is the concept document in the Mybizz FDA project li
 
 ---
 
-## 5. Target Market
+## 4. Target Market
 
 - **Who:** independent consultants and coaches; small agencies in marketing, design, development, recruitment, advisory, accounting and bookkeeping; fractional executives and advisers; service businesses that book appointments.
 - **Size:** one person to a team of about ten.
@@ -86,7 +55,7 @@ The full product definition is the concept document in the Mybizz FDA project li
 
 ---
 
-## 6. Competition
+## 5. Competition
 
 | Option | What the business gets | Limitation |
 |---|---|---|
@@ -97,16 +66,16 @@ The full product definition is the concept document in the Mybizz FDA project li
 
 ---
 
-## 7. Sales and Marketing
+## 6. Sales and Marketing
 
-- **Approach:** direct, personal, one-to-one outreach by the founder, and building in public on LinkedIn and short video. No paid advertising while Mybizz FDA funds Mybizz-Live Ltd.
+- **Approach:** direct, personal, one-to-one outreach by the founder, and building in public on LinkedIn and short video. No paid advertising.
 - **Trial:** prospects test Mybizz FDA by enquiring through Mybizz's own front desk on mybizz.live.
 - **Offer:** £45 a month, month to month, no contract, no setup fee.
-- **Plans:** `fda-marketing-plan.md`, `fda-sniper-outreach-kit.md` and `fda-content-and-social-pack.md`.
+- **Plans:** `fda-marketing-plan.md`, `fda-sniper-outreach-kit.md` and `fda-content-and-social-pack.md`, in `mybizz-fda/marketing`.
 
 ---
 
-## 8. Operations
+## 7. Operations
 
 - **Hosting:** each client's copy runs in its own container on Mybizz's Hetzner servers in the EU, with its own database on a database pair (primary and live standby).
 - **Management:** the Mybizz management app signs up clients, starts and updates their copies, watches their health and handles Paddle billing.
@@ -115,34 +84,10 @@ The full product definition is the concept document in the Mybizz FDA project li
 
 ---
 
-## 9. Financial Forecast (January 2027 – April 2028)
-
-### Assumptions
-- New clients: 6 a month in January to March 2027, 5 a month in April to June, 3 in July and August, then 2 a month.
-- Monthly churn: 3%.
-- Paddle fees: 5% plus £0.38 per payment.
-- Per-client costs: £1.50 a month for hosting, email and voice, plus 20% non-recoverable VAT.
-- Fixed costs: Hetzner servers £20 a month and Anvil, domain and accounting £121.73 a month, each plus 20% non-recoverable VAT.
-- Mybizz-Live Ltd registration and bank set-up: £150 plus VAT in February 2027, paid from Mybizz FDA's income.
-- No marketing spend and no founder salary.
-
-### Results
-| Figure | Value |
-|---|---|
-| Lowest month-end cash | positive in every month |
-| Active clients at April 2028 | about 42 |
-| Revenue over 16 months | about £22,100 |
-| Net profit over 16 months | about £17,200 |
-| Cash at April 2028 | about £17,000 |
-
----
-
-## 10. Risks and Answers
+## 8. Risks and Answers
 
 | Risk | Answer |
 |---|---|
-| Slow first sales | Fixed costs are about £170 a month; about 5 clients cover them |
 | WhatsApp not yet available | Email, website form, website chat and SMS work from day one; WhatsApp is switched on after Meta verification |
 | A server fails | A live standby database, nightly client backups and monitored servers |
 | AI writes something wrong | Approval before sending by default; facts only from the client's own content |
-| The founder's time | Self-service setup with help videos; Mybizz's own front desk answers prospects |
