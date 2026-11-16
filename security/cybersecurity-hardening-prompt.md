@@ -1,7 +1,7 @@
 ---
 title: "cybersecurity-hardening-prompt"
 doc-id: "mb-5da6987c"
-updated: "2026-11-13"
+updated: "2026-11-16"
 ---
 # Cybersecurity Hardening – Defensive Security Due Diligence
 
@@ -29,11 +29,11 @@ The cybersecurity assessment must account for MyBizz's distributed hosting archi
 
 - **Anvil.works:** Hosts the central MyBizz management application and development environment.
 
-- **DigitalOcean:** Hosts the deployed commercial client instances.
+- **Hetzner:** Hosts the deployed commercial client instances.
 
 Assess both environments independently, as well as the security of the communication, deployment, management and integration mechanisms connecting them.
 
-Clearly distinguish between security responsibilities provided by Anvil and DigitalOcean, those implemented by MyBizz, and those requiring shared responsibility.
+Clearly distinguish between security responsibilities provided by Anvil and Hetzner, those implemented by MyBizz, and those requiring shared responsibility.
 
 Particular attention must be given to the security of the central management application, the deployment pipeline, privileged administrative access, client-instance provisioning, and the isolation of individual client environments.
 
