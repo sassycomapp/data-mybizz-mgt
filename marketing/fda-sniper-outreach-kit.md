@@ -1,6 +1,7 @@
 ---
 title: "fda-sniper-outreach-kit"
 updated: "2026-11-16"
+doc-id: "mb-0bc43a75"
 ---
 # Mybizz FDA — Sniper Outreach Kit
 

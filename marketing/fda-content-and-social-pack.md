@@ -1,6 +1,7 @@
 ---
 title: "fda-content-and-social-pack"
 updated: "2026-11-16"
+doc-id: "mb-4d37893f"
 ---
 # Mybizz FDA — Content and Social Pack
 
