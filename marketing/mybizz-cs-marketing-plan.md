@@ -5,7 +5,7 @@ updated: "2026-11-17"
 ---
 # Mybizz CS — Marketing Plan
 
-The go-to-market plan and key messages of Mybizz CS. The product, its features and its prices are in `mb-3-cs-concept.md` and the brand in `brand-profile.md`, both in `C:\dev\dev-mb-3-cs\mb-3-cs-project-library\docs-local`.
+The go-to-market plan and key messages of Mybizz CS. The product, its features and its prices are in [[[mb-3-cs-project-library:docs-local/mb-3-cs-concept]]](C:/dev/dev-mb-3-cs/mb-3-cs-project-library/docs-local/mb-3-cs-concept.md), and the brand in [[[mb-3-cs-project-library:docs-local/brand-profile]]](C:/dev/dev-mb-3-cs/mb-3-cs-project-library/docs-local/brand-profile.md).
 
 ---
 

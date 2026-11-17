@@ -15,7 +15,7 @@ doc-id: "mb-2d1055ee"
 ## 1. The Aim
 
 - Win about **5 paying clients** first, then grow steadily by personal, one-to-one outreach.
-- The funding targets that Mybizz FDA's sales serve are in `business/mybizz-live/mybizz-live-business-plan.md`.
+- The funding targets that Mybizz FDA's sales serve are in [[[data-mybizz-mgt:business/mybizz-live/mybizz-live-business-plan]]](C:/data-mybizz-mgt/business/mybizz-live/mybizz-live-business-plan.md).
 
 ---
 
@@ -53,10 +53,10 @@ Build a list of 50 independent consultants, coaches, therapists and small agenci
 Track them in `fda-sniper-tracker.xlsx`.
 
 ### Tactic 2: 60-second personal teardown videos
-Record five to ten short screen videos a day on the prospect's own website (`fda-sniper-outreach-kit.md`, section 4).
+Record five to ten short screen videos a day on the prospect's own website ([[[data-mybizz-mgt:marketing/fda-sniper-outreach-kit]]](C:/data-mybizz-mgt/marketing/fda-sniper-outreach-kit.md), section 4).
 
 ### Tactic 3: Daily build-in-public
-One honest post a day on LinkedIn, cut into short videos for YouTube Shorts (`fda-content-and-social-pack.md`).
+One honest post a day on LinkedIn, cut into short videos for YouTube Shorts ([[[data-mybizz-mgt:marketing/fda-content-and-social-pack]]](C:/data-mybizz-mgt/marketing/fda-content-and-social-pack.md)).
 
 ---
 

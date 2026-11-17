@@ -22,7 +22,7 @@ the control surface the skills and agents read from and write to.
 | `assets/` | Images |
 | `README.md` | This file |
 
-Documents for building an app live in that app's project library, not here.
+Documents for building an app live in that app's project library, not here. Each fact has one home: product, brand and build facts live in the app's project library, and business and marketing facts live here. A document that needs a fact from the other side links to the fact's source document as `[[source-id:page-name]]` and never restates it. Finished marketing material, such as a post or an outreach message, is the one exception: it is written from the source when it is made and is never used as a source.
 
 ## Key documents
 

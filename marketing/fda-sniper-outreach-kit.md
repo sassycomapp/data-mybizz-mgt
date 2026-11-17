@@ -1,6 +1,6 @@
 ---
 title: "fda-sniper-outreach-kit"
-updated: "2026-11-16"
+updated: "2026-11-17"
 doc-id: "mb-0bc43a75"
 ---
 # Mybizz FDA — Sniper Outreach Kit
@@ -109,4 +109,4 @@ Monday to Friday:
 1. **0:00–0:30 — Research and score:** find 5 new prospects, score them in `fda-sniper-tracker.xlsx` and note one observation about each website.
 2. **0:30–1:15 — Record:** record 5 teardown videos (section 4).
 3. **1:15–1:45 — Send and follow up:** send today's 5 messages and the one-time follow-up to anyone silent for 4 days.
-4. **1:45–2:00 — Build in public:** post one short update from `fda-content-and-social-pack.md`.
+4. **1:45–2:00 — Build in public:** post one short update from [[[data-mybizz-mgt:marketing/fda-content-and-social-pack]]](C:/data-mybizz-mgt/marketing/fda-content-and-social-pack.md).

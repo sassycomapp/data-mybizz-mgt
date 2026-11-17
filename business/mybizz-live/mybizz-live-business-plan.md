@@ -5,7 +5,7 @@ doc-id: "mb-4f3aa19d"
 ---
 # Mybizz-Live — Business Plan
 
-The company plan of Mybizz: the operator, how the business is funded, the company budget, and the company tasks and risks. Each product has its own plan in its own folder: Mybizz FDA in `mybizz-fda`.
+The company plan of Mybizz: the operator, how the business is funded, the company budget, and the company tasks and risks. Each product has its own plan: [[[data-mybizz-mgt:business/mybizz-fda/fda-business-plan]]](C:/data-mybizz-mgt/business/mybizz-fda/fda-business-plan.md) and [[[data-mybizz-mgt:business/mybizz-cs/mybizz-cs-business-plan]]](C:/data-mybizz-mgt/business/mybizz-cs/mybizz-cs-business-plan.md).
 
 ---
 
@@ -84,7 +84,7 @@ The company budget is `mybizz-live-budget.xlsx` in this folder. Every figure in 
 4. **Paddle and legal texts:** move Paddle and every legal text to Mybizz-Live Ltd.
 5. **WhatsApp:** verify Mybizz-Live Ltd with Meta as a Tech Provider; switch WhatsApp on for every client from App 5.
 
-The banking, tax and transition detail is in `mybizz-live-launch-and-banking-guide.md`.
+The banking, tax and transition detail is in [[[data-mybizz-mgt:business/mybizz-live/mybizz-live-launch-and-banking-guide]]](C:/data-mybizz-mgt/business/mybizz-live/mybizz-live-launch-and-banking-guide.md).
 
 ---
 

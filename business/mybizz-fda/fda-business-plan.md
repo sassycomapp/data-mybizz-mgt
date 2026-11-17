@@ -14,7 +14,7 @@ doc-id: "mb-0defdbae"
 Mybizz FDA is an AI front desk for consulting and service businesses. It answers every enquiry in the client's voice, books the meeting and follows up, on email, website, WhatsApp and SMS, with the client in control.
 
 - **Price:** one fixed price of £45 a month, with the whole team included.
-- **Place in Mybizz:** Mybizz FDA is the proof of concept of Mybizz CS. The two are separate products with separate sign-ups. The company plan, funding and budget are in `business/mybizz-live/mybizz-live-business-plan.md`.
+- **Place in Mybizz:** Mybizz FDA is the proof of concept of Mybizz CS. The two are separate products with separate sign-ups. The company plan, funding and budget are in [[[data-mybizz-mgt:business/mybizz-live/mybizz-live-business-plan]]](C:/data-mybizz-mgt/business/mybizz-live/mybizz-live-business-plan.md).
 
 ---
 
@@ -42,7 +42,7 @@ Mybizz FDA is an AI front desk for consulting and service businesses. It answers
 
 **Channels at launch:** email, website form, website chat with voice, and SMS. WhatsApp is built from the start and is switched on for every client once Mybizz-Live Ltd is registered and verified by Meta.
 
-The full product definition is the concept document in the Mybizz FDA project library.
+The full product definition is [[[mb-1-fda-project-library:docs-local/mb-1-fda-concept]]](C:/dev/dev-mb-1-fda/mb-1-fda-project-library/docs-local/mb-1-fda-concept.md).
 
 ---
 
@@ -71,7 +71,7 @@ The full product definition is the concept document in the Mybizz FDA project li
 - **Approach:** direct, personal, one-to-one outreach by the founder, and building in public on LinkedIn and short video. No paid advertising.
 - **Trial:** prospects test Mybizz FDA by enquiring through Mybizz's own front desk on mybizz.live.
 - **Offer:** £45 a month, month to month, no contract, no setup fee.
-- **Plans:** `fda-marketing-plan.md`, `fda-sniper-outreach-kit.md` and `fda-content-and-social-pack.md`, in `marketing`.
+- **Plans:** [[[data-mybizz-mgt:marketing/fda-marketing-plan]]](C:/data-mybizz-mgt/marketing/fda-marketing-plan.md), [[[data-mybizz-mgt:marketing/fda-sniper-outreach-kit]]](C:/data-mybizz-mgt/marketing/fda-sniper-outreach-kit.md) and [[[data-mybizz-mgt:marketing/fda-content-and-social-pack]]](C:/data-mybizz-mgt/marketing/fda-content-and-social-pack.md).
 
 ---
 
@@ -80,7 +80,7 @@ The full product definition is the concept document in the Mybizz FDA project li
 - **Hosting:** each client's copy runs in its own container on Mybizz's Hetzner servers in the EU, with its own database on a database pair (primary and live standby).
 - **Management:** the Mybizz management app signs up clients, starts and updates their copies, watches their health and handles Paddle billing.
 - **Costs the client pays directly:** AI on its own OpenRouter key, WhatsApp messages charged by Meta, SMS on its own phone plan, storage above Cloudflare's free tier.
-- **Running the business:** `fda-operations-plan.md`.
+- **Running the business:** [[[data-mybizz-mgt:business/mybizz-fda/fda-operations-plan]]](C:/data-mybizz-mgt/business/mybizz-fda/fda-operations-plan.md).
 
 ---
 

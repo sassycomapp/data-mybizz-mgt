@@ -5,7 +5,7 @@ updated: "2026-11-17"
 ---
 # UK Business Tax and VAT Explainer
 
-This document explains the taxes Mybizz-Live Ltd pays and files as a UK company, and how sales taxes work on Mybizz subscriptions sold through Paddle. The setup steps and deadlines are in `mybizz-live-business-setup.md`. The costs are in `mybizz-live-budget.xlsx`.
+This document explains the taxes Mybizz-Live Ltd pays and files as a UK company, and how sales taxes work on Mybizz subscriptions sold through Paddle. The setup steps and deadlines are in [[[data-mybizz-mgt:business/mybizz-live/mybizz-live-business-setup]]](C:/data-mybizz-mgt/business/mybizz-live/mybizz-live-business-setup.md). The costs are in `mybizz-live-budget.xlsx`.
 
 ## 1. Corporation Tax
 

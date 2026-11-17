@@ -5,7 +5,7 @@ doc-id: "mb-458de800"
 ---
 # Mybizz FDA — Operations Plan
 
-How Mybizz FDA is run day to day: what runs by itself, what the developer does by hand, and the steps to launch. The technical limits and the server design are in the project library's architecture reference.
+How Mybizz FDA is run day to day: what runs by itself, what the developer does by hand, and the steps to launch. The technical limits and the server design are in [[[mb-1-fda-project-library:docs-local/mb-1-fda-architecture-reference]]](C:/dev/dev-mb-1-fda/mb-1-fda-project-library/docs-local/mb-1-fda-architecture-reference.md).
 
 ---
 
@@ -34,7 +34,7 @@ The Mybizz management app (App 5) and scheduled jobs on each client's copy do th
 - Approve each release.
 - Answer support emails within one working day; within four hours when a client cannot work at all.
 - Act on reports to `abuse@mybizz.live`, using App 5's Suspend action.
-- Keep the outreach going: the routine in `fda-sniper-outreach-kit.md`.
+- Keep the outreach going: the routine in [[[data-mybizz-mgt:marketing/fda-sniper-outreach-kit]]](C:/data-mybizz-mgt/marketing/fda-sniper-outreach-kit.md).
 
 ---
 
@@ -59,8 +59,8 @@ The Mybizz management app (App 5) and scheduled jobs on each client's copy do th
 2. **Email:** set up Amazon SES for `in.fda.mybizz.live` and `reply.fda.mybizz.live`.
 3. **Google:** submit Mybizz FDA's calendar access for Google verification.
 4. **Abuse address:** set up `abuse@mybizz.live`.
-5. **Paddle:** add the £45 Mybizz FDA price in Paddle, once the company steps in `business/mybizz-live/mybizz-live-business-plan.md` are done.
+5. **Paddle:** add the £45 Mybizz FDA price in Paddle, once the company steps in [[[data-mybizz-mgt:business/mybizz-live/mybizz-live-business-plan]]](C:/data-mybizz-mgt/business/mybizz-live/mybizz-live-business-plan.md) are done.
 6. **Mybizz's own front desk:** run Mybizz's own Mybizz FDA copy on mybizz.live so prospects can test it.
 7. **Final checks:** run a test enquiry on every launch channel; confirm STOP stops every automatic message; confirm approvals record who gave them.
 
-The WhatsApp channel is switched on for every client once Mybizz-Live Ltd is registered and verified by Meta; the company steps are in `business/mybizz-live/mybizz-live-business-plan.md`.
+The WhatsApp channel is switched on for every client once Mybizz-Live Ltd is registered and verified by Meta; the company steps are in [[[data-mybizz-mgt:business/mybizz-live/mybizz-live-business-plan]]](C:/data-mybizz-mgt/business/mybizz-live/mybizz-live-business-plan.md).

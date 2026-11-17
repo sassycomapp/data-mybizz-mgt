@@ -5,7 +5,7 @@ updated: "2026-11-17"
 ---
 # Mybizz CS — Business Plan
 
-The revenue and the cost per client of Mybizz CS. All amounts are GBP and exclude VAT. Mybizz-Live Ltd's fixed costs and the monthly forecast are in `mybizz-live-budget.xlsx` (sheet Forecast B), in `C:\data-mybizz-mgt\business\mybizz-live`, which is the single source of every figure here.
+The revenue and the cost per client of Mybizz CS. The product and its prices are in [[[mb-3-cs-project-library:docs-local/mb-3-cs-concept]]](C:/dev/dev-mb-3-cs/mb-3-cs-project-library/docs-local/mb-3-cs-concept.md) section 9. All amounts are GBP and exclude VAT. Mybizz-Live Ltd's fixed costs and the monthly forecast are in `mybizz-live-budget.xlsx` (sheet Forecast B), in `C:\data-mybizz-mgt\business\mybizz-live`, which is the single source of every figure here.
 
 ---
 
