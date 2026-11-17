@@ -43,7 +43,7 @@ The technical safeguards are in [[[mb-1-fda-project-library:docs-local/mb-1-fda-
 ## 4. Launch Steps
 
 ### Mybizz FDA launch
-1. **Servers:** set up the Hetzner application server, the database pair, Caddy, monitoring and the provisioning runner; test a full backup and restore.
+1. **Servers:** set up the Ubicloud database service, the Hetzner application server, Caddy, monitoring and the provisioning runner; test a full backup and restore.
 2. **Email:** set up Amazon SES for `in.fda.mybizz.live` and `reply.fda.mybizz.live`.
 3. **Google:** submit Mybizz FDA's calendar access for Google verification.
 4. **Abuse address:** set up `abuse@mybizz.live`.

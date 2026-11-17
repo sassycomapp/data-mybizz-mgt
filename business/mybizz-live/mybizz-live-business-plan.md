@@ -18,7 +18,7 @@ The company plan of Mybizz: the operator, how the business is funded, the compan
 | Products | Mybizz FDA (Front Desk Assistant) and Mybizz CS (consulting and services) |
 | Merchant of record | Paddle (checkout, sales tax and VAT, invoices) |
 | Banking | Wise |
-| Hosting of client instances | Mybizz's own Hetzner Cloud servers in the EU |
+| Hosting of client instances | Mybizz's own Hetzner Cloud servers in the EU, with the databases in Ubicloud's managed service in Germany |
 
 ### The founder
 
@@ -30,8 +30,8 @@ The founder's story is in [[[mb-1-fda-project-library:docs-local/brand-profile]]
 
 Mybizz FDA's sales fund Mybizz-Live Ltd and the build of Mybizz CS. There is no loan and no start-up capital, so every step is paid for by the step before it.
 
-- About **5 clients** cover Mybizz FDA's fixed monthly costs.
-- The forecast (the Forecast sheet of `mybizz-live-budget.xlsx`) reaches about **42 clients** and about **£17,000** of cash by April 2028.
+- About **9 clients** cover Mybizz FDA's fixed monthly costs.
+- The forecast (the Forecast sheet of `mybizz-live-budget.xlsx`) reaches about **42 clients** and about **£12,300** of cash by April 2028.
 
 ---
 
@@ -50,25 +50,25 @@ The company budget is `mybizz-live-budget.xlsx` in this folder. Every figure in 
 - New clients: 6 a month in January to March 2027, 5 a month in April to June, 3 in July and August, then 2 a month.
 - Monthly churn: 3%.
 - Paddle fees: 5% plus £0.38 per payment.
-- Per-client costs: £1.50 a month for hosting, email and voice, plus 20% non-recoverable VAT.
-- Fixed costs: Hetzner servers £20 a month and Anvil, domain and accounting £121.73 a month, each plus 20% non-recoverable VAT.
+- Per-client costs: £6.33 a month (a £5.83 share of a Hetzner application server, and £0.50 for email and voice), plus 20% non-recoverable VAT.
+- Fixed costs: the Ubicloud database service £116.22 a month and Anvil, domain and accounting £121.73 a month, each plus 20% non-recoverable VAT.
 - Mybizz-Live Ltd registration and bank set-up: £150 plus VAT in February 2027, paid from Mybizz FDA's income.
 - No marketing spend and no founder salary.
 
 #### Results
 | Figure | Value |
 |---|---|
-| Lowest month-end cash | positive in every month |
+| Lowest month-end cash | −£131, in February 2027; positive from March 2027 |
 | Active clients at April 2028 | about 42 |
 | Revenue over 16 months | about £22,100 |
-| Net profit over 16 months | about £17,200 |
-| Cash at April 2028 | about £17,000 |
+| Net profit over 16 months | about £12,500 |
+| Cash at April 2028 | about £12,300 |
 
 ---
 
 ## 4. Company Tasks Done by Hand
 - Renew access keys once a year when App 5 prompts (about 10 minutes).
-- Keep a valid payment card on Hetzner, Anvil, Amazon Web Services, Groq and Cloudflare.
+- Keep a valid payment card on Hetzner, Ubicloud, Anvil, Amazon Web Services, Groq and Cloudflare.
 - Keep two hardware security keys: one carried daily, one stored safely.
 - Publish the legal texts on mybizz.live and keep them in the operator's current name.
 
@@ -77,7 +77,7 @@ The company budget is `mybizz-live-budget.xlsx` in this folder. Every figure in 
 ## 5. Company Launch Steps
 
 ### Stage 1 — Trading as a sole proprietor
-1. **Security:** hardware security keys on Hetzner, Cloudflare, GitHub, Anvil, Amazon Web Services, Groq and Paddle.
+1. **Security:** hardware security keys on Hetzner, Ubicloud, Cloudflare, GitHub, Anvil, Amazon Web Services, Groq and Paddle.
 2. **Paddle:** publish the legal texts on mybizz.live and complete Paddle's sole-proprietor verification.
 
 ### Stage 2 — Mybizz-Live Ltd
@@ -93,5 +93,5 @@ The banking, tax and transition detail is in [[[data-mybizz-mgt:business/mybizz-
 
 | Risk | Answer |
 |---|---|
-| Slow first sales | Fixed costs are about £170 a month; about 5 clients cover them |
+| Slow first sales | Fixed costs are about £286 a month including VAT; about 9 clients cover them |
 | The founder's time | Self-service setup with help videos; Mybizz's own front desk answers prospects |
