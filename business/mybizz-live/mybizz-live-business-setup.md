@@ -5,7 +5,7 @@ updated: "2026-11-17"
 ---
 # Mybizz-Live Business Setup
 
-This document sets out the legal company behind Mybizz, how that company is formed, and what it must do to stay legally compliant. All amounts are GBP. The costs match the fixed costs in `Budget.md`.
+This document sets out the legal company behind Mybizz, how that company is formed, and what it must do to stay legally compliant. All amounts are GBP. The costs match the fixed costs in `mybizz-live-budget.xlsx`.
 
 ## 1. The Company
 
@@ -47,7 +47,7 @@ The package costs about £60 a year. It keeps David's home address off the publi
 | January 2027 | Steps 1 to 3 of section 4: name check, address package, identity verification |
 | 1 February 2027 | Step 4: the company is registered |
 | February 2027 | Steps 5 to 12: bank, tax registrations, ICO fee, FreeAgent, Paddle |
-| Before 1 April 2027 | Cyber Essentials and the business insurance, as `Budget.md` sets out |
+| Before 1 April 2027 | Cyber Essentials and the business insurance, as `mybizz-live-budget.xlsx` sets out |
 | 1 April 2027 | Mybizz goes live and takes its first paying client |
 
 The company is registered two months before go-live because Paddle's seller checks need the company and its bank account. Registering any earlier would only start the fixed costs earlier.

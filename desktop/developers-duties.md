@@ -2,7 +2,7 @@
 
 title: "developers-duties"
 doc-id: "mb-85e657ca"
-updated: "2026-11-11"
+updated: "2026-11-17"
 
 ---
 
@@ -78,4 +78,4 @@ The agent does these itself when the event happens, and gives the developer the 
 
 2. **When the Cyber Essentials certificate is issued (before 1 April 2027): add the Cyber Essentials statement and badge.**
    - Ask Claude to add the statement and the badge to the Mybizz marketing website and to the client service agreement of each business (`C:\dev\dev-mb-3-cs\mb-3-cs-project-library\legal-local\client-service-agreement.md` and the project template's copy), with the certificate number and its expiry date.
-   - Why: the badge may only be shown once the certificate exists; this is Budget.md task 34 (`C:\data-mybizz-mgt\business\Budget.md`).
+   - Why: the badge may only be shown once the certificate exists; its cost is in the budget (`C:\data-mybizz-mgt\business\mybizz-live\mybizz-live-budget.xlsx`).

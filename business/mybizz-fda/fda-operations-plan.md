@@ -59,8 +59,8 @@ The Mybizz management app (App 5) and scheduled jobs on each client's copy do th
 2. **Email:** set up Amazon SES for `in.fda.mybizz.live` and `reply.fda.mybizz.live`.
 3. **Google:** submit Mybizz FDA's calendar access for Google verification.
 4. **Abuse address:** set up `abuse@mybizz.live`.
-5. **Paddle:** add the £45 Mybizz FDA price in Paddle, once the company steps in `business/mybizz-live-business-plan.md` are done.
+5. **Paddle:** add the £45 Mybizz FDA price in Paddle, once the company steps in `business/mybizz-live/mybizz-live-business-plan.md` are done.
 6. **Mybizz's own front desk:** run Mybizz's own Mybizz FDA copy on mybizz.live so prospects can test it.
 7. **Final checks:** run a test enquiry on every launch channel; confirm STOP stops every automatic message; confirm approvals record who gave them.
 
-The WhatsApp channel is switched on for every client once Mybizz-Live Ltd is registered and verified by Meta; the company steps are in `business/mybizz-live-business-plan.md`.
+The WhatsApp channel is switched on for every client once Mybizz-Live Ltd is registered and verified by Meta; the company steps are in `business/mybizz-live/mybizz-live-business-plan.md`.

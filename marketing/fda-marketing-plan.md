@@ -1,6 +1,6 @@
 ---
 title: "fda-marketing-plan"
-updated: "2026-11-16"
+updated: "2026-11-17"
 doc-id: "mb-2d1055ee"
 ---
 # Mybizz FDA — Marketing Plan
@@ -15,7 +15,7 @@ doc-id: "mb-2d1055ee"
 ## 1. The Aim
 
 - Win about **5 paying clients** first, then grow steadily by personal, one-to-one outreach.
-- The funding targets that Mybizz FDA's sales serve are in `business/mybizz-live-business-plan.md`.
+- The funding targets that Mybizz FDA's sales serve are in `business/mybizz-live/mybizz-live-business-plan.md`.
 
 ---
 

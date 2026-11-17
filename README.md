@@ -1,27 +1,28 @@
 ---
 title: "README"
 doc-id: "mb-8436565e"
-updated: "2026-10-10"
+updated: "2026-11-17"
 ---
 # data-mybizz-mgt — README
 
 The Mybizz management data folder — the desktop-level operating documents of
-the Mybizz/PDLF operating system, plus the developer's budget, model, and
-prompt working files. Not an Anvil project and not a code repository: this is
+the Mybizz/PDLF operating system, plus Mybizz's business and marketing documents. Not an Anvil project and not a code repository: this is
 the control surface the skills and agents read from and write to.
 
 ## Structure
 
 | Item | Purpose |
 |---|---|
-| `desktop/` | Operating documents — daily ops, master task list, deferred-and-unresolved-matters |
-| `WIP/` | Working files |
-| `archive/` | Archived material |
-| `temp/` | Temporary files |
+| `business/mybizz-live/` | The company: budget, business plan, setup, launch and banking, tax |
+| `business/mybizz-cs/` | Mybizz CS business plan |
+| `business/mybizz-fda/` | Mybizz FDA business and operations plans |
+| `marketing/` | Marketing for every Mybizz product |
+| `security/` | Security and legal compliance briefs |
+| `desktop/` | Operating documents: master task list, developer's duties |
+| `assets/` | Images |
 | `README.md` | This file |
 
-Related folders that no longer live here: `Budget/` moved to `C:\_data-mybizz-exempt\Budget`
-(out of scope); `Models/` moved to `C:\mybizz\Models`; `prompts/` moved to `C:\mybizz\prompts`.
+Documents for building an app live in that app's project library, not here.
 
 ## Key documents
 

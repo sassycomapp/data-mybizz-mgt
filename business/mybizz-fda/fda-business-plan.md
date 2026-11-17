@@ -14,7 +14,7 @@ doc-id: "mb-0defdbae"
 Mybizz FDA is an AI front desk for consulting and service businesses. It answers every enquiry in the client's voice, books the meeting and follows up, on email, website, WhatsApp and SMS, with the client in control.
 
 - **Price:** one fixed price of £45 a month, with the whole team included.
-- **Place in Mybizz:** Mybizz FDA is the proof of concept of Mybizz CS. The two are separate products with separate sign-ups. The company plan, funding and budget are in `business/mybizz-live-business-plan.md`.
+- **Place in Mybizz:** Mybizz FDA is the proof of concept of Mybizz CS. The two are separate products with separate sign-ups. The company plan, funding and budget are in `business/mybizz-live/mybizz-live-business-plan.md`.
 
 ---
 
@@ -71,7 +71,7 @@ The full product definition is the concept document in the Mybizz FDA project li
 - **Approach:** direct, personal, one-to-one outreach by the founder, and building in public on LinkedIn and short video. No paid advertising.
 - **Trial:** prospects test Mybizz FDA by enquiring through Mybizz's own front desk on mybizz.live.
 - **Offer:** £45 a month, month to month, no contract, no setup fee.
-- **Plans:** `fda-marketing-plan.md`, `fda-sniper-outreach-kit.md` and `fda-content-and-social-pack.md`, in `mybizz-fda/marketing`.
+- **Plans:** `fda-marketing-plan.md`, `fda-sniper-outreach-kit.md` and `fda-content-and-social-pack.md`, in `marketing`.
 
 ---
 
