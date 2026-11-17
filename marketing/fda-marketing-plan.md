@@ -5,10 +5,9 @@ doc-id: "mb-2d1055ee"
 ---
 # Mybizz FDA — Marketing Plan
 
-**Product:** Mybizz FDA (Mybizz Front Desk Assistant), mybizz.live
-**Price:** £45 a month, whole team included, month to month
+**Product and price:** [[[mb-1-fda-project-library:docs-local/mb-1-fda-concept]]](C:/dev/dev-mb-1-fda/mb-1-fda-project-library/docs-local/mb-1-fda-concept.md) sections 1 and 7
 **Marketing budget:** £0 a month; direct one-to-one outreach and building in public
-**Corporate colour:** Professional Blue
+**Brand:** [[[mb-1-fda-project-library:docs-local/brand-profile]]](C:/dev/dev-mb-1-fda/mb-1-fda-project-library/docs-local/brand-profile.md)
 
 ---
 
@@ -33,13 +32,11 @@ doc-id: "mb-2d1055ee"
 
 ## 3. Positioning
 
-- **Primary message:** Never miss a qualified enquiry again.
-- **What it does, in one line:** Your AI front desk replies in your voice, books the call and follows up, on email, your website and SMS, and nothing goes out without your approval until you say so.
-- **Founder hook:** a project manager who ran life-support operations at remote sites, from the Congo jungle to Antarctica, where a missed message meant failure.
+- **Messages, brand story and tone:** [[[mb-1-fda-project-library:docs-local/brand-profile]]](C:/dev/dev-mb-1-fda/mb-1-fda-project-library/docs-local/brand-profile.md) sections 4, 5 and 6.
 - **Proof anyone can test:** send an enquiry through mybizz.live; Mybizz's own front desk is Mybizz FDA.
 - **Tone:** direct, honest, calm and practical. Relatable beats impressive.
 
-**Channel claims, at launch:** email (by forwarding), website form, website chat with voice, and SMS from the client's own phone. WhatsApp is announced only when it is switched on.
+**Channel claims:** only the channels live at launch, as [[[mb-1-fda-project-library:docs-local/mb-1-fda-concept]]](C:/dev/dev-mb-1-fda/mb-1-fda-project-library/docs-local/mb-1-fda-concept.md) section 6 sets out. WhatsApp is announced only when it is switched on.
 
 ---
 

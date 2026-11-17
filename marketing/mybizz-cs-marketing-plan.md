@@ -5,7 +5,7 @@ updated: "2026-11-17"
 ---
 # Mybizz CS — Marketing Plan
 
-The go-to-market plan and key messages of Mybizz CS. The product, its features and its prices are in [[[mb-3-cs-project-library:docs-local/mb-3-cs-concept]]](C:/dev/dev-mb-3-cs/mb-3-cs-project-library/docs-local/mb-3-cs-concept.md), and the brand in [[[mb-3-cs-project-library:docs-local/brand-profile]]](C:/dev/dev-mb-3-cs/mb-3-cs-project-library/docs-local/brand-profile.md).
+The go-to-market plan of Mybizz CS. The product, its features and its prices are in [[[mb-3-cs-project-library:docs-local/mb-3-cs-concept]]](C:/dev/dev-mb-3-cs/mb-3-cs-project-library/docs-local/mb-3-cs-concept.md), and the brand in [[[mb-3-cs-project-library:docs-local/brand-profile]]](C:/dev/dev-mb-3-cs/mb-3-cs-project-library/docs-local/brand-profile.md).
 
 ---
 
@@ -66,31 +66,4 @@ Clients in the United States, Canada, the European Union, the European Economic 
 
 ## 2. Key Messages
 
-### Primary message
-*One platform. One price. You own it.*
-
-### Supporting messages
-
-**On fragmentation:**
-*Most consulting and service businesses are running their online operations across five or six separate tools. Each one costs money. None of them talk to each other properly. Mybizz CS replaces all of them.*
-
-**On ownership:**
-*Your business. Your customers. Your data. Nobody else's. On Booksy, your customers are Booksy's customers. On Mybizz CS, your customer database belongs to you — structurally isolated, privately hosted, backed up to your own storage, accessible only by you.*
-
-**On identity:**
-*You are not a listing. You are a business. On a marketplace you are one of hundreds in your area. On Mybizz CS you have your own website, your own brand, your own booking flow, your own customer database. You compete on your terms, not theirs.*
-
-**On leaving:**
-*What happens to your customers when you leave? On marketplace platforms, they stay behind. On Mybizz CS your customer list is yours on day one and yours on the last day. Take it anywhere. No one else has a copy.*
-
-**On pricing:**
-*A website, a booking system, a CRM, email marketing, invoicing and an AI writer, bought separately for a team of six, cost over £240 a month — and every team member adds more. Mybizz CS is £119 a month for all of it and more, for your whole team, with email, accounts, AI and voice included. No contract, no add-ons.*
-
-**On simplicity:**
-*Set up your business once. Website, booking, payments, CRM, sales, email, invoicing, accounts — all connected, all working, all in one place. Then run your business.*
-
-**On voice:**
-*Ask your business a question and hear the answer. "What is my schedule for tomorrow?" "Which invoices are outstanding?" From your phone, wherever you are.*
-
-**The founder message:**
-*I built this because I needed it. I could not find a single platform that did everything a business needs without costing a fortune and requiring a technical degree to set up. So I built one. That is Mybizz.*
+The key messages of Mybizz CS are in [[[mb-3-cs-project-library:docs-local/brand-profile]]](C:/dev/dev-mb-3-cs/mb-3-cs-project-library/docs-local/brand-profile.md) section 11.

@@ -21,7 +21,8 @@ The company plan of Mybizz: the operator, how the business is funded, the compan
 | Hosting of client instances | Mybizz's own Hetzner Cloud servers in the EU |
 
 ### The founder
-The founder spent most of his working life setting up and running life-support operations at remote sites, from the Congo jungle to Antarctica, where systems had to be simple, self-contained and dependable. Mybizz FDA applies the same discipline to a small business's front desk: no enquiry goes unanswered.
+
+The founder's story is in [[[mb-1-fda-project-library:docs-local/brand-profile]]](C:/dev/dev-mb-1-fda/mb-1-fda-project-library/docs-local/brand-profile.md) section 4.
 
 ---
 

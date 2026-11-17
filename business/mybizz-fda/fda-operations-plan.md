@@ -13,19 +13,11 @@ How Mybizz FDA is run day to day: what runs by itself, what the developer does b
 
 The Mybizz management app (App 5) and scheduled jobs on each client's copy do this work. App 5 sends the developer one daily summary and an immediate message only when a decision is needed.
 
+The schedules, limits and alerts are in [[[mb-1-fda-project-library:docs-local/mb-1-fda-architecture-reference]]](C:/dev/dev-mb-1-fda/mb-1-fda-project-library/docs-local/mb-1-fda-architecture-reference.md) sections 4 and 5.
+
 | Area | How often | Done by | What happens |
 |---|---|---|---|
-| New client set-up | Each registration | App 5 | Creates the client's container, database, R2 bucket, email address and keys; sends the Owner the sign-in link |
-| Channel health | Every 15 minutes | Client copy | Checks email, SMS phone and WhatsApp; a broken channel becomes a high-priority item in the client's action queue |
-| Client backups | Nightly | Client copy | Encrypted backup to the client's own R2 bucket; App 5 checks each backup arrived |
-| History clean-up | Nightly | Client copy | Records older than 30 days move to the client's R2 bucket |
-| Container memory | On alert | App 5 | Raises a container from 1 GiB to 2 GiB above 80% use and tells the developer |
-| Server security updates | Daily | Each server | Installs security patches; restarts only in the Sunday 06:00 UK window |
-| Disk space | Continuous | App 5 | Alerts the developer at 75% use |
-| Uptime | Every minute | Outside uptime check | Alerts the developer if App 5 fails or a client copy stops reporting for 30 minutes |
-| Non-payment | Each Paddle notice | App 5 | Warning on day 1, suspension on day 7, final backup and removal on day 37 |
 | Releases | Each approved release | App 5 | Test client first, then every client; a failed health check rolls the client back |
-| Restore drill | Monthly | Test client copy | Restores one backup into a scratch database, checks it, deletes it |
 
 ---
 
@@ -40,15 +32,11 @@ The Mybizz management app (App 5) and scheduled jobs on each client's copy do th
 
 ## 3. Risks and Safeguards
 
+The technical safeguards are in [[[mb-1-fda-project-library:docs-local/mb-1-fda-architecture-reference]]](C:/dev/dev-mb-1-fda/mb-1-fda-project-library/docs-local/mb-1-fda-architecture-reference.md) sections 4 and 5, and the product's risks and answers in [[[mb-1-fda-project-library:docs-local/mb-1-fda-concept]]](C:/dev/dev-mb-1-fda/mb-1-fda-project-library/docs-local/mb-1-fda-concept.md) section 15.
+
 | Risk | Safeguard |
 |---|---|
-| One client overloads the database | Each client's database user is limited to 3 connections, 60-second queries and 2 GiB of data |
-| A WhatsApp number is banned | Meta's official service only; one-to-one replies only; STOP enforced at once |
-| AI costs run away | The client's own key and monthly ceiling; draft-only when the ceiling is reached |
-| The client's SMS phone goes offline | Checked every 15 minutes; flagged in the client's action queue |
-| A server or EU location fails | A live standby database in a second EU location; nightly client backups; servers rebuilt from the release image |
 | A key leaks | Keys limited to one purpose; hardware security keys on every supplier account |
-| Backups deleted by an attacker | R2 Object Lock keeps daily backups 7 days and weekly backups 28 days |
 
 ---
 
