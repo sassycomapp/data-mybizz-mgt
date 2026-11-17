@@ -1,6 +1,6 @@
 ---
 title: "fda-operations-plan"
-updated: "2026-11-16"
+updated: "2026-11-17"
 doc-id: "mb-458de800"
 ---
 # Mybizz FDA — Operations Plan

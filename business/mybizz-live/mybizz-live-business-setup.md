@@ -1,7 +1,7 @@
 ---
 title: "mybizz-live-business-setup"
 doc-id: "mb-2119df24"
-updated: "2026-11-16"
+updated: "2026-11-17"
 ---
 # Mybizz-Live Business Setup
 

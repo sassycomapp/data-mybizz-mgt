@@ -1,7 +1,7 @@
 ---
 title: "uk-business-tax-and-vat-explainer"
 doc-id: "mb-6450d886"
-updated: "2026-11-16"
+updated: "2026-11-17"
 ---
 # UK Business Tax and VAT Explainer
 

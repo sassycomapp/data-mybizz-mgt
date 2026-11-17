@@ -1,6 +1,6 @@
 ---
 title: "mybizz-live-launch-and-banking-guide"
-updated: "2026-11-16"
+updated: "2026-11-17"
 doc-id: "mb-c48c9917"
 ---
 # Mybizz-Live — Launch and Banking Guide (Sole Proprietor to Mybizz-Live Ltd)
