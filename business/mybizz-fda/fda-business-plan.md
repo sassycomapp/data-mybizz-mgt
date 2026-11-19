@@ -1,6 +1,6 @@
 ---
 title: "fda-business-plan"
-updated: "2026-11-17"
+updated: "2026-11-19"
 doc-id: "mb-0defdbae"
 ---
 # Mybizz FDA — Business Plan
@@ -49,9 +49,9 @@ Who Mybizz FDA serves, and its markets, are in [[[mb-1-fda-project-library:docs-
 
 ## 6. Sales and Marketing
 
-- **Approach:** direct, personal, one-to-one outreach by the founder, and building in public on LinkedIn and short video. No paid advertising.
+- **Approach:** direct, personal, one-to-one outreach by the founder, and videos, posts and email. Advertising starts in the first month in which income covers fixed costs.
 - **Trial and offer:** [[[mb-1-fda-project-library:docs-local/mb-1-fda-concept]]](C:/dev/dev-mb-1-fda/mb-1-fda-project-library/docs-local/mb-1-fda-concept.md) section 7.
-- **Plans:** [[[data-mybizz-mgt:marketing/fda-marketing-plan]]](C:/data-mybizz-mgt/marketing/fda-marketing-plan.md), [[[data-mybizz-mgt:marketing/fda-sniper-outreach-kit]]](C:/data-mybizz-mgt/marketing/fda-sniper-outreach-kit.md) and [[[data-mybizz-mgt:marketing/fda-content-and-social-pack]]](C:/data-mybizz-mgt/marketing/fda-content-and-social-pack.md).
+- **Plan:** [[[data-mybizz-mgt:marketing/mybizz-live-marketing-plan]]](C:/data-mybizz-mgt/marketing/mybizz-live-marketing-plan.md).
 
 ---
 

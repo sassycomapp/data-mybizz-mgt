@@ -1,6 +1,6 @@
 ---
 title: "fda-operations-plan"
-updated: "2026-11-17"
+updated: "2026-11-19"
 doc-id: "mb-458de800"
 ---
 # Mybizz FDA — Operations Plan
@@ -26,7 +26,7 @@ The schedules, limits and alerts are in [[[mb-1-fda-project-library:docs-local/m
 - Approve each release.
 - Answer support emails within one working day; within four hours when a client cannot work at all.
 - Act on reports to `abuse@mybizz.live`, using App 5's Suspend action.
-- Keep the outreach going: the routine in [[[data-mybizz-mgt:marketing/fda-sniper-outreach-kit]]](C:/data-mybizz-mgt/marketing/fda-sniper-outreach-kit.md).
+- Keep the outreach going: the teardown routine in [[[data-mybizz-mgt:marketing/mybizz-live-marketing-plan]]](C:/data-mybizz-mgt/marketing/mybizz-live-marketing-plan.md) section 8.
 
 ---
 
