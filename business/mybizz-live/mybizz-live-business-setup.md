@@ -67,7 +67,7 @@ Every step is David's. The steps run in this order.
 | 7 | Register for Corporation Tax | HMRC posts the company's Unique Taxpayer Reference to the registered office after incorporation. Register for Corporation Tax online with that reference, within 3 months of the company starting business. | Free |
 | 8 | Pay the ICO fee | Register with the Information Commissioner's Office as a tier 1 organisation and pay by direct debit. The law requires this fee from every company that holds personal data. | £47 a year |
 | 9 | Set up FreeAgent | Subscribe to FreeAgent's limited company plan. Enter the company number, VAT number, Corporation Tax reference and year end. Connect the Wise GBP balance as a bank feed. | £33 a month |
-| 10 | Enter the VAT number on every supplier account | Add the VAT number to Hetzner, Anvil, AWS, Cloudflare, Groq, Paddle and every other supplier, so no supplier charges VAT. | Free |
+| 10 | Enter the VAT number on every supplier account | Add the VAT number to Hetzner, Ubicloud, Anvil, AWS, Cloudflare, Groq, Paddle and every other supplier, so overseas suppliers charge no VAT and the VAT of UK suppliers is reclaimed. | Free |
 | 11 | Become a Paddle seller | Set up Paddle as section 5 describes. | Paddle's fee per payment only |
 | 12 | Connect FreeAgent to App 5 | In FreeAgent, create a separate user for App 5 at the lowest access level that reads the tax timeline. Approve App 5's connection to FreeAgent through that user. Enter the confirmation statement date in App 5. App 5 only reads from FreeAgent and never changes anything there. | Free |
 
@@ -88,7 +88,7 @@ Paddle carries the work and the legal liability for sales taxes in every country
 | Handles fraud checks, chargebacks and failed payment retries | |
 | Pays Mybizz-Live Ltd each month, less Paddle's fee | |
 
-Paddle's fee is 5% of each payment plus a fixed amount per payment: £6.33 on each £119 monthly payment and £59.88 on each £1,190 annual payment.
+Paddle's fee is 5% of each payment plus £0.38 per payment: £2.63 on each £45 Mybizz FDA payment, £6.33 on each £119 Mybizz CS monthly payment and £59.88 on each £1,190 Mybizz CS annual payment.
 
 ### What the client sees
 
@@ -106,7 +106,7 @@ These steps make up step 11 of section 4.
 | 2 | Create the Paddle seller account for Mybizz-Live Ltd with the company number, registered office, VAT number and David's identity. |
 | 3 | Add and verify `mybizz.live` as the domain allowed to open the checkout. |
 | 4 | Set the payout account to the Wise GBP account, with payouts in GBP. |
-| 5 | Create the Mybizz subscription with two prices, £119 a month and £1,190 a year, and assisted setup as a one-off price of £119, each with the fixed local prices in the other currencies of the billing specification. |
+| 5 | Create the Mybizz FDA subscription at £45 a month, with the fixed local prices in [[[mb-1-fda-project-library:docs-local/mb-1-fda-concept]]](C:/dev/dev-mb-1-fda/mb-1-fda-project-library/docs-local/mb-1-fda-concept.md) section 7. Create the Mybizz CS subscription with two prices, £119 a month and £1,190 a year, and assisted setup as a one-off price of £119, each with the fixed local prices in the other currencies of the billing specification. |
 | 6 | Brand the checkout and the receipts with the Mybizz logo and colours. |
 | 7 | Point Paddle's notifications (webhooks) at App 5, which acts on each new subscription, renewal, failed payment and cancellation, including suspension on day 7 and exit on day 37 after a failed payment, and applies each referral credit as a discount on the referring client's next annual renewal. |
 | 8 | Make one test purchase in Paddle's test environment, and check that App 5 records it and that the receipt arrives. |
@@ -130,7 +130,7 @@ The year end is the last day of the month in which the company was registered, s
 
 ## 7. How Money Flows
 
-1. A client pays £119 a month, or £1,190 a year, to Paddle. Paddle charges the client any sales tax due.
+1. A client pays Paddle £45 a month for Mybizz FDA, or £119 a month or £1,190 a year for Mybizz CS. Paddle charges the client any sales tax due.
 2. Paddle pays out to the Wise GBP account, less Paddle's fee. The payout carries no VAT, because Paddle accounts for the VAT itself.
 3. Wise sends each transaction to FreeAgent through the bank feed.
 4. Suppliers are paid from the Wise account. With the VAT number on each supplier account, overseas suppliers charge no VAT, and VAT charged by UK suppliers is reclaimed on the quarterly VAT return.

@@ -44,7 +44,7 @@ You **can** open a **Wise Personal Account** right now as a South African reside
 - **Wise Personal Account (Available Today):**
   - **Requirements:** South African ID/passport + proof of South African residential address. No registered company required.
   - **What You Get:** Multi-currency balances where you can hold and convert **GBP, USD, EUR, CAD, and ZAR**, plus a Wise debit card (depending on regional card availability) and low-cost international transfers.
-  - **Important SARB Catch on Local GBP Account Details:** Due to South African exchange control rules, Wise restricts South African resident personal accounts from keeping permanent local UK/US bank account numbers (`Sort Code / Account Number` or `ACH Routing`) active indefinitely for third-party commercial inflows, or requires inflows to be repatriated/declared properly. However, you **can** use Wise to receive international payouts, convert GBP/USD at the real mid-market exchange rate, and pay foreign suppliers (Hetzner, Cloudflare, OpenRouter) without paying punitive South African bank FX spreads (2.5%–4%).
+  - **Important SARB Catch on Local GBP Account Details:** Due to South African exchange control rules, Wise restricts South African resident personal accounts from keeping permanent local UK/US bank account numbers (`Sort Code / Account Number` or `ACH Routing`) active indefinitely for third-party commercial inflows, or requires inflows to be repatriated/declared properly. However, you **can** use Wise to receive international payouts, convert GBP/USD at the real mid-market exchange rate, and pay foreign suppliers (Hetzner, Ubicloud, Amazon Web Services, Groq, Cloudflare, OpenRouter) without paying punitive South African bank FX spreads (2.5%–4%).
 - **Wise Business Account:**
   - Requires a registered business entity (such as a CIPC `(Pty) Ltd` in South Africa or your future UK `Mybizz-Live Ltd`). Once `Mybizz-Live Ltd` is registered at Companies House in the UK, you can open a full **Wise Business** account with local UK Sort Code/Account Number, US ACH, and EU IBAN details.
 
@@ -58,7 +58,7 @@ You **can** open a **Wise Personal Account** right now as a South African reside
 
 ### Income Tax (SARS)
 - **Declaration:** All net income received from Paddle is declared as **sole proprietor / freelance business income** on your personal **SARS ITR12** tax return (and provisional tax returns `IRP6` twice a year once you earn above the tax threshold).
-- **Deductible Expenses:** Keep every PDF invoice from **Hetzner**, **Anvil**, **Cloudflare**, **OpenRouter**, and your domain registrar. All of these are legitimate business expenses deducted from your gross revenue before calculating taxable profit.
+- **Deductible Expenses:** Keep every PDF invoice from **Hetzner**, **Ubicloud**, **Anvil**, **Amazon Web Services**, **Groq**, **Cloudflare**, **OpenRouter**, and your domain registrar. All of these are legitimate business expenses deducted from your gross revenue before calculating taxable profit.
 - **South African VAT:** You do **not** register for South African VAT until your total taxable turnover exceeds **R1,000,000** (~£42,000) in any consecutive 12-month period.
 
 ### Exchange Control (SARB)
@@ -71,9 +71,9 @@ You **can** open a **Wise Personal Account** right now as a South African reside
 
 Once Mybizz FDA sales build the cash reserve set out in `mybizz-live-budget.xlsx` and you are ready to incorporate **Mybizz-Live Ltd** in the UK:
 
-1. **Incorporate in the UK:** Register `Mybizz-Live Ltd` at Companies House (~£50–£100 via an online formation agent with a UK registered office address).
+1. **Incorporate in the UK:** Register `Mybizz-Live Ltd` by the setup checklist in [[[data-mybizz-mgt:business/mybizz-live/mybizz-live-business-setup]]](C:/data-mybizz-mgt/business/mybizz-live/mybizz-live-business-setup.md) section 4.
 2. **Open Wise Business (UK):** Register Wise Business using your UK Certificate of Incorporation to get full UK GBP, EU EUR, and US USD business banking details.
 3. **Create a New Paddle Business Account:** Paddle requires a separate seller account when switching from a Sole Proprietor to a Limited Company. Verify `Mybizz-Live Ltd` on Paddle and point new checkouts to the UK company account.
-5. **Re-issue the legal texts:** publish the Terms of Service, Privacy Policy, Data Processing Agreement and other texts in the name of Mybizz-Live Ltd.
-6. **Meta Tech Provider:** verify Mybizz-Live Ltd with Meta as a Tech Provider, then switch WhatsApp on for every Mybizz FDA client from the Mybizz management app.
-4. **Cross-Border Tax Check (POEM Rule):** Because you live in South Africa while directing a UK company, consult a South African cross-border tax accountant once revenue scales so you stay compliant with both **HMRC (UK)** and **SARS "Place of Effective Management" (POEM)** rules.
+4. **Re-issue the legal texts:** publish the Terms of Service, Privacy Policy, Data Processing Agreement and other texts in the name of Mybizz-Live Ltd.
+5. **Meta Tech Provider:** verify Mybizz-Live Ltd with Meta as a Tech Provider, then switch WhatsApp on for every Mybizz FDA client from the Mybizz management app.
+6. **Cross-Border Tax Check (POEM Rule):** Because you live in South Africa while directing a UK company, consult a South African cross-border tax accountant once revenue scales so you stay compliant with both **HMRC (UK)** and **SARS "Place of Effective Management" (POEM)** rules.
