@@ -5,7 +5,7 @@ updated: "2026-11-19"
 ---
 # Task Spec Sheet — Email Setup
 
-**Task:** A1 in `marketing-project-management-plan.xlsx`
+**Task:** A1 in `marketing-project-plan.xlsx`
 **Owner:** David
 **Depends on:** nothing
 **Unblocks:** A2 (the Mybizz Google account), C8 (EmailOctopus) and every Mybizz account created after them
@@ -115,6 +115,6 @@ The `mybizz.live` DNS records hold five MX records pointing at `eforward1` to `e
 
 ## 6. Records
 
-1. Add Cloudflare Email Routing and Brevo to the **Accounts** sheet of `marketing-project-management-plan.xlsx`, with login email and 2-step verification status.
+1. Add Cloudflare Email Routing and Brevo to the **Accounts** sheet of `marketing-project-plan.xlsx`, with login email and 2-step verification status.
 2. Switch on 2-step verification in Brevo.
 3. Set task A1 to **Done** on the **Plan** sheet, with the date.
