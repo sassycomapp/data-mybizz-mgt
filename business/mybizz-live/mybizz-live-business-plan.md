@@ -1,6 +1,6 @@
 ---
 title: "mybizz-live-business-plan"
-updated: "2026-11-17"
+updated: "2026-11-19"
 doc-id: "mb-4f3aa19d"
 ---
 # Mybizz-Live — Business Plan
@@ -31,7 +31,7 @@ The founder's story is in [[[mb-1-fda-project-library:docs-local/brand-profile]]
 Mybizz FDA's sales fund Mybizz-Live Ltd and the build of Mybizz CS. There is no loan and no start-up capital, so every step is paid for by the step before it.
 
 - About **9 clients** cover Mybizz FDA's fixed monthly costs.
-- The forecast (the Forecast sheet of `mybizz-live-budget.xlsx`) reaches about **42 clients** and about **£12,300** of cash by April 2028.
+- The forecast (the Forecast sheet of `mybizz-live-budget.xlsx`) reaches about **42 clients** and about **£12,300** of cash by Month 16.
 
 ---
 
@@ -41,28 +41,28 @@ The company budget is `mybizz-live-budget.xlsx` in this folder. Every figure in 
 
 | Sheet | Covers |
 |---|---|
-| Assumptions and Forecast | Mybizz FDA alone, January 2027 – April 2028 |
+| Assumptions and Forecast | Mybizz FDA alone, Month 1 – Month 16 |
 | Assumptions B | Every creditor of Mybizz-Live, Mybizz FDA and Mybizz CS, with fees and the basis of each cost estimate |
-| Forecast B | The company budget: Mybizz FDA and Mybizz CS together, January – December |
+| Forecast B | The company budget: Mybizz FDA and Mybizz CS together, Month 1 – Month 12 |
 
-### Forecast sheet (Mybizz FDA alone, January 2027 – April 2028)
+### Forecast sheet (Mybizz FDA alone, Month 1 – Month 16)
 #### Assumptions
-- New clients: 6 a month in January to March 2027, 5 a month in April to June, 3 in July and August, then 2 a month.
+- New clients: 6 a month in Months 1 to 3, 5 a month in Months 4 to 6, 3 in Months 7 and 8, then 2 a month.
 - Monthly churn: 3%.
 - Paddle fees: 5% plus £0.38 per payment.
 - Per-client costs: £6.33 a month (a £5.83 share of a Hetzner application server, and £0.50 for email and voice), plus 20% non-recoverable VAT.
 - Fixed costs: the Ubicloud database service £116.22 a month and Anvil, domain and accounting £121.73 a month, each plus 20% non-recoverable VAT.
-- Mybizz-Live Ltd registration and bank set-up: £150 plus VAT in February 2027, paid from Mybizz FDA's income.
+- Mybizz-Live Ltd registration and bank set-up: £150 plus VAT in Month 2, paid from Mybizz FDA's income.
 - No marketing spend and no founder salary.
 
 #### Results
 | Figure | Value |
 |---|---|
-| Lowest month-end cash | −£131, in February 2027; positive from March 2027 |
-| Active clients at April 2028 | about 42 |
+| Lowest month-end cash | −£131, in Month 2; positive from Month 3 |
+| Active clients at Month 16 | about 42 |
 | Revenue over 16 months | about £22,100 |
 | Net profit over 16 months | about £12,500 |
-| Cash at April 2028 | about £12,300 |
+| Cash at Month 16 | about £12,300 |
 
 ---
 

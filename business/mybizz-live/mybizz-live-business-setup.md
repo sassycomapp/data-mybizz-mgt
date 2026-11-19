@@ -1,7 +1,7 @@
 ---
 title: "mybizz-live-business-setup"
 doc-id: "mb-2119df24"
-updated: "2026-11-17"
+updated: "2026-11-19"
 ---
 # Mybizz-Live Business Setup
 
@@ -44,13 +44,13 @@ The package costs about £60 a year. It keeps David's home address off the publi
 
 | Date | Milestone |
 |---|---|
-| January 2027 | Steps 1 to 3 of section 4: name check, address package, identity verification |
-| 1 February 2027 | Step 4: the company is registered |
-| February 2027 | Steps 5 to 12: bank, tax registrations, ICO fee, FreeAgent, Paddle |
-| Before 1 April 2027 | Cyber Essentials and the business insurance, as `mybizz-live-budget.xlsx` sets out |
-| 1 April 2027 | Mybizz goes live and takes its first paying client |
+| Before Month 1 | Cyber Essentials and the business insurance, as `mybizz-live-budget.xlsx` sets out |
+| Month 1 | Mybizz goes live, trading as David's sole proprietorship, and takes its first paying client |
+| When Mybizz FDA's income reaches the cash reserve set in `mybizz-live-budget.xlsx` | Steps 1 to 3 of section 4: name check, address package, identity verification |
+| The month after steps 1 to 3 | Step 4: the company is registered |
+| The month after registration | Steps 5 to 12: bank, tax registrations, ICO fee, FreeAgent, Paddle |
 
-The company is registered two months before go-live because Paddle's seller checks need the company and its bank account. Registering any earlier would only start the fixed costs earlier.
+Mybizz-Live Ltd is registered once Mybizz FDA's income reaches the cash reserve, because registering earlier only starts the company's fixed costs earlier. Paddle and every legal text then move to Mybizz-Live Ltd.
 
 ## 4. Setup Checklist
 
@@ -126,7 +126,7 @@ These steps make up step 11 of section 4.
 
 App 5 reads every tax and accounts deadline from FreeAgent's tax timeline each day and reminds David 30 days before each one. App 5 holds the confirmation statement date itself, because that filing is made at Companies House. App 5 also checks daily that Wise transactions are still arriving in FreeAgent, and messages David when none has arrived for 7 days.
 
-The year end is the last day of the month in which the company was registered, so a company registered in February 2027 has its year end on the last day of February each year.
+The year end is the last day of the month in which the company was registered, so a company registered in March has its year end on the last day of March each year.
 
 ## 7. How Money Flows
 

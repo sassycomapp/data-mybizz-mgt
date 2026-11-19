@@ -1,6 +1,6 @@
 ---
 title: "mybizz-live-launch-and-banking-guide"
-updated: "2026-11-17"
+updated: "2026-11-19"
 doc-id: "mb-c48c9917"
 ---
 # Mybizz-Live — Launch and Banking Guide (Sole Proprietor to Mybizz-Live Ltd)
@@ -11,7 +11,7 @@ doc-id: "mb-c48c9917"
 
 ## 1. Trading Status: South African Sole Proprietor
 
-You do **not** need a UK Limited Company (`Mybizz-Live Ltd`) or a South African CIPC `(Pty) Ltd` to launch Mybizz FDA in January 2027.
+You do **not** need a UK Limited Company (`Mybizz-Live Ltd`) or a South African CIPC `(Pty) Ltd` to launch Mybizz FDA in Month 1.
 
 - **How You Trade:** You trade in your personal capacity as a **Sole Proprietor** under your own legal name or trading name: **`[Your Full Name] trading as Mybizz`**.
 - **Contracting Party:** Until `Mybizz-Live Ltd` is incorporated in the UK, your website Terms of Service, Privacy Policy, and Paddle account must state your own full legal name and South African residential/business address. Never list an unincorporated `Ltd` name on legal contracts or Paddle applications.
@@ -48,7 +48,7 @@ You **can** open a **Wise Personal Account** right now as a South African reside
 - **Wise Business Account:**
   - Requires a registered business entity (such as a CIPC `(Pty) Ltd` in South Africa or your future UK `Mybizz-Live Ltd`). Once `Mybizz-Live Ltd` is registered at Companies House in the UK, you can open a full **Wise Business** account with local UK Sort Code/Account Number, US ACH, and EU IBAN details.
 
-### Practical Payout Setup for January
+### Practical Payout Setup for Month 1
 1. **Checkout:** Use **Paddle** for every subscription (£45/month). Paddle collects payment from clients and pays out directly to your bank account or Wise.
 2. **No other checkout:** every sale goes through Paddle, so Paddle handles tax and invoices on every sale.
 

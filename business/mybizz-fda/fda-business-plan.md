@@ -5,7 +5,7 @@ doc-id: "mb-0defdbae"
 ---
 # Mybizz FDA — Business Plan
 
-**Mybizz Front Desk Assistant · mybizz.live · trading from January 2027**
+**Mybizz Front Desk Assistant · mybizz.live · trading from Month 1**
 
 ---
 
