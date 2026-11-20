@@ -14,6 +14,7 @@ The single reference for everything Mybizz has in Cloudflare: the account, the m
 | Item | Value |
 |---|---|
 | Cloudflare account owner (login) | `sassycomapp@gmail.com` |
+| Sign-in method | Sign in with Google. The account is protected by 2-step verification on the Google account `sassycomapp@gmail.com`. |
 | Domain in the account | `mybizz.live` (the only domain) |
 | Domain registrar | Namecheap. Namecheap holds the registration; Cloudflare manages the DNS records. |
 | Workers | None |
