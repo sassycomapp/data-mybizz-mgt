@@ -172,7 +172,7 @@ A video that shows no app screens is made during Preparation. A video that shows
 | Job | Tool | Free-tier basis |
 |---|---|---|
 | Presenter base images and clips | Google Flow | Free daily credits, about two clips a day |
-| Narration voices | Google Cloud Text-to-Speech, Chirp 3 HD voices | Free monthly character allowance; spending cap set to £0 |
+| Narration voices | Google Cloud Text-to-Speech, Chirp 3 HD voices | Free monthly character allowance; a £1 budget alert and a daily character limit keep use inside it |
 | Animated scenes and Shorts | video_explainer (Remotion) | Free; runs on the "claude-code" setting of David's Claude plan |
 | Help-video recording | Playwright | Free, open source |
 | Teardown recording | OBS Studio | Free, open source |
