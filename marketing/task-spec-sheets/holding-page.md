@@ -14,7 +14,7 @@ updated: "2026-11-20"
 
 ## 1. Result
 
-`mybizz.live` and `www.mybizz.live` show one Mybizz page: the white Mybizz wordmark on Professional Blue, the line "Online business software for consultants and service businesses.", "Launching soon", and a link to `hello@mybizz.live`.
+`mybizz.live` and `www.mybizz.live` show one Mybizz page: the white Mybizz logo (smiling M mark and wordmark) on Professional Blue, the line "Online business software for consultants and service businesses – One platform. One price. Your customers. Your data.", "Launching soon", and a link to `hello@mybizz.live`.
 
 The page collects no data and sets no cookies, so it needs no legal pages.
 
@@ -24,7 +24,7 @@ The page collects no data and sets no cookies, so it needs no legal pages.
 
 | Part | Service | What it does | Cost |
 |---|---|---|---|
-| The page | `marketing/holding-page/` in `data-mybizz-mgt` | Holds the page (`index.html`) and its icon (`mybizz-mark-800.png`) | Free |
+| The page | `marketing/holding-page/` in `data-mybizz-mgt` | Holds the page (`index.html`) and its icons (`favicon.ico`, `mybizz-smile-mark-disc-800.png`) | Free |
 | Hosting | Cloudflare Pages | Serves the page at `mybizz.live` and `www.mybizz.live` | Free |
 
 - **Only two addresses change:** `mybizz.live` and `www.mybizz.live`. The app addresses (`mb-3-cs-app1`, `mb-3-cs-app5`, `mb-4-ecom-app1`, `mb-4-ecom-app5`) and every email record stay as they are.

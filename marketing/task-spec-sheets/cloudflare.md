@@ -67,7 +67,7 @@ The full email set-up, including sending through Brevo and the Thunderbird folde
 | Project | `mybizz-holding` (Direct Upload) |
 | Address on Cloudflare | `https://mybizz-holding.pages.dev` |
 | Custom domains | `mybizz.live` and `www.mybizz.live`, both Active |
-| Content | The folder `C:\data-mybizz-mgt\marketing\holding-page` (`index.html`, `mybizz-mark-800.png`) |
+| Content | The folder `C:\data-mybizz-mgt\marketing\holding-page` (`index.html`, `favicon.ico`, `mybizz-smile-mark-disc-800.png`) |
 
 To change the page: edit the files in `marketing/holding-page`, then open the `mybizz-holding` project, choose **Create deployment**, and upload the folder again.
 
