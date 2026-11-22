@@ -74,15 +74,15 @@ Every file is in `C:\data-mybizz-mgt\marketing\brand-assets\`. Every text is in 
 
 ## 5. B2 — LinkedIn
 
-**David's personal profile** (signs in with `sassycomapp@gmail.com`) carries the minimum: name, photo, the YouTube banner, headline "Founder, Mybizz", location Knysna, Western Cape, South Africa, website `mybizz.live` (type Company), one Experience entry (Founder, Mybizz-Live, self-employed, remote, March 2025 to present), and the About text. Skills, interests and instant messaging stay empty.
+**David's personal profile** (signs in with `sassycomapp@gmail.com`) carries the minimum: name, photo, the YouTube banner, headline beginning "Founder, Mybizz", location Knysna, Western Cape, South Africa, website `mybizz.live` (type Company), one Experience entry (Founder, Mybizz-Live, self-employed, remote, March 2025 to present), and the About text. Skills, interests and instant messaging stay empty.
 
-**Page creation needs:** more than one connection (the profile connects with LinkedIn Open Networkers, found by searching "open networker" → People), and an account at least one day old. LinkedIn may also ask for workplace verification, which is not offered in South Africa; LinkedIn support handles that case through a support request from the Help Center.
+**Who creates the page:** LinkedIn requires a verified workplace before an account creates a page, and LinkedIn does not offer verification to David's account; LinkedIn support confirms there is no override. The page is therefore created by an established LinkedIn member whom Mybizz-Live authorises to act for it. That member connects with David, creates the page, adds David as **Super admin**, and then removes themself as admin. From then on David alone runs the page.
 
 **The company page:**
 
-1. Open `https://www.linkedin.com/company/setup/new/` → **Company**.
+1. The creating member opens `https://www.linkedin.com/company/setup/new/` → **Company**.
 2. Name **Mybizz-Live**; public URL `mybizzlive`; website `https://mybizz.live`; industry **Software Development**; size **0–1 employees**; type **Privately held**; logo: the profile picture; tagline: the short bio. Tick the confirmation box, then **Create page**.
-3. On the new page: **Edit page → Header**: the LinkedIn banner. **Edit page → Overview**: the long description. **Save**.
+3. David, as Super admin, on the new page: **Edit page → Header**: the LinkedIn banner. **Edit page → Overview**: the long description. **Save**.
 4. On David's profile, edit the Experience entry and pick **Mybizz-Live** from LinkedIn's list, so the page logo shows beside the role.
 
 **Check:** linkedin.com/company/mybizzlive shows the disc, the banner and the description.
@@ -132,7 +132,15 @@ TikTok allows one account per phone number, and David's number belongs to his ex
 
 ## 9. B6 — Security and Record
 
-1. Switch on 2-step verification in each account's security settings. YouTube is covered by the Mybizz Google account, which already has 2-step verification.
+1. Every account has 2-step verification:
+
+   | Account | 2-step verification |
+   |---|---|
+   | YouTube | The Mybizz Google account's 2-step verification |
+   | Facebook and Instagram | The Meta account's two-factor authentication, by authentication app; one setting covers both, because both sit in the same Meta account. Meta's recovery codes are kept in the password manager |
+   | TikTok | Email and authentication app |
+   | LinkedIn | David's profile, by authentication app |
+
 2. Record each account on the **Accounts** sheet of `marketing-project-plan.xlsx`: address, sign-in email, 2-step verification and date created. Passwords are never written there.
 
 **Check:** every account row on the Accounts sheet is complete.
