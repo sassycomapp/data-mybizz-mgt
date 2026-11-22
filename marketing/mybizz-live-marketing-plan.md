@@ -83,7 +83,7 @@ Every video belongs to exactly one category.
 | # | Category | Job | Audience | Where shown | Length and shape | Presenter |
 |---|---|---|---|---|---|---|
 | 1 | **Marketing: long form** | Win attention and trust | The public | YouTube, LinkedIn | 5–12 minutes, landscape | Sarah |
-| 2 | **Marketing: short form** | Stop the scroll and send viewers to the long-form videos and mybizz.live | The public | YouTube Shorts, reposted to Instagram, TikTok, Facebook and LinkedIn | Under 60 seconds, portrait | Sarah |
+| 2 | **Marketing: short form** | Stop the scroll and send viewers to the long-form videos and mybizz.live | The public | YouTube Shorts, reposted to Instagram, TikTok, Facebook and LinkedIn | Under 60 seconds, portrait, with a square copy for the Instagram and Facebook feeds | Sarah; none in feature clips |
 | 3 | **Explainer** | Show a prospect what a product is and how it works | Prospects | mybizz.live, YouTube | 2–3 minutes, landscape | Brian |
 | 4 | **Help** | Show a client how to do one task | Paying clients | Inside the app, opened from the tooltip of that task | 30–90 seconds, landscape | Brian (voice only) |
 | 5 | **Sales: teardown** | Open a conversation with one named prospect | That one prospect | Unlisted YouTube link in a personal message | 60–75 seconds, landscape | Sarah (voice only) |
@@ -93,7 +93,7 @@ Every video belongs to exactly one category.
 | Category | Mybizz FDA | Mybizz CS |
 |---|---|---|
 | 1. Marketing: long form | 6 (listed below) | 6, one for each supporting message in [[[mb-3-cs-project-library:docs-local/brand-profile]]](C:/dev/dev-mb-3-cs/mb-3-cs-project-library/docs-local/brand-profile.md) section 11 |
-| 2. Marketing: short form | About 40: three cut from each long-form and explainer video, plus single tips | About 45, made the same way |
+| 2. Marketing: short form | About 40: three cut from each long-form and explainer video, plus single tips, plus one feature clip per released feature | About 45, made the same way |
 | 3. Explainer | 7: one overview, plus one per feature group (front desk, channels, customers and bookings, numbers, data and team, ease of use) | About 9: one overview, plus one per group of feature sections |
 | 4. Help | One per task the client performs: about 50 | One per task in the user flows (UF-01 to UF-46): about 140 |
 | 5. Sales: teardown | One per prospect, five prospects a weekday from Month 1 | The same, from the Mybizz CS launch month |
@@ -129,7 +129,7 @@ A video that shows no app screens is made during Preparation. A video that shows
 | Category | Intro | Outro |
 |---|---|---|
 | 1. Marketing: long form | Its own scripted intro, Sarah on camera | The standard marketing outro |
-| 2. Marketing: short form | The presenter clips of the video it was cut from | The presenter clips of the video it was cut from |
+| 2. Marketing: short form | The presenter clips of the video it was cut from; a feature clip has none | The presenter clips of the video it was cut from; a feature clip ends on mybizz.live |
 | 3. Explainer | Its own scripted intro, Brian on camera | The standard explainer outro |
 | 4. Help | None | None |
 | 5. Sales: teardown | The one standard teardown intro | The standard teardown outro |
@@ -143,7 +143,7 @@ A video that shows no app screens is made during Preparation. A video that shows
 | Category | Pictures | Voice | Put together with |
 |---|---|---|---|
 | 1. Marketing: long form | video_explainer animated scenes; Sarah's intro, mid-video and outro clips from Google Flow | Sarah's voices; five language tracks | OpenShot |
-| 2. Marketing: short form | Cut from long-form and explainer videos by video_explainer's Shorts step | Sarah's voices; five language tracks | video_explainer |
+| 2. Marketing: short form | Cut from long-form and explainer videos by video_explainer's Shorts step. A feature clip is a 15-second Remotion animation of one released feature: the feature's real screen, an animated cursor clicking the feature, and its result | Sarah's voices; five language tracks. A feature clip carries on-screen text instead, one version per language | video_explainer |
 | 3. Explainer | video_explainer animated scenes built from the approved product documents; Brian's intro and outro clips | Brian's voices; five language tracks | OpenShot |
 | 4. Help | Playwright records the real app performing the task, once per language with the app's screens in that language | Brian's Gemini voice; one version per language | FFmpeg, as a batch job |
 | 5. Sales: teardown | OBS Studio records the prospect's own website | Sarah's Gemini voice, in the prospect's language | OBS Studio records the screen while the narration plays; OpenShot adds the intro and outro |
@@ -163,6 +163,9 @@ A video that shows no app screens is made during Preparation. A video that shows
 - `factcheck` (a video_explainer check against the source document) runs on every explainer video before its final render.
 - Each help video is made after its feature has passed its tests.
 - A Short reuses the presenter clips of the video it was cut from and never needs new Google Flow clips.
+- Every released Mybizz FDA and Mybizz CS feature gets one feature clip, made once the feature has passed its tests. Claude picks the one moment of the feature that films best and writes a 15-second beat sheet for it.
+- **Reading time.** Every line of on-screen text stays on screen for at least (number of words ÷ 3 + 0.5) seconds, in every language. A 12-word line needs 4.5 seconds.
+- **Square copy.** Every Short is also rendered square (1080 × 1080) for the Instagram and Facebook feeds, from the same project.
 - Finished master videos are kept in `G:\My Drive\mybizz-videos\`, one folder per category.
 
 ---
