@@ -48,9 +48,9 @@ Months count from **Month 1**, the first operating month in `mybizz-live-budget.
 
 | When | Work |
 |---|---|
-| **Now** | Reserve the handle `mybizzlive` on YouTube, Instagram, TikTok and Facebook, and create the Mybizz company page on LinkedIn. Nothing is published yet. |
-| **Preparation** (starts as soon as the end of the Mybizz FDA and Mybizz CS App 1 builds is in sight) | Build the presenter library (section 6.3). Make the problem-focused marketing videos that show no app screens, and bank at least four weeks of Shorts before publishing starts. Put the mybizz.live sign-up form live (section 9). |
-| **Month −3** (at the latest) | Publishing starts on the content calendar (section 10). The email list opens. |
+| **Now** | Reserve the handle `mybizzlive` on YouTube, Instagram, TikTok and Facebook, and create the Mybizz-Live company page on LinkedIn. Set up the free tools (section 7). Put the mybizz.live holding page live with the email sign-up form (section 9). Nothing is published yet. |
+| **Preparation** (starts as soon as the end of the Mybizz FDA and Mybizz CS App 1 builds is in sight) | Build the presenter library (section 6.3). Make the problem-focused marketing videos that show no app screens, and bank at least four weeks of Shorts before publishing starts. |
+| **Month −3** (at the latest) | Publishing starts on the content calendar (section 10). The first email goes to the list. |
 | **Month −2** | Make the Mybizz FDA explainer videos once the Mybizz FDA screens are final. Make the Mybizz FDA help videos as each feature passes its tests. |
 | **Month −1** | Release the Mybizz FDA explainer videos. Create the teardown tracker. Research and score the first 50 prospects. |
 | **Month 1** | Mybizz FDA launch email to the list. Teardowns start (section 8). |
@@ -63,13 +63,12 @@ Months count from **Month 1**, the first operating month in `mybizz-live-budget.
 | Channel | Account | Use |
 |---|---|---|
 | **YouTube** | One channel, `@mybizzlive` | Long-form videos, Shorts and explainer videos; unlisted teardown videos |
-| **LinkedIn** | The Mybizz company page | Shorts and text posts drawn from the videos |
-| **LinkedIn** | David's own profile | Sending teardowns to prospects (section 8) |
+| **LinkedIn** | The Mybizz-Live company page, run from David's profile | Shorts and text posts drawn from the videos |
 | **Instagram, TikTok, Facebook** | `@mybizzlive` on each | The same Shorts as YouTube, reposted |
 | **Email** | The Mybizz list (section 9) | One email every two weeks, plus launch emails |
-| **mybizz.live** | The Mybizz website | Where every channel sends people (section 9) |
+| **mybizz.live** | The Mybizz website; until it is live, the holding page with the sign-up form | Where every channel sends people (section 9) |
 
-- The same handle, name and Professional Blue profile image are used on every channel. Mybizz's corporate colour is set in [[[mb-3-cs-project-library:docs-local/brand-profile]]](C:/dev/dev-mb-3-cs/mb-3-cs-project-library/docs-local/brand-profile.md) section 13.
+- Every channel uses the handle `mybizzlive`, the name Mybizz and the smiling M disc as profile image; the LinkedIn company page carries the company name, Mybizz-Live. Account details are on [[[data-mybizz-mgt:marketing/task-spec-sheets/social-accounts]]](C:/data-mybizz-mgt/marketing/task-spec-sheets/social-accounts.md). Mybizz's corporate colour is set in [[[mb-3-cs-project-library:docs-local/brand-profile]]](C:/dev/dev-mb-3-cs/mb-3-cs-project-library/docs-local/brand-profile.md) section 13.
 - Each YouTube video and Short carries its five language tracks as uploaded audio tracks (YouTube's multi-language audio), with a translated title and description for each language. YouTube's automatic dubbing is switched off, so every language uses the Mybizz presenter voices.
 
 ---
@@ -176,18 +175,20 @@ A video that shows no app screens is made during Preparation. A video that shows
 |---|---|---|
 | Presenter base images and clips | Google Flow | Free daily credits, about two clips a day |
 | Narration voices | Gemini voices, through a free Google AI Studio API key in the Mybizz project | Free daily allowance; no card and no billing account |
+| Scripts and animated scenes | Claude Code | David's Claude subscription; no API billing |
 | Animated scenes and Shorts | video_explainer (Remotion) | Free; runs on the "claude-code" setting of David's Claude plan |
 | Help-video recording | Playwright | Free, open source |
 | Teardown recording | OBS Studio | Free, open source |
 | Hand editing | OpenShot | Free, open source |
 | Batch audio and video jobs | FFmpeg | Free, open source |
-| Email list until Mybizz CS is live | EmailOctopus | Free plan up to 2,500 subscribers and 10,000 emails a month |
+| Sign-up form and email list until Mybizz CS is live | EmailOctopus | Free plan up to 2,500 subscribers and 10,000 emails a month |
 | Email list from Mybizz CS launch | Mybizz's own Mybizz CS instance | Mybizz CS email campaigns |
 | Video hosting | YouTube | Free |
 
 - **Google Flow credits.** About 160 presenter clips are needed for the full set of Mybizz FDA and Mybizz CS intros and outros. English clips are made first, then the other languages.
 - **Claude usage.** video_explainer uses the same Claude allowance as other Claude work, so videos are built in batches at quiet times.
 - **One tool per job.** No second tool is added for a job a listed tool already does.
+- **Set-up records.** How each tool is installed, signed in and set up is on its task spec sheet: [[[data-mybizz-mgt:marketing/task-spec-sheets/video-tools]]](C:/data-mybizz-mgt/marketing/task-spec-sheets/video-tools.md), [[[data-mybizz-mgt:marketing/task-spec-sheets/narration-voices]]](C:/data-mybizz-mgt/marketing/task-spec-sheets/narration-voices.md) and [[[data-mybizz-mgt:marketing/task-spec-sheets/emailoctopus]]](C:/data-mybizz-mgt/marketing/task-spec-sheets/emailoctopus.md).
 
 ---
 
@@ -213,7 +214,7 @@ Prospects scoring 4 or 5 receive a teardown first. Prospects come from LinkedIn 
 
 1. **Choose:** five new prospects each weekday; score them in the teardown tracker.
 2. **Record:** one teardown per prospect: the standard teardown intro, Sarah's Gemini voice over the prospect's website in the prospect's language, the standard teardown outro.
-3. **Send:** one personal message, signed by David, with the unlisted YouTube link.
+3. **Send:** one personal email from `hello@mybizz.live`, signed Mybizz, with the unlisted YouTube link.
 4. **Follow up:** one reminder after four days if there is no reply.
 5. **Stop:** after that reminder the prospect is never contacted again, and the tracker records the outcome.
 
@@ -222,7 +223,7 @@ The teardown says: "This is a short video from Mybizz, made for [Company Name]."
 ### 8.3 Contact rules
 
 - **Email** goes only to limited companies and limited liability partnerships in the United Kingdom, at a business address. Every email names the sender and gives a one-line way to opt out.
-- **Every other prospect** (sole traders, partnerships, and every prospect outside the United Kingdom) is contacted only on LinkedIn, and only after accepting a connection request.
+- **Every other prospect** (sole traders, partnerships, and every prospect outside the United Kingdom) receives no unasked email. These prospects are reached through the broadcast channels (videos, posts and the email list), and receive a teardown only after contacting Mybizz first.
 - **WhatsApp and SMS** are used only with people who have replied first.
 - **Opt-outs:** anyone who asks not to be contacted goes on the tracker's do-not-contact list and is never contacted again.
 - **No bulk messages:** every message is written for one prospect.
@@ -249,10 +250,11 @@ The teardown tracker is a spreadsheet in this folder, `teardown-tracker.xlsx`, w
 
 - Every page is in all five languages.
 - Every channel links to mybizz.live.
+- **Until the website is live,** mybizz.live is a holding page: the Mybizz logo, the brand statement, "Launching soon", the email sign-up form and a privacy notice ([[[data-mybizz-mgt:marketing/task-spec-sheets/holding-page]]](C:/data-mybizz-mgt/marketing/task-spec-sheets/holding-page.md)).
 
 ### 9.2 The email list
 
-- **Sign-up:** on mybizz.live, with confirmation by email (double opt-in). The subscriber chooses one of the five languages at sign-up and receives every email in that language.
+- **Sign-up:** on mybizz.live, with a consent box and confirmation by email (double opt-in). The subscriber's language is the language of the page they sign up on, and they receive every email in that language. Sign-ups on the English holding page receive English emails.
 - **What is sent:** one email every two weeks, with one practical tip and the latest long-form video; a launch email for each product.
 - **Every email** names the sender and carries a one-click unsubscribe link.
 - **Tool:** EmailOctopus until Mybizz CS is live; from then on the list moves into Mybizz's own Mybizz CS instance.
