@@ -139,17 +139,17 @@ In Gmail (mail.google.com, signed in as `mybizzlive@gmail.com`), create one filt
 
    | Your Name | Email Address | Outgoing Server | Copies & Folders: Place a copy in |
    |---|---|---|---|
-   | `Mybizz` | `hello@mybizz.live` | Brevo - smtp-relay.brevo.com | Other: **hello** on mybizzlive@gmail.com |
+   | `David from Mybizz` | `hello@mybizz.live` | Brevo - smtp-relay.brevo.com | Other: **hello** on mybizzlive@gmail.com |
    | `Mybizz Support` | `support@mybizz.live` | Brevo - smtp-relay.brevo.com | Other: **support** on mybizzlive@gmail.com |
 
-3. Select **Mybizz <hello@mybizz.live>** and click **Set Default**.
+3. Select **David from Mybizz <hello@mybizz.live>** and click **Set Default**. The sender name shows a person and the brand in one glance in the recipient's inbox.
 4. Check that the folders **hello**, **support** and **abuse** show under `mybizzlive@gmail.com`. If any folder is missing, right-click the account, choose **Subscribe…**, and tick it.
 5. On the first message sent through Brevo, Thunderbird asks for the password: paste the SMTP key and tick **Use Password Manager to remember this password**.
 6. **Signatures.** **Account Settings → mybizzlive@gmail.com → Manage Identities**, select an identity, **Edit**. On the **Settings** tab, tick **Attach the signature from a file instead (text, HTML or image)**, click **Choose…**, pick that identity's signature file, and click **OK**. Do this for both identities.
 
    | Identity | Signature file (in `C:\data-mybizz-mgt\marketing\brand-assets\`) | Signer |
    |---|---|---|
-   | Mybizz <hello@mybizz.live> | `signature-hello.html` | David |
+   | David from Mybizz <hello@mybizz.live> | `signature-hello.html` | David |
    | Mybizz Support <support@mybizz.live> | `signature-support.html` | Mybizz Support |
 
    Each signature has four lines: the signer's name in bold, a link to mybizz.live, the brand statement in Professional Blue at 16 pixels (two pixels larger than the rest), and the smiling M tile at 48 pixels. The sender's address is left out, because every email already shows it. Thunderbird places its standard `-- ` separator line above every signature. The tile comes from `mybizz-smile-mark-96.png` in the same folder; Thunderbird embeds it in each email, so it shows in every mail program without the reader allowing images from the internet. The signature carries a first name only: no surname, phone number or postal address. Teardowns and EmailOctopus emails do not use these signatures; teardowns are signed "Mybizz", and EmailOctopus adds its own footer.
