@@ -17,8 +17,8 @@ title: "video-tools"
 | C3 | Claude Code | WSL | 2.1.330 | Installed, signed in |
 | C4 | FFmpeg | WSL | 6.1.1 (Ubuntu package 7:6.1.1-3ubuntu5) | Installed |
 | C5 | video_explainer | WSL, `~/video_explainer` | Remotion 4.0.242 | Installed, test render passed |
-| C6 | OpenShot | Windows | — | Not installed |
-| C7 | OBS Studio | Windows | — | Not installed |
+| C6 | OpenShot | Windows | 4.1.1 | Installed |
+| C7 | OBS Studio | Windows | 33.0.3 | Installed, set up for recording |
 | C9 | Playwright | WSL | — | Installed when the first Mybizz FDA feature passes its tests |
 
 **WSL system:** Ubuntu 24.04, Python 3.12.3, Node.js 24.15.0.
@@ -78,13 +78,27 @@ The test passes when `render-test.mp4` is listed with its size.
 
 ## 5. C6 — OpenShot (Windows)
 
-Not installed yet.
+- **What it is:** a free, open-source video editor. It joins each video's intro, main part and outro, and adds the intro and outro to teardowns.
+- **Install:** the **Free EXE Installer** (64-bit) from `https://www.openshot.org/download/`, with the default settings. The Microsoft Store version is the same program, sold to support its developers.
+- **Check:** OpenShot opens from the Start menu.
 
 ---
 
 ## 6. C7 — OBS Studio (Windows)
 
-Not installed yet.
+- **What it is:** a free, open-source screen recorder. It records the prospect's website while the teardown narration plays.
+- **Install:** the Windows installer from `https://obsproject.com/download`, with the default settings.
+- **Settings** (Auto-Configuration Wizard, **Optimize just for recording**):
+
+  | Setting | Value |
+  |---|---|
+  | Recording encoder | Hardware (QSV, H.264): the computer's built-in video chip does the encoding, so recording does not slow the computer |
+  | Recording quality | High quality, medium file size |
+  | Base (canvas) resolution | 1366 × 768, the size of David's screen |
+  | Output resolution | 1280 × 720 (720p) |
+  | Frames per second | 30, the same as every other Mybizz video |
+
+- **Check:** OBS opens, and **Start Recording** records the screen.
 
 ---
 
