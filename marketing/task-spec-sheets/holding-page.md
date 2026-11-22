@@ -16,7 +16,7 @@ updated: "2026-11-20"
 
 `mybizz.live` and `www.mybizz.live` show one Mybizz page: the white Mybizz logo (smiling M mark and wordmark) on Professional Blue, the line "Online business software for consultants and service businesses – One platform. One price. Your customers. Your data.", "Launching soon", a sign-up form, and a link to `hello@mybizz.live`.
 
-The sign-up form is EmailOctopus's, loaded from EmailOctopus; its settings are on [[[data-mybizz-mgt:marketing/task-spec-sheets/emailoctopus]]](C:/data-mybizz-mgt/marketing/task-spec-sheets/emailoctopus.md). Below the form, the page carries Google's reCAPTCHA notice. The page layout grows with its content, so it scrolls on a phone.
+The sign-up form is EmailOctopus's, loaded from EmailOctopus; its settings are on [[[data-mybizz-mgt:marketing/task-spec-sheets/emailoctopus]]](C:/data-mybizz-mgt/marketing/task-spec-sheets/emailoctopus.md). Below the form, the page carries Google's reCAPTCHA notice and a link to the Mybizz privacy notice, `privacy.html` (mybizz.live/privacy.html). The privacy notice names David Coleman, trading as Mybizz, as responsible for the information, with `hello@mybizz.live` as the contact; once Mybizz-Live Ltd is registered, the company replaces him there. The page layout grows with its content, so it scrolls on a phone.
 
 ---
 
@@ -24,7 +24,7 @@ The sign-up form is EmailOctopus's, loaded from EmailOctopus; its settings are o
 
 | Part | Service | What it does | Cost |
 |---|---|---|---|
-| The page | `marketing/holding-page/` in `data-mybizz-mgt` | Holds the page (`index.html`) and its icons (`favicon.ico`, `mybizz-smile-mark-disc-800.png`) | Free |
+| The page | `marketing/holding-page/` in `data-mybizz-mgt` | Holds the page (`index.html`), the privacy notice (`privacy.html`) and the icons (`favicon.ico`, `mybizz-smile-mark-disc-800.png`) | Free |
 | Hosting | Cloudflare Pages | Serves the page at `mybizz.live` and `www.mybizz.live` | Free |
 
 - **Only two addresses change:** `mybizz.live` and `www.mybizz.live`. The app addresses (`mb-3-cs-app1`, `mb-3-cs-app5`, `mb-4-ecom-app1`, `mb-4-ecom-app5`) and every email record stay as they are.
