@@ -19,6 +19,8 @@ title: "emailoctopus"
 | Signs in with | `hello@mybizz.live` and its password (password manager) |
 | Card or billing | None |
 | Postal address in emails | Kept out |
+| 2-step verification | On, by authentication app |
+| Google sign-in | Not linked: one sign-in method only |
 
 ---
 
@@ -52,6 +54,5 @@ LinkedIn is added once the Mybizz-Live company page exists.
 
 1. **Business postal address.** Email marketing rules, notably in the United States, expect a business postal address in every marketing email. Once Mybizz-Live Ltd is registered, its UK registered office address is added in EmailOctopus and switched on for emails. David's home address never appears in an email.
 2. **Sending domain.** EmailOctopus is set up to send as `hello@mybizz.live`, with the DNS records EmailOctopus gives added in Cloudflare (recorded on [[[data-mybizz-mgt:marketing/task-spec-sheets/cloudflare]]](C:/data-mybizz-mgt/marketing/task-spec-sheets/cloudflare.md)), so the newsletter passes SPF, DKIM and DMARC checks.
-3. **2-step verification** is switched on in the EmailOctopus account settings.
 
 **Check:** a test campaign sent to `hello@mybizz.live` arrives in the **hello** folder, shows the logo, colours and social links, and its footer shows the Mybizz-Live Ltd address.
