@@ -91,7 +91,7 @@ Every video belongs to exactly one category.
 
 | Category | Mybizz FDA | Mybizz CS |
 |---|---|---|
-| 1. Marketing: long form | 6 (listed below) | 6, one for each supporting message in [[[mb-3-cs-project-library:docs-local/brand-profile]]](C:/dev/dev-mb-3-cs/mb-3-cs-project-library/docs-local/brand-profile.md) section 11 |
+| 1. Marketing: long form | 6 (listed below) | 6 (listed below), drawn from the supporting messages in [[[mb-3-cs-project-library:docs-local/brand-profile]]](C:/dev/dev-mb-3-cs/mb-3-cs-project-library/docs-local/brand-profile.md) section 11 |
 | 2. Marketing: short form | About 40: three cut from each long-form and explainer video, plus single tips, plus one feature clip per released feature | About 45, made the same way |
 | 3. Explainer | 7: one overview, plus one per feature group (front desk, channels, customers and bookings, numbers, data and team, ease of use) | About 9: one overview, plus one per group of feature sections |
 | 4. Help | One per task the client performs: about 50 | One per task in the user flows (UF-01 to UF-46): about 140 |
@@ -99,14 +99,27 @@ Every video belongs to exactly one category.
 
 **Mybizz FDA long-form videos**
 
-| # | Subject | Shows app screens |
-|---|---|---|
-| 1 | The five-minute rule: the first helpful reply wins the client | No |
-| 2 | Approve before send: an AI front desk that never speaks without the owner | No |
-| 3 | The cost of separate tools against one front desk | No |
-| 4 | Your data, your storage: leave whenever you like | No |
-| 5 | A day of enquiries, answered and booked | Yes |
-| 6 | Real free times from your calendar, booked without the back-and-forth | Yes |
+| # | Name | Purpose | Aimed at | Shows app screens |
+|---|---|---|---|---|
+| FDA-1 | The five-minute rule | Shows that the first helpful reply wins the client | Owners who answer enquiries late | No |
+| FDA-2 | Approve before send | Shows an AI front desk that never replies without the owner's approval | Owners wary of AI speaking for them | No |
+| FDA-3 | Separate tools against one front desk | Shows the cost and hassle of juggling separate tools | Owners paying for several tools | No |
+| FDA-4 | Your data, your storage | Shows that the owner keeps the data and can leave at any time | Owners worried about being locked in | No |
+| FDA-5 | A day of enquiries, answered and booked | Shows Mybizz FDA handling a real day of enquiries | Owners ready to see it work | Yes |
+| FDA-6 | Real free times from your calendar | Shows customers booking without the back-and-forth | Owners losing time to scheduling | Yes |
+
+**Mybizz CS long-form videos**
+
+| # | Name | Purpose | Aimed at | Shows app screens |
+|---|---|---|---|---|
+| CS-1 | Six tools, one platform | Shows that one platform replaces the five or six separate tools a business runs | Owners running their business across separate tools | No |
+| CS-2 | Your customers, your data | Shows that the customer list belongs to the business, on the first day and the last | Owners selling through marketplaces | No |
+| CS-3 | A business, not a listing | Shows the business with its own website, brand and booking, competing on its own terms | Owners listed on marketplaces among hundreds of others | No |
+| CS-4 | What separate tools really cost | Sets the monthly cost of separate tools against one Mybizz CS price | Owners counting their monthly software bills | No |
+| CS-5 | Set up once, then run your business | Shows website, booking, payments, CRM, email and invoicing working together | Owners worn out by setting up and connecting tools | Yes |
+| CS-6 | Ask your business | Shows the owner asking Mybizz CS questions by voice and hearing the answers | Owners who run their business from their phone | Yes |
+
+Each video is produced in the components tracked on the **Video production** sheet of `marketing-project-plan.xlsx`: script, English narration, animated scenes, intro clip, outro clip, English assembly, translations, language tracks, Shorts, and upload.
 
 A video that shows no app screens is made during Preparation. A video that shows app screens is made once those screens are final.
 
