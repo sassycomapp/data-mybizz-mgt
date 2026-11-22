@@ -14,9 +14,9 @@ updated: "2026-11-20"
 
 ## 1. Result
 
-`mybizz.live` and `www.mybizz.live` show one Mybizz page: the white Mybizz logo (smiling M mark and wordmark) on Professional Blue, the line "Online business software for consultants and service businesses – One platform. One price. Your customers. Your data.", "Launching soon", and a link to `hello@mybizz.live`.
+`mybizz.live` and `www.mybizz.live` show one Mybizz page: the white Mybizz logo (smiling M mark and wordmark) on Professional Blue, the line "Online business software for consultants and service businesses – One platform. One price. Your customers. Your data.", "Launching soon", a sign-up form, and a link to `hello@mybizz.live`.
 
-The page collects no data and sets no cookies, so it needs no legal pages.
+The sign-up form is EmailOctopus's, loaded from EmailOctopus; its settings are on [[[data-mybizz-mgt:marketing/task-spec-sheets/emailoctopus]]](C:/data-mybizz-mgt/marketing/task-spec-sheets/emailoctopus.md). Below the form, the page carries Google's reCAPTCHA notice. The page layout grows with its content, so it scrolls on a phone.
 
 ---
 

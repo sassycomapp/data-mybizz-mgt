@@ -41,7 +41,11 @@ A DNS record is one line of the domain's address book: it tells the internet whe
 | 12 | TXT | `mybizz.live` | `brevo-code:24c7a7846433b9af4cf47…` | DNS only | Proves to Brevo that Mybizz owns mybizz.live | Brevo set-up | Keep while Brevo sends Mybizz mail |
 | 13 | CNAME | `brevo1._domainkey` | `b1.mybizz-live.dkim.brevo.com` | DNS only | Brevo's mail signature (DKIM) | Brevo set-up | Must stay DNS only |
 | 14 | CNAME | `brevo2._domainkey` | `b2.mybizz-live.dkim.brevo.com` | DNS only | Brevo's mail signature (DKIM) | Brevo set-up | Must stay DNS only |
-| 15 | TXT | `_dmarc` | `v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com` | DNS only | DMARC: tells receiving servers how to treat mail that fails the checks | Brevo set-up | Keep while Brevo sends Mybizz mail |
+| 15 | TXT | `_dmarc` | `v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com` | DNS only | DMARC: tells receiving servers how to treat mail that fails the checks | Brevo set-up | Exactly this content. Services that offer to add DNS records automatically may try to replace it with a shorter DMARC record; the replacement is refused |
+| 16 | CNAME | `eo._domainkey` | `eo._domainkey.e9c9bfac02.californicus.eoidentity.com` | DNS only | EmailOctopus's mail signature (DKIM) | EmailOctopus set-up | Must stay DNS only |
+| 17 | CNAME | `eom` | `eom.e9c9bfac02.californicus.eoidentity.com` | DNS only | EmailOctopus sending (return path) | EmailOctopus set-up | Must stay DNS only |
+| 18 | CNAME | `eot` | `eot.e9c9bfac02.californicus.eoidentity.com` | DNS only | EmailOctopus link and open tracking | EmailOctopus set-up | Must stay DNS only |
+| 19 | CNAME | `119406118` | `119406118.e9c9bfac02.californicus.eoidentity.com` | DNS only | EmailOctopus domain verification | EmailOctopus set-up | Must stay DNS only |
 
 ---
 
