@@ -119,7 +119,7 @@ A video that shows no app screens is made during Preparation. A video that shows
 | **Brian** | A man aged 40 to 50, smart-casual business dress, mild UK accent, the technical presenter | Explainer and help videos |
 
 - **One base image each.** Each presenter has one base image made in Google Flow. Every Google Flow clip of that presenter starts from the base image as its first frame ("Frames to Video"), with the same written description.
-- **Two matched voices each.** Each presenter has one Google Flow voice, used whenever the presenter speaks on camera, and one Google Chirp 3 HD UK voice, chosen by ear as the closest match to the Google Flow voice and used for all narration. Both voices stay fixed for the life of the presenter.
+- **Two matched voices each.** Each presenter has one Google Flow voice, used whenever the presenter speaks on camera, and one Gemini voice, chosen by ear as the closest match to the Google Flow voice and used for all narration in a mild British accent. Both voices stay fixed for the life of the presenter.
 - **Mid-video narration** in long-form videos may use the presenter's Google Flow voice on camera.
 - **AI disclosure.** Both presenters are AI. Every video description states that the presenter is AI-generated, and YouTube's altered or synthetic content setting is switched on for every upload.
 - **Presenter library.** All presenter clips are kept in one library and reused (section 6.4).
@@ -145,12 +145,12 @@ A video that shows no app screens is made during Preparation. A video that shows
 | 1. Marketing: long form | video_explainer animated scenes; Sarah's intro, mid-video and outro clips from Google Flow | Sarah's voices; five language tracks | OpenShot |
 | 2. Marketing: short form | Cut from long-form and explainer videos by video_explainer's Shorts step | Sarah's voices; five language tracks | video_explainer |
 | 3. Explainer | video_explainer animated scenes built from the approved product documents; Brian's intro and outro clips | Brian's voices; five language tracks | OpenShot |
-| 4. Help | Playwright records the real app performing the task, once per language with the app's screens in that language | Brian's Chirp voice; one version per language | FFmpeg, as a batch job |
-| 5. Sales: teardown | OBS Studio records the prospect's own website | Sarah's Chirp voice, in the prospect's language | OBS Studio records the screen while the narration plays; OpenShot adds the intro and outro |
+| 4. Help | Playwright records the real app performing the task, once per language with the app's screens in that language | Brian's Gemini voice; one version per language | FFmpeg, as a batch job |
+| 5. Sales: teardown | OBS Studio records the prospect's own website | Sarah's Gemini voice, in the prospect's language | OBS Studio records the screen while the narration plays; OpenShot adds the intro and outro |
 
 **Order of work for a video in categories 1 and 3:**
 1. The script is written from the source documents (category 3) or the subject list (category 1).
-2. The narration is made with the presenter's Chirp voice, in English first.
+2. The narration is made with the presenter's Gemini voice, in English first.
 3. video_explainer builds and renders the scenes from the script, using the narration as its imported voiceover.
 4. The presenter clips come from the library, or a new intro is made in Google Flow.
 5. OpenShot joins intro, main part and outro.
@@ -172,7 +172,7 @@ A video that shows no app screens is made during Preparation. A video that shows
 | Job | Tool | Free-tier basis |
 |---|---|---|
 | Presenter base images and clips | Google Flow | Free daily credits, about two clips a day |
-| Narration voices | Google Cloud Text-to-Speech, Chirp 3 HD voices | Free monthly character allowance; a £1 budget alert and a daily character limit keep use inside it |
+| Narration voices | Gemini voices, through a free Google AI Studio API key in the Mybizz project | Free daily allowance; no card and no billing account |
 | Animated scenes and Shorts | video_explainer (Remotion) | Free; runs on the "claude-code" setting of David's Claude plan |
 | Help-video recording | Playwright | Free, open source |
 | Teardown recording | OBS Studio | Free, open source |
@@ -209,7 +209,7 @@ Prospects scoring 4 or 5 receive a teardown first. Prospects come from LinkedIn 
 ### 8.2 The routine
 
 1. **Choose:** five new prospects each weekday; score them in the teardown tracker.
-2. **Record:** one teardown per prospect: the standard teardown intro, Sarah's Chirp voice over the prospect's website in the prospect's language, the standard teardown outro.
+2. **Record:** one teardown per prospect: the standard teardown intro, Sarah's Gemini voice over the prospect's website in the prospect's language, the standard teardown outro.
 3. **Send:** one personal message, signed by David, with the unlisted YouTube link.
 4. **Follow up:** one reminder after four days if there is no reply.
 5. **Stop:** after that reminder the prospect is never contacted again, and the tracker records the outcome.
