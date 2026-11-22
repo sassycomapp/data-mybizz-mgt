@@ -20,7 +20,7 @@ Mybizz has one account on each of five platforms, all with the same picture, lin
 | B2 | LinkedIn company page | Mybizz-Live | linkedin.com/company/mybizzlive | David's personal LinkedIn profile (`sassycomapp@gmail.com`), as page admin |
 | B3 | Facebook page | Mybizz | facebook.com/mybizzlive | David's personal Facebook profile (`mybizzlive@gmail.com` and David's mobile number), as page admin |
 | B4 | Instagram, professional business account | Mybizz | `@mybizzlive` | `hello@mybizz.live` and its password; linked to the Mybizz Facebook page |
-| B5 | TikTok, business account | Mybizz | `@mybizzlive` | `hello@mybizz.live`; the account is tied to David's mobile number |
+| B5 | TikTok | Mybizz | `@mybizzlive`, tiktok.com/@mybizzlive | `mybizzlive@gmail.com` and its password; the account is tied to David's mobile number |
 
 ---
 
@@ -115,19 +115,18 @@ Every file is in `C:\data-mybizz-mgt\marketing\brand-assets\`. Every text is in 
 
 ---
 
-## 8. B5 — TikTok Business Account
+## 8. B5 — TikTok
 
-TikTok allows one account per phone number, and David's number belongs to his existing TikTok account (signed in with `hikwagga@gmail.com`). That account becomes the Mybizz account.
+TikTok allows one account per phone number, and David's number belongs to his existing TikTok account. That account is the Mybizz account.
 
-1. In the TikTok app, sign in to that account.
-2. **Profile → ☰ → Settings and privacy → Account → Account information → Email**: change to `hello@mybizz.live` and confirm with the emailed code. Set a password.
-3. **Account information → Username**: `mybizzlive`. **Edit profile**: name **Mybizz**, profile picture, the short bio, and the website when TikTok offers the field.
-4. Delete every old video.
-5. **Settings and privacy → Account → Switch to Business Account**; category **Software & apps**.
+1. **☰ → Settings and privacy → Account → Account information → Email:** `mybizzlive@gmail.com`, confirmed with the emailed code.
+2. **☰ → Settings and privacy → Account → Password:** a password, so the account signs in with `mybizzlive@gmail.com` and that password, never through a Google sign-in.
+3. **Edit profile (pencil, top left):** name **Mybizz**; username `mybizzlive`; the profile picture; bio: the short bio. Pronouns and the AI self stay empty. TikTok offers this account no website field.
+4. The account type stays as it is: TikTok offers this account no free switch to a business account, and posting works without one. TikTok's paid verified business account is not used.
 
-**Retry rule:** after several failed code attempts, TikTok blocks all codes for about a day. Stop and retry the next day, not sooner.
+**Rules:** TikTok allows one username change every 30 days. After several failed code attempts, TikTok blocks codes for that email address for at least a day: enter each code once, and stop at the first refusal.
 
-**Check:** tiktok.com/@mybizzlive shows the disc, the short bio and no old videos.
+**Check:** tiktok.com/@mybizzlive shows the disc, the name Mybizz, the short bio and no old videos.
 
 ---
 
