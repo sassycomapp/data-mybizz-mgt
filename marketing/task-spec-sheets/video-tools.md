@@ -19,7 +19,7 @@ title: "video-tools"
 | C5 | video_explainer | WSL, `~/video_explainer` | Remotion 4.0.242 | Installed, test render passed |
 | C6 | OpenShot | Windows | 4.1.1 | Installed |
 | C7 | OBS Studio | Windows | 33.0.3 | Installed, set up for recording |
-| C9 | Playwright | WSL | — | Installed when the first Mybizz FDA feature passes its tests |
+| C9 | Playwright | WSL, `~/help-videos` | 1.65.1, with its Chromium browser | Installed |
 
 **WSL system:** Ubuntu 24.04, Python 3.12.3, Node.js 24.15.0.
 
@@ -104,4 +104,8 @@ The test passes when `render-test.mp4` is listed with its size.
 
 ## 7. C9 — Playwright
 
-Installed when the first Mybizz FDA feature passes its tests; it records the help videos.
+- **What it is:** a free, open-source tool (Apache 2.0 licence) that controls a web browser from a script: it clicks, types and moves through an app exactly as written, and records what it does as a video. Mybizz uses it for help videos: Playwright performs one task in the real Mybizz app, once per language, and records it.
+- **Folder:** `~/help-videos` in WSL.
+- **Install:** `mkdir -p ~/help-videos && cd ~/help-videos && npm init -y && npm install -D @playwright/test && npx playwright install --with-deps chromium`
+- **When recordings start:** each help video is recorded once its feature has passed its tests, because the video shows the real, working screen.
+- **Check:** `cd ~/help-videos && npx playwright --version` prints the version.
