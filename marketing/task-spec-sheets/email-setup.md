@@ -145,14 +145,14 @@ In Gmail (mail.google.com, signed in as `mybizzlive@gmail.com`), create one filt
 3. Select **Mybizz <hello@mybizz.live>** and click **Set Default**.
 4. Check that the folders **hello**, **support** and **abuse** show under `mybizzlive@gmail.com`. If any folder is missing, right-click the account, choose **Subscribe…**, and tick it.
 5. On the first message sent through Brevo, Thunderbird asks for the password: paste the SMTP key and tick **Use Password Manager to remember this password**.
-6. **Signatures.** **Account Settings → mybizzlive@gmail.com → Manage Identities**, select an identity, **Edit**. On the **Settings** tab, paste that identity's signature into **Signature text**, tick **Use HTML (e.g., <b>bold</b>)**, and click **OK**. Do this for both identities.
+6. **Signatures.** **Account Settings → mybizzlive@gmail.com → Manage Identities**, select an identity, **Edit**. On the **Settings** tab, tick **Attach the signature from a file instead (text, HTML or image)**, click **Choose…**, pick that identity's signature file, and click **OK**. Do this for both identities.
 
-   | Identity | Signature text (one line, pasted exactly) |
-   |---|---|
-   | Mybizz <hello@mybizz.live> | `<table cellpadding="0" cellspacing="0" style="font-family:Roboto,Arial,Helvetica,sans-serif;font-size:14px;line-height:1.5;color:#1B1B1F"><tr><td style="padding-right:12px;vertical-align:top"><img src="https://mybizz.live/mybizz-smile-mark-disc-800.png" width="48" height="48" alt="Mybizz"></td><td style="vertical-align:top"><strong style="color:#0200BD">David</strong><br>Mybizz — One platform. One price. Your customers. Your data.<br><a href="https://mybizz.live" style="color:#0200BD">mybizz.live</a> · <a href="mailto:hello@mybizz.live" style="color:#0200BD">hello@mybizz.live</a></td></tr></table>` |
-   | Mybizz Support <support@mybizz.live> | `<table cellpadding="0" cellspacing="0" style="font-family:Roboto,Arial,Helvetica,sans-serif;font-size:14px;line-height:1.5;color:#1B1B1F"><tr><td style="padding-right:12px;vertical-align:top"><img src="https://mybizz.live/mybizz-smile-mark-disc-800.png" width="48" height="48" alt="Mybizz"></td><td style="vertical-align:top"><strong style="color:#0200BD">Mybizz Support</strong><br>Mybizz — One platform. One price. Your customers. Your data.<br><a href="https://mybizz.live" style="color:#0200BD">mybizz.live</a> · <a href="mailto:support@mybizz.live" style="color:#0200BD">support@mybizz.live</a></td></tr></table>` |
+   | Identity | Signature file (in `C:\data-mybizz-mgt\marketing\brand-assets\`) | Signer |
+   |---|---|---|
+   | Mybizz <hello@mybizz.live> | `signature-hello.html` | David |
+   | Mybizz Support <support@mybizz.live> | `signature-support.html` | Mybizz Support |
 
-   Each signature shows the smiling M disc at 48 pixels, the signer, the brand statement, and links to mybizz.live and the identity's own address. The disc is loaded from mybizz.live, where the holding page hosts it, so no file is attached to the email. The signature carries a first name only: no surname, phone number or postal address. Teardowns and EmailOctopus emails do not use these signatures; teardowns are signed "Mybizz", and EmailOctopus adds its own footer.
+   Each signature has four lines: the signer's name in bold, a link to mybizz.live, the brand statement in Professional Blue at 16 pixels (two pixels larger than the rest), and the smiling M tile at 48 pixels. The sender's address is left out, because every email already shows it. Thunderbird places its standard `-- ` separator line above every signature. The tile comes from `mybizz-smile-mark-96.png` in the same folder; Thunderbird embeds it in each email, so it shows in every mail program without the reader allowing images from the internet. The signature carries a first name only: no surname, phone number or postal address. Teardowns and EmailOctopus emails do not use these signatures; teardowns are signed "Mybizz", and EmailOctopus adds its own footer.
 
 ---
 
@@ -164,7 +164,7 @@ In Gmail (mail.google.com, signed in as `mybizzlive@gmail.com`), create one filt
 | 2 | Send a message from `hello@mybizz.live` and from `support@mybizz.live` to another account, and reply to each from that account | Each message arrives from the right mybizz.live address, in the inbox, not in spam; each sent message and its reply sit in the matching folder |
 | 3 | In the other account (Gmail), open each message received from mybizz.live and choose **⋮ → Show original** | SPF, DKIM and DMARC each show **PASS** |
 | 4 | Send a message to `nobody@mybizz.live` | The message is refused and bounces back |
-| 5 | Start a new message from each identity | The identity's signature appears at the bottom; in the sent message, the disc, the blue name and both links show |
+| 5 | From each identity, send a message to another account | The identity's signature appears at the bottom, and the received message shows the name, the mybizz.live link, the brand statement and the Mybizz tile |
 
 ---
 
