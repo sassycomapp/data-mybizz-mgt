@@ -3,7 +3,7 @@ title: "video-tools"
 ---
 # Task Spec Sheet — Mybizz Video Tools
 
-**Tasks:** C3 to C9 in `marketing-project-plan.xlsx`
+**Tasks:** C3 to C9 in `marketing-plan.xlsx`
 **Owner:** David
 **Depends on:** C2 (narration voices)
 **Unblocks:** every video in the marketing plan

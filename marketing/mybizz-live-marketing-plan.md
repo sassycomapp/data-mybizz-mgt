@@ -119,7 +119,7 @@ Every video belongs to exactly one category.
 | CS-5 | Set up once, then run your business | Shows website, booking, payments, CRM, email and invoicing working together | Owners worn out by setting up and connecting tools | Yes |
 | CS-6 | Ask your business | Shows the owner asking Mybizz CS questions by voice and hearing the answers | Owners who run their business from their phone | Yes |
 
-Each video is produced in the components tracked on the **Video Plan** sheet of `marketing-project-plan.xlsx`: script, English narration, animated scenes, intro clip, outro clip, English assembly, translations, language tracks, Shorts, and upload.
+Each video is produced as the tasks on the **Video Plan** sheet of `marketing-plan.xlsx`, one row per task in workflow order: script, English narration, animated scenes, intro clip, English assembly, translations, narrations and intro clips per language, language tracks, Shorts, and upload.
 
 A video that shows no app screens is made during Preparation. A video that shows app screens is made once those screens are final.
 

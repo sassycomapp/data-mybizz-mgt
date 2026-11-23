@@ -3,7 +3,7 @@ title: "social-accounts"
 ---
 # Task Spec Sheet — Mybizz Social Accounts
 
-**Tasks:** B1 to B6 in `marketing-project-plan.xlsx`
+**Tasks:** B1 to B6 in `marketing-plan.xlsx`
 **Owner:** David
 **Depends on:** A3 (Mybizz Google account), A7 (banner set), A9 (profile texts), A10 (holding page)
 **Unblocks:** every video and post in the marketing plan
@@ -141,6 +141,6 @@ TikTok allows one account per phone number, and David's number belongs to his ex
    | TikTok | Email and authentication app |
    | LinkedIn | David's profile, by authentication app |
 
-2. Record each account on the **Accounts** sheet of `marketing-project-plan.xlsx`: address, sign-in email, 2-step verification and date created. Passwords are never written there.
+2. Record each account on the **Accounts** sheet of `marketing-plan.xlsx`: address, sign-in email, 2-step verification and date created. Passwords are never written there.
 
 **Check:** every account row on the Accounts sheet is complete.

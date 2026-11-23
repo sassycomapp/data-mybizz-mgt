@@ -5,7 +5,7 @@ updated: "2026-11-20"
 ---
 # Mybizz Profile Texts
 
-**Tasks:** A8 and A9 in `marketing-project-plan.xlsx`
+**Tasks:** A8 and A9 in `marketing-plan.xlsx`
 **Languages:** English (EN), French (FR), German (DE), Spanish (ES), Italian (IT)
 **Used by:** B1 to B6 (account set-up) and the holding page on mybizz.live
 

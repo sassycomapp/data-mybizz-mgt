@@ -3,7 +3,7 @@ title: "emailoctopus"
 ---
 # Task Spec Sheet — Mybizz Newsletter (EmailOctopus)
 
-**Task:** C8 in `marketing-project-plan.xlsx`
+**Task:** C8 in `marketing-plan.xlsx`
 **Owner:** David
 **Depends on:** A1 (Mybizz email addresses)
 **Unblocks:** the Mybizz newsletter, every email sent to subscribers, and D10 (the sign-up form)

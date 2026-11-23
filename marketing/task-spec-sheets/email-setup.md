@@ -5,7 +5,7 @@ updated: "2026-11-20"
 ---
 # Task Spec Sheet — Email Setup
 
-**Task:** A1 in `marketing-project-plan.xlsx`
+**Task:** A1 in `marketing-plan.xlsx`
 **Owner:** David
 **Depends on:** nothing
 **Unblocks:** A2 (the Mybizz Google account), C8 (EmailOctopus) and every Mybizz account created after them
@@ -170,5 +170,5 @@ In Gmail (mail.google.com, signed in as `mybizzlive@gmail.com`), create one filt
 
 ## 6. Records
 
-1. **Accounts** sheet of `marketing-project-plan.xlsx`: the Gmail mailbox, Cloudflare Email Routing and Brevo, each with login email and 2-step verification status.
+1. **Accounts** sheet of `marketing-plan.xlsx`: the Gmail mailbox, Cloudflare Email Routing and Brevo, each with login email and 2-step verification status.
 2. **Plan** sheet: task A1 set to **Done**, with the date.

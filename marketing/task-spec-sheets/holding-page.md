@@ -5,7 +5,7 @@ updated: "2026-11-20"
 ---
 # Task Spec Sheet — Holding Page on mybizz.live
 
-**Task:** A10 in `marketing-project-plan.xlsx`
+**Task:** A10 in `marketing-plan.xlsx`
 **Owner:** David
 **Depends on:** A5 (approved logo)
 **Unblocks:** B1 to B5, because every Mybizz account links to mybizz.live
@@ -75,5 +75,5 @@ Every other record stays.
 
 ## 5. Records
 
-1. **Accounts** sheet of `marketing-project-plan.xlsx`: Cloudflare Pages, project `mybizz-holding`.
+1. **Accounts** sheet of `marketing-plan.xlsx`: Cloudflare Pages, project `mybizz-holding`.
 2. **Plan** sheet: task A10 set to **Done**, with the date.

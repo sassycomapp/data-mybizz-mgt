@@ -3,7 +3,7 @@ title: "narration-voices"
 ---
 # Task Spec Sheet — Mybizz Narration Voices
 
-**Task:** C2 in `marketing-project-plan.xlsx`
+**Task:** C2 in `marketing-plan.xlsx`
 **Owner:** David
 **Depends on:** A3 (Mybizz Google account)
 **Unblocks:** every narrated video in the marketing plan (explainer, help and teardown videos, and the narration in long-form videos)
