@@ -70,3 +70,11 @@ The base image is never regenerated once clips are made from it.
 | Gemini narration voice (task 16) | Gemini 3.8 Flash TTS, ready-made voice **Rami** (English (US) setting), with this Style instruction | man in his late 30s with a crisp, resonant baritone voice and a clean, refined UK accent. Confident, direct, and engaging, delivering sharp marketing lines with steady authority and zero fluff. |
 
 The Brian character in Google Flow carries the base image and the Google Flow voice together, so every clip of Brian is made from the Brian character.
+
+## 7. Finished clips
+
+Every finished clip is kept in `C:\data-mybizz-mgt\marketing\brand-assets\done-videos\` on the PC only; video files are never stored in GitHub. Each clip is made in Google Flow (Video, Ingredients, Omni 1.1 Flash, 16:9, 720p, 8 s, x1) with the presenter's character card dragged into the prompt box, so the clip carries the presenter's face and Google Flow voice.
+
+| Task | Video | Clip | File |
+|---|---|---|---|
+| 18 | SC-2 | Explainer outro, English | `sc-2-en.mp4` |

@@ -69,3 +69,11 @@ The base image is never regenerated once clips are made from it.
 | Gemini narration voice (task 15) | Gemini 3.8 Flash TTS, ready-made voice **Zuri** (English (US) setting), with this Style instruction | A composed woman around 40 with a smooth, resonant mid-range voice, crisp UK English diction, and a welcoming tone. Assured, concise, and helpful, guiding viewers through software features with steady confidence and zero hype. |
 
 The Sarah character in Google Flow carries the base image and the Google Flow voice together, so every clip of Sarah is made from the Sarah character.
+
+## 7. Finished clips
+
+Every finished clip is kept in `C:\data-mybizz-mgt\marketing\brand-assets\done-videos\` on the PC only; video files are never stored in GitHub. Each clip is made in Google Flow (Video, Ingredients, Omni 1.1 Flash, 16:9, 720p, 8 s, x1) with the presenter's character card dragged into the prompt box, so the clip carries the presenter's face and Google Flow voice.
+
+| Task | Video | Clip | File |
+|---|---|---|---|
+| 17 | SC-1 | Marketing outro, English | `sc-1-en.mp4` |

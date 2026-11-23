@@ -134,7 +134,7 @@ A video that shows no app screens is made during Preparation. A video that shows
 - **Two matched voices each.** Each presenter has one Google Flow voice, used whenever the presenter speaks on camera, and one Gemini voice, chosen by ear as the closest match to the Google Flow voice and used for all narration in a mild British accent. Both voices stay fixed for the life of the presenter.
 - **Mid-video narration** in long-form videos may use the presenter's Google Flow voice on camera.
 - **AI disclosure.** Both presenters are AI. Every video description states that the presenter is AI-generated, and YouTube's altered or synthetic content setting is switched on for every upload.
-- **Presenter library.** All presenter clips are kept in one library and reused (section 6.4).
+- **Presenter library.** The base images are kept in `marketing/brand-assets/presenters/`. Every finished clip is kept in `marketing/brand-assets/done-videos/`, named by its video ID and language (for example `sc-1-en.mp4`), and reused (section 6.4). Video files stay on the PC only and are never stored in GitHub.
 
 ### 6.4 Intro and outro rules
 
