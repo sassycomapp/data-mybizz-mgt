@@ -17,7 +17,7 @@ Sarah is the Mybizz presenter for marketing videos (long form and Shorts) and te
 |---|---|
 | Age | 40 |
 | Look | Warm, confident, approachable; a business owner's peer, not a celebrity or a salesperson |
-| Dress | Smart-casual business: a feminine, delicately tailored navy jacket over a plain white top, no pattern, no logo, no text |
+| Dress | Smart-casual business: a feminine, delicately tailored soft camel jacket over a plain white top, no pattern, no logo, no text |
 | Hair | Shoulder-length, medium blonde, softly styled, kept behind the shoulders and clear of the face and mouth |
 | Eyes | Hazel |
 | Accessories | Small plain stud earrings only; no glasses, no necklace, no watch in frame |
@@ -39,13 +39,13 @@ The base image is the first frame of every Google Flow clip of Sarah, so it is m
 
 Paste as written:
 
-> Photorealistic portrait photograph of a 40-year-old woman, warm, confident and approachable, looking straight into the camera with a light closed-mouth smile. Shoulder-length medium blonde hair, softly styled and kept behind her shoulders, clear of her face. Hazel eyes. She wears a feminine, delicately tailored navy jacket over a plain white top, small plain stud earrings, no glasses, no other jewellery. Framed from the top of the head to the upper chest, centred, with generous space on both sides. Background: a bright, modern, minimal office in neutral tones, softly out of focus, with no text, screens or logos. Soft, even front lighting, natural skin texture, sharp focus on the face. Landscape 16:9. One person only, hands not visible.
+> Photorealistic portrait photograph of a 40-year-old woman, warm, confident and approachable, looking straight into the camera with a light closed-mouth smile. Shoulder-length medium blonde hair, softly styled and kept behind her shoulders, clear of her face. Hazel eyes. She wears a feminine, delicately tailored soft camel jacket over a plain white top, small plain stud earrings, no glasses, no other jewellery. Framed from the top of the head to the upper chest, centred, with generous space on both sides. Background: a bright, modern, minimal office in neutral tones, softly out of focus, with no text, screens or logos. Soft, even front lighting, natural skin texture, sharp focus on the face. Landscape 16:9. One person only, hands not visible.
 
 ## 4. Description for every clip of Sarah
 
 Every Google Flow clip of Sarah starts from the base image ("Frames to Video") and carries this line, word for word, before the clip's own action:
 
-> Sarah, a 40-year-old woman with shoulder-length medium blonde hair and hazel eyes, in a feminine, delicately tailored navy jacket over a plain white top, speaking to camera in a bright modern office.
+> Sarah, a 40-year-old woman with shoulder-length medium blonde hair and hazel eyes, in a feminine, delicately tailored soft camel jacket over a plain white top, speaking to camera in a bright modern office.
 
 ## 5. Choosing the base image
 
