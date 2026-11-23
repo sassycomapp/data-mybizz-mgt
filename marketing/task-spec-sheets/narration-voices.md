@@ -29,8 +29,8 @@ Mybizz narrates its videos with Google's Gemini voices, through a free Gemini AP
 
 ## 2. How It Works
 
-- **The voices.** Gemini's voices are the same voice set Google sells in Cloud Text-to-Speech as Chirp 3 HD. Each presenter, Sarah and Brian, has one Gemini voice, chosen by ear as the closest match to the presenter's Google Flow voice, and kept for the life of the presenter.
-- **The accent.** Gemini voices take their accent and delivery from the instruction sent with the text. Every narration request asks for a mild British accent and a calm, professional delivery, so every video sounds the same.
+- **The voices.** Each presenter, Sarah and Brian, has one ready-made Gemini voice on the model Gemini 3.8 Flash TTS, chosen by ear as the closest match to the presenter's Google Flow voice, and kept for the life of the presenter (section 5). Designed voices (Voice Design) are not used, because Voice Design runs only on the paid tier.
+- **The accent.** Gemini voices take their accent and delivery from the Style instruction sent with the text; the voices themselves are listed under English (US). Every English narration request carries the presenter's Style instruction (section 5), which asks for UK English, so every video sounds the same. Without it, the voices speak with an American accent. French, German, Spanish and Italian narrations carry the same Style instruction without the accent words.
 - **The free allowance.** The free tier allows a limited number of narration requests per day per project; AI Studio shows the current limits under **Rate limits**. One request narrates a whole script section, so a full narration takes a few requests. The daily count resets at midnight Pacific time, which is 10:00 in South Africa (09:00 while the United States is on summer time).
 - **Why free first.** Mybizz has no income until it sells, and selling needs the videos. The free key breaks that loop: the videos are made now at no cost.
 
@@ -55,3 +55,16 @@ When Mybizz-Live has income and needs more narration than the free allowance:
 3. Set a £1 budget alert and a daily character limit, so spending is noticed at once and capped.
 
 The voices stay the same, so no narration has to be redone.
+
+---
+
+## 5. The Presenter Voices
+
+Chosen by ear in the AI Studio Playground (Gemini 3.8 Flash TTS, speech session), tasks 15 and 16 in `marketing-plan.xlsx`.
+
+| Presenter | Model | Voice | Language setting | Style instruction (sent with every English narration) |
+|---|---|---|---|---|
+| Sarah | Gemini 3.8 Flash TTS (`gemini-3.8-flash-tts`) | Zuri | English (US) | A composed woman around 40 with a smooth, resonant mid-range voice, crisp UK English diction, and a welcoming tone. Assured, concise, and helpful, guiding viewers through software features with steady confidence and zero hype. |
+| Brian | Gemini 3.8 Flash TTS (`gemini-3.8-flash-tts`) | Rami | English (US) | man in his late 30s with a crisp, resonant baritone voice and a clean, refined UK accent. Confident, direct, and engaging, delivering sharp marketing lines with steady authority and zero fluff. |
+
+The Style instruction goes in the Style field (in code, the instruction part of the request), never in the script text, so it is never read aloud.

@@ -67,6 +67,6 @@ The base image is never regenerated once clips are made from it.
 | Voice | Where | Description |
 |---|---|---|
 | Google Flow voice (task 13) | A custom voice saved on the Brian character in the Google Flow project "Mybizz Presenters" | A strong, masculine British man in his late 30s with a crisp, resonant baritone voice and a clean, refined UK accent. Confident, direct, and engaging, delivering sharp marketing lines with steady authority and zero fluff. |
-| Gemini narration voice (task 16) | Google AI Studio, Voice Design, made from the same description | Recorded here when made |
+| Gemini narration voice (task 16) | Gemini 3.8 Flash TTS, ready-made voice **Rami** (English (US) setting), with this Style instruction | man in his late 30s with a crisp, resonant baritone voice and a clean, refined UK accent. Confident, direct, and engaging, delivering sharp marketing lines with steady authority and zero fluff. |
 
 The Brian character in Google Flow carries the base image and the Google Flow voice together, so every clip of Brian is made from the Brian character.

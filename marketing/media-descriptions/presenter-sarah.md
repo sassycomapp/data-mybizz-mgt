@@ -66,6 +66,6 @@ The base image is never regenerated once clips are made from it.
 | Voice | Where | Description |
 |---|---|---|
 | Google Flow voice (task 12) | A custom voice saved on the Sarah character in the Google Flow project "Mybizz Presenters" | A composed woman around 40 with a smooth, resonant mid-range voice, crisp UK English diction, and a welcoming tone. Assured, concise, and helpful, guiding viewers through software features with steady confidence and zero hype. |
-| Gemini narration voice (task 15) | Google AI Studio, Voice Design, made from the same description | Recorded here when made |
+| Gemini narration voice (task 15) | Gemini 3.8 Flash TTS, ready-made voice **Zuri** (English (US) setting), with this Style instruction | A composed woman around 40 with a smooth, resonant mid-range voice, crisp UK English diction, and a welcoming tone. Assured, concise, and helpful, guiding viewers through software features with steady confidence and zero hype. |
 
 The Sarah character in Google Flow carries the base image and the Google Flow voice together, so every clip of Sarah is made from the Sarah character.
