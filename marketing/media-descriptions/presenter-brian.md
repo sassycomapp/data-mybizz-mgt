@@ -58,4 +58,4 @@ Generate several images from the prompt in section 3 and choose one that passes 
 4. His head and shoulders still fit when the image is cropped to 9:16 and to 1:1.
 5. He does not resemble a known real person.
 
-The chosen image is kept with the presenter clips (marketing plan section 6.4) as `brian-base-image.png`, and the base image is never regenerated once clips are made from it.
+The chosen image is saved as `marketing/brand-assets/presenters/brian-base-image.jpg`, and the base image is never regenerated once clips are made from it.
