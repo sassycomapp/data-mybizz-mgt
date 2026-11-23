@@ -25,7 +25,7 @@ Brian is the Mybizz technical presenter for explainer videos, and the voice of t
 | Accessories | None in frame; no glasses, no watch |
 | Expression | Relaxed, a light closed-mouth smile, looking straight into the camera |
 | Setting | A bright, modern office, softly out of focus: a window with plants on one side, wooden bookshelves on the other; no readable text or logos |
-| Voice | Mild UK accent (chosen in tasks 13 and 16, not in the image) |
+| Voice | Crisp UK English; the Google Flow custom voice in section 6 |
 
 ## 2. Base image rules
 
@@ -61,3 +61,12 @@ Every Google Flow clip of Brian starts from the base image ("Frames to Video") a
 5. He is an AI-generated person, not a real person.
 
 The base image is never regenerated once clips are made from it.
+
+## 6. Voices
+
+| Voice | Where | Description |
+|---|---|---|
+| Google Flow voice (task 13) | A custom voice saved on the Brian character in the Google Flow project "Mybizz Presenters" | A strong, masculine British man in his late 30s with a crisp, resonant baritone voice and a clean, refined UK accent. Confident, direct, and engaging, delivering sharp marketing lines with steady authority and zero fluff. |
+| Gemini narration voice (task 16) | Google AI Studio, Voice Design, made from the same description | Recorded here when made |
+
+The Brian character in Google Flow carries the base image and the Google Flow voice together, so every clip of Brian is made from the Brian character.

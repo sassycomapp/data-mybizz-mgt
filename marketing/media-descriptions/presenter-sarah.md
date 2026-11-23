@@ -24,7 +24,7 @@ Sarah is the Mybizz presenter for marketing videos (long form and Shorts) and te
 | Accessories | None in frame; no glasses |
 | Expression | Relaxed, a warm closed-mouth smile, looking straight into the camera |
 | Setting | A bright, modern office, softly out of focus: a window with greenery and plants on one side, wooden bookshelves on the other; no readable text or logos |
-| Voice | Mild UK accent (chosen in tasks 12 and 15, not in the image) |
+| Voice | Crisp UK English; the Google Flow custom voice in section 6 |
 
 ## 2. Base image rules
 
@@ -60,3 +60,12 @@ Every Google Flow clip of Sarah starts from the base image ("Frames to Video") a
 5. She is an AI-generated person, not a real person.
 
 The base image is never regenerated once clips are made from it.
+
+## 6. Voices
+
+| Voice | Where | Description |
+|---|---|---|
+| Google Flow voice (task 12) | A custom voice saved on the Sarah character in the Google Flow project "Mybizz Presenters" | A composed woman around 40 with a smooth, resonant mid-range voice, crisp UK English diction, and a welcoming tone. Assured, concise, and helpful, guiding viewers through software features with steady confidence and zero hype. |
+| Gemini narration voice (task 15) | Google AI Studio, Voice Design, made from the same description | Recorded here when made |
+
+The Sarah character in Google Flow carries the base image and the Google Flow voice together, so every clip of Sarah is made from the Sarah character.
