@@ -93,7 +93,7 @@ EOF
 cd /mnt/c/data-mybizz-mgt/marketing/tools && ~/tools/kokoro/.venv/bin/python narrate.py --lang en --voice bf_lily fda-1 fda-2 fda-3 fda-4 cs-1 cs-2 cs-3 cs-4
 ```
 
-`--lang` is `en`, `fr`, `es` or `it`, and `--voice` is the presenter's voice for that language (section 5). Translated scripts are named like their English script with the language at the end, for example `fda-1-the-five-minute-rule-fr.md`.
+`--lang` is `en`, `fr`, `es` or `it`, and `--voice` is the presenter's voice for that language (section 5). Narration uses Kokoro's own speaking pace, which business viewers follow easily and which keeps their interest. Translated scripts are named like their English script with the language at the end, for example `fda-1-the-five-minute-rule-fr.md`.
 
 ### Piper (German)
 
