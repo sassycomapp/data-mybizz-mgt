@@ -44,11 +44,15 @@ The base image was made in Google Flow (Image, Landscape 16:9) with this prompt:
 
 > Photorealistic portrait photograph of a 45-year-old man, calm, clear and capable, looking straight into the camera with a light closed-mouth smile. Short, neatly cut dark brown hair with a touch of grey at the temples. Clean-shaven. Grey-blue eyes. He wears a charcoal grey jacket over a plain light blue open-collar shirt, no tie, no glasses, no jewellery. Framed from the top of the head to the upper chest, centred, with generous space on both sides. Background: a bright, modern office in neutral tones, softly out of focus, with a window and plants on one side and wooden bookshelves on the other, no text, screens or logos. Soft, even front lighting, natural skin texture, sharp focus on the face. Landscape 16:9. One person only, hands not visible.
 
-## 4. Description for every clip of Brian
+## 4. Prompt for every clip of Brian
 
-Every Google Flow clip of Brian starts from the base image ("Frames to Video") and carries this line, word for word, before the clip's own action:
+Every Google Flow clip of Brian is made with Brian's character card dragged into the prompt box. The character card carries Brian's face, clothes and Google Flow voice, so the prompt gives only the action and the words, never Brian's looks.
 
-> Brian, a clean-shaven 45-year-old man with short dark brown hair greying at the temples and grey-blue eyes, in a charcoal grey jacket over a light blue open-collar shirt, speaking to camera in a bright modern office.
+Every prompt opens with a silent start, so that the voice begins after the animation is moving and the lips match the first word:
+
+> Brian smiles at the camera and takes a short breath, then speaks warmly, in <language> with natural <language> pronunciation, calmly and clearly: "<the clip's script>". No text on screen.
+
+The words "in <language> with natural <language> pronunciation" are left out of an English clip. Words shown on screen, such as `mybizz.live`, are added when the film is put together, never by Google Flow.
 
 ## 5. The base image
 

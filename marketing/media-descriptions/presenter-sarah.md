@@ -43,11 +43,15 @@ The base image was made in Google Flow (Image, Landscape 16:9) from a square AI-
 
 > Keep this exact woman: the same face, hair, makeup, soft camel jacket and pink broderie top. Recreate the photo as a photorealistic landscape 16:9 image, framed from the top of her head to the upper chest, centred, with generous space on both sides. Background: a bright, modern, minimal office in neutral tones, softly out of focus, with no text, screens or logos. Change only her expression: a warm, friendly, light closed-mouth smile, looking straight into the camera. Soft, even front lighting, natural skin texture, sharp focus on the face. One person only, hands not visible.
 
-## 4. Description for every clip of Sarah
+## 4. Prompt for every clip of Sarah
 
-Every Google Flow clip of Sarah starts from the base image ("Frames to Video") and carries this line, word for word, before the clip's own action:
+Every Google Flow clip of Sarah is made with Sarah's character card dragged into the prompt box. The character card carries Sarah's face, clothes and Google Flow voice, so the prompt gives only the action and the words, never Sarah's looks.
 
-> Sarah, a woman of about 40 with wavy medium blonde hair and hazel eyes, in a soft camel jacket over a pink broderie blouse, speaking warmly to camera in a bright modern office.
+Every prompt opens with a silent start, so that the voice begins after the animation is moving and the lips match the first word:
+
+> Sarah smiles at the camera and takes a short breath, then speaks warmly, in <language> with natural <language> pronunciation, calmly and clearly: "<the clip's script>". No text on screen.
+
+The words "in <language> with natural <language> pronunciation" are left out of an English clip. Words shown on screen, such as `mybizz.live`, are added when the film is put together, never by Google Flow.
 
 ## 5. The base image
 
@@ -78,6 +82,10 @@ Every finished clip is kept in `C:\data-mybizz-mgt\marketing\brand-assets\done-v
 |---|---|---|---|
 | 17 | SC-1 | Marketing outro, English | `sc-1-en.mp4` |
 | 19 | FDA-1 | Intro clip, English | `fda-1-intro-en.mp4` |
+| 21 | SC-1 | Marketing outro, French | `sc-1-fr.mp4` |
+| 22 | SC-1 | Marketing outro, German | `sc-1-de.mp4` |
+| 23 | SC-1 | Marketing outro, Spanish | `sc-1-es.mp4` |
+| 24 | SC-1 | Marketing outro, Italian | `sc-1-it.mp4` |
 
 Every finished voice file is kept in `C:\data-mybizz-mgt\marketing\brand-assets\done-audios\` on the PC only, made as set out in `task-spec-sheets/narration-voices.md`.
 
