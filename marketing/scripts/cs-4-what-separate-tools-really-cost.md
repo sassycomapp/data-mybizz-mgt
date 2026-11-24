@@ -5,7 +5,7 @@ title: "cs-4-what-separate-tools-really-cost"
 
 **Task:** 53 in `marketing-plan.xlsx` (Video Plan sheet): Script EN
 **Video:** CS-4, long-form marketing, target 8 minutes, landscape
-**Presenter:** Sarah (on-camera intro, Gemini voice narration)
+**Presenter:** Sarah (on-camera intro in her Google Flow voice; narration in her narration voice)
 **Aimed at:** owners counting their monthly software bills
 **Purpose:** sets the monthly cost of separate tools against one Mybizz CS price
 **App screens:** none

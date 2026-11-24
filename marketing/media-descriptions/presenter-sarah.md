@@ -66,7 +66,7 @@ The base image is never regenerated once clips are made from it.
 | Voice | Where | Description |
 |---|---|---|
 | Google Flow voice (task 12) | A custom voice saved on the Sarah character in the Google Flow project "Mybizz Presenters" | A composed woman around 40 with a smooth, resonant mid-range voice, crisp UK English diction, and a welcoming tone. Assured, concise, and helpful, guiding viewers through software features with steady confidence and zero hype. |
-| Gemini narration voice (task 15) | Gemini 3.8 Flash TTS, ready-made voice **Zuri** (English (US) setting), with this Style instruction | A composed woman around 40 with a smooth, resonant mid-range voice, crisp UK English diction, and a welcoming tone. Assured, concise, and helpful, guiding viewers through software features with steady confidence and zero hype. |
+| Narration voice (task 15) | Kokoro, on David's PC; voice **bf_lily** (British English) | Other languages: French `ff_siwis`, Spanish `ef_dora`, Italian `if_sara` (Kokoro); German `de_DE-kerstin-low` (Piper). Full method: `task-spec-sheets/narration-voices.md` |
 
 The Sarah character in Google Flow carries the base image and the Google Flow voice together, so every clip of Sarah is made from the Sarah character.
 
@@ -77,3 +77,11 @@ Every finished clip is kept in `C:\data-mybizz-mgt\marketing\brand-assets\done-v
 | Task | Video | Clip | File |
 |---|---|---|---|
 | 17 | SC-1 | Marketing outro, English | `sc-1-en.mp4` |
+| 19 | FDA-1 | Intro clip, English | `fda-1-intro-en.mp4` |
+
+Every finished voice file is kept in `C:\data-mybizz-mgt\marketing\brand-assets\done-audios\` on the PC only, made as set out in `task-spec-sheets/narration-voices.md`.
+
+| Tasks | Video | Voice file | Files |
+|---|---|---|---|
+| 29–33 | SC-3 | Teardown intro, five languages | `sc-3-en.wav`, `sc-3-fr.wav`, `sc-3-de.wav`, `sc-3-es.wav`, `sc-3-it.wav` |
+| 34–38 | SC-4 | Teardown outro, five languages | `sc-4-en.wav`, `sc-4-fr.wav`, `sc-4-de.wav`, `sc-4-es.wav`, `sc-4-it.wav` |

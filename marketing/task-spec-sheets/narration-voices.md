@@ -5,66 +5,123 @@ title: "narration-voices"
 
 **Task:** C2 in `marketing-plan.xlsx`
 **Owner:** David
-**Depends on:** A3 (Mybizz Google account)
-**Unblocks:** every narrated video in the marketing plan (explainer, help and teardown videos, and the narration in long-form videos)
+**Unblocks:** every narrated video in the marketing plan (explainer, help and teardown videos, the narration in long-form videos, and the teardown intro and outro)
 
 ---
 
 ## 1. Result
 
-Mybizz narrates its videos with Google's Gemini voices, through a free Gemini API key from Google AI Studio. The key costs nothing and needs no card and no billing account.
+Mybizz makes all narration on David's own PC, in WSL, with two free, open-source voice tools. Neither needs an account, a key, a card or an internet connection once installed, and neither has a daily limit.
 
 | Item | Value |
 |---|---|
-| Google account | `mybizzlive@gmail.com` |
-| Google Cloud project name | Mybizz |
-| Project ID | `mybizz-515510` |
-| Project number | 81918688433 |
-| API key name | Gemini API Key |
-| Where the key is kept | David's password manager only; never in a file or a repository |
-| Billing account | None |
-| Google payments profile | Individual, South Africa, legal name David Coleman, profile ID 5401-0178-4710; holds no card |
+| English, French, Spanish, Italian | **Kokoro** (Kokoro-82M, Apache 2.0 licence), Python package `kokoro` |
+| German | **Piper** (`piper-tts` 1.8.0), with Piper voice files |
+| Installed in | WSL, `~/tools/kokoro` (Python environment `~/tools/kokoro/.venv`) |
+| Piper voice files | `~/tools/kokoro/piper-voices` |
+| Helper | `espeak-ng` (installed with `apt`), needed by Kokoro for French, Spanish and Italian |
+| Finished voice files | `C:\data-mybizz-mgt\marketing\brand-assets\done-audios\`, on the PC only; voice files are never stored in GitHub |
+| Sound format | WAV, 24,000 Hz, mono (Kokoro); WAV (Piper) |
 
 ---
 
 ## 2. How It Works
 
-- **The voices.** Each presenter, Sarah and Brian, has one ready-made Gemini voice on the model Gemini 3.8 Flash TTS, chosen by ear as the closest match to the presenter's Google Flow voice, and kept for the life of the presenter (section 5). Designed voices (Voice Design) are not used, because Voice Design runs only on the paid tier.
-- **The accent.** Gemini voices take their accent and delivery from the Style instruction sent with the text; the voices themselves are listed under English (US). Every English narration request carries the presenter's Style instruction (section 5), which asks for UK English, so every video sounds the same. Without it, the voices speak with an American accent. French, German, Spanish and Italian narrations carry the same Style instruction without the accent words.
-- **The free allowance.** The free tier allows a limited number of narration requests per day per project; AI Studio shows the current limits under **Rate limits**. One request narrates a whole script section, so a full narration takes a few requests. The daily count resets at midnight Pacific time, which is 10:00 in South Africa (09:00 while the United States is on summer time).
-- **Why free first.** Mybizz has no income until it sells, and selling needs the videos. The free key breaks that loop: the videos are made now at no cost.
+- **Why on the PC.** The PC has 8 GB of memory and no graphics card for AI work. Kokoro (82 million parameters) and Piper both run on the processor in well under 1 GB of memory, at about the speed of speech, so a full narration runs in the background while other work continues.
+- **The voices.** Each presenter has one fixed voice per language, chosen by ear (section 5). The voices are ready-made: neither tool copies the presenter's Google Flow voice, so the narration voice is the closest match chosen by ear.
+- **The accent.** Kokoro's British English voices speak British English by themselves (language code `b`); no accent instruction is sent.
+- **One line per call for short clips, one scene per call for films.** Each script scene is narrated as one piece and saved as one file, so a fault is fixed by remaking one scene, not the whole film.
+- **File names.** Every voice file is named after its video ID and language, in lower case: `sc-3-en.wav`, `sc-4-de.wav`. Film narration adds the scene number: `fda-1-en-s03.wav`.
 
 ---
 
-## 3. Set-Up
+## 3. Set-Up (WSL terminal, once)
 
-1. Open `https://console.cloud.google.com` as `mybizzlive@gmail.com` and create the project **Mybizz**.
-2. Open `https://aistudio.google.com` as `mybizzlive@gmail.com` and accept the terms.
-3. **Get API key → Create API key**, in the **Mybizz** project. Save the key in the password manager.
+1. Kokoro's engine (PyTorch for processors without a graphics card):
 
-**Check:** AI Studio's API keys page lists **Gemini API Key** under the Mybizz project, on the free tier.
+```
+cd ~ && mkdir -p ~/tools/kokoro && cd ~/tools/kokoro && python3 -m venv .venv && .venv/bin/pip install --upgrade pip && .venv/bin/pip install torch --index-url https://download.pytorch.org/whl/cpu
+```
+
+2. Kokoro and its language helper:
+
+```
+cd ~/tools/kokoro && sudo apt-get update && sudo apt-get install -y espeak-ng && .venv/bin/pip install "kokoro>=0.9.4" soundfile
+```
+
+3. Piper and its voices:
+
+```
+cd ~/tools/kokoro && .venv/bin/pip install piper-tts && mkdir -p piper-voices && cd piper-voices && ../.venv/bin/python -m piper.download_voices de_DE-kerstin-low de_DE-thorsten-medium
+```
+
+Kokoro downloads each voice from Hugging Face (`hexgrad/Kokoro-82M`) the first time it is used and keeps it on the PC. The messages "unauthenticated requests to the HF Hub" and "Defaulting repo_id to hexgrad/Kokoro-82M" are expected and need no action.
+
+**Check:** the test in section 4 writes a playable file.
 
 ---
 
-## 4. Moving to Paid Voices
+## 4. Making Narration
 
-When Mybizz-Live has income and needs more narration than the free allowance:
+### Kokoro (English, French, Spanish, Italian)
 
-1. Create a Google Cloud billing account of type **Business**, in the name of Mybizz-Live Ltd once registered, with a card that has funds. Google places a temporary card check of about £40, released within a week.
-2. Link the billing account to the Mybizz project.
-3. Set a £1 budget alert and a daily character limit, so spending is noticed at once and capped.
+The language code and voice come from section 5. Each entry in `lines` is one file: language code, voice, file name, text.
 
-The voices stay the same, so no narration has to be redone.
+```
+cd ~/tools/kokoro && .venv/bin/python - <<'EOF'
+from kokoro import KPipeline
+import soundfile as sf, numpy as np
+out = "/mnt/c/data-mybizz-mgt/marketing/brand-assets/done-audios/"
+lines = [
+ ("b","bf_lily","sc-3-en","Hello. I'm Sarah, an AI presenter, with a quick look at your website."),
+]
+pipes = {}
+for lang, voice, name, text in lines:
+    p = pipes.setdefault(lang, KPipeline(lang_code=lang))
+    audio = np.concatenate([np.asarray(a) for _, _, a in p(text, voice=voice)])
+    sf.write(out + name + ".wav", audio, 24000)
+    print("made", name)
+print("done")
+EOF
+```
+
+### Piper (German)
+
+```
+cd ~/tools/kokoro/piper-voices && ../.venv/bin/python -m piper -m de_DE-kerstin-low --data-dir . -f /mnt/c/data-mybizz-mgt/marketing/brand-assets/done-audios/sc-3-de.wav -- "Hallo. Ich bin Sarah, eine KI-Moderatorin, mit einem kurzen Blick auf Ihre Website."
+```
+
+The warning "Missing phoneme from id map" means one rare sound mark is skipped; it needs no action unless the sentence sounds wrong.
+
+### Listening check
+
+Every file is played once before it is used: the words are complete, the pronunciation is natural, and the file ends cleanly with no noise.
 
 ---
 
 ## 5. The Presenter Voices
 
-Chosen by ear in the AI Studio Playground (Gemini 3.8 Flash TTS, speech session), tasks 15 and 16 in `marketing-plan.xlsx`.
-
-| Presenter | Model | Voice | Language setting | Style instruction (sent with every English narration) |
+| Presenter | Language | Tool | Language code | Voice |
 |---|---|---|---|---|
-| Sarah | Gemini 3.8 Flash TTS (`gemini-3.8-flash-tts`) | Zuri | English (US) | A composed woman around 40 with a smooth, resonant mid-range voice, crisp UK English diction, and a welcoming tone. Assured, concise, and helpful, guiding viewers through software features with steady confidence and zero hype. |
-| Brian | Gemini 3.8 Flash TTS (`gemini-3.8-flash-tts`) | Rami | English (US) | man in his late 30s with a crisp, resonant baritone voice and a clean, refined UK accent. Confident, direct, and engaging, delivering sharp marketing lines with steady authority and zero fluff. |
+| Sarah | English (British) | Kokoro | `b` | `bf_lily` |
+| Sarah | French | Kokoro | `f` | `ff_siwis` |
+| Sarah | Spanish | Kokoro | `e` | `ef_dora` |
+| Sarah | Italian | Kokoro | `i` | `if_sara` |
+| Sarah | German | Piper | — | `de_DE-kerstin-low` |
+| Brian | English (British) | Kokoro | `b` | `bm_daniel` |
+| Brian | French | Piper | — | `fr_FR-tom-medium` |
+| Brian | Spanish | Kokoro | `e` | `em_alex` |
+| Brian | Italian | Kokoro | `i` | `im_nicola` |
+| Brian | German | Piper | — | `de_DE-thorsten-medium` |
 
-The Style instruction goes in the Style field (in code, the instruction part of the request), never in the script text, so it is never read aloud.
+Sarah's voices are chosen by ear and used. Brian's French, Spanish, Italian and German voices are confirmed by ear before his first translated narration; Piper downloads `fr_FR-tom-medium` with `python -m piper.download_voices fr_FR-tom-medium` in `piper-voices`.
+
+---
+
+## 6. Accounts Kept but Not Used for Narration
+
+| Account | Detail |
+|---|---|
+| Google AI Studio | `mybizzlive@gmail.com`; project **Mybizz** (`mybizz-515510`, number 81918688433); key **Gemini API Key**, free tier, kept in David's password manager only. Google's speech models run on the paid tier only. |
+| Hugging Face | Free account on `mybizzlive@gmail.com`; password in David's password manager. Its free web pages have a small daily allowance. |
+| Google payments profile | Individual, South Africa, legal name David Coleman, profile ID 5401-0178-4710; holds no card; no billing account exists. |

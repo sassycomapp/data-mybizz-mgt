@@ -49,7 +49,7 @@ Every tool on this sheet is free. None needs a card, a billing account or an API
 
 - **What it is:** an open-source pipeline (MIT licence) that turns a source document into an animated explainer video: script, narration, scenes, storyboard and render. Its scenes are drawn by Remotion, which renders each frame in a hidden browser. Source: `https://github.com/prajwal-y/video_explainer`.
 - **Folder:** `~/video_explainer` in WSL. Each video is a project in `~/video_explainer/projects/<name>`.
-- **Settings:** `config.yaml` sets `llm.provider: "claude-code"`, so video_explainer works through Claude Code on David's Claude plan. Narration is imported as Mybizz's own voiceover (the Gemini voices on the narration-voices sheet).
+- **Settings:** `config.yaml` sets `llm.provider: "claude-code"`, so video_explainer works through Claude Code on David's Claude plan. Narration is imported as Mybizz's own voiceover (the Kokoro and Piper voices on the narration-voices sheet).
 
 **Install (in this order):**
 

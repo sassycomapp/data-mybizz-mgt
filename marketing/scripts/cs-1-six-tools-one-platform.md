@@ -5,7 +5,7 @@ title: "cs-1-six-tools-one-platform"
 
 **Task:** 41 in `marketing-plan.xlsx` (Video Plan sheet): Script EN
 **Video:** CS-1, long-form marketing, target 8 minutes, landscape
-**Presenter:** Sarah (on-camera intro, Gemini voice narration)
+**Presenter:** Sarah (on-camera intro in her Google Flow voice; narration in her narration voice)
 **Aimed at:** owners running their business across separate tools
 **Purpose:** shows that one platform replaces the five or six separate tools a business runs
 **App screens:** none

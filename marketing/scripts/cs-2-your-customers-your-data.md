@@ -5,7 +5,7 @@ title: "cs-2-your-customers-your-data"
 
 **Task:** 45 in `marketing-plan.xlsx` (Video Plan sheet): Script EN
 **Video:** CS-2, long-form marketing, target 8 minutes, landscape
-**Presenter:** Sarah (on-camera intro, Gemini voice narration)
+**Presenter:** Sarah (on-camera intro in her Google Flow voice; narration in her narration voice)
 **Aimed at:** owners selling through marketplaces
 **Purpose:** shows that the customer list belongs to the business, on the first day and the last
 **App screens:** none

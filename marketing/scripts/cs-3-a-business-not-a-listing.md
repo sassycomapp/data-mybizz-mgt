@@ -5,7 +5,7 @@ title: "cs-3-a-business-not-a-listing"
 
 **Task:** 48 in `marketing-plan.xlsx` (Video Plan sheet): Script EN
 **Video:** CS-3, long-form marketing, target 8 minutes, landscape
-**Presenter:** Sarah (on-camera intro, Gemini voice narration)
+**Presenter:** Sarah (on-camera intro in her Google Flow voice; narration in her narration voice)
 **Aimed at:** owners listed on marketplaces among hundreds of others
 **Purpose:** shows the business with its own website, brand and booking, competing on its own terms
 **App screens:** none

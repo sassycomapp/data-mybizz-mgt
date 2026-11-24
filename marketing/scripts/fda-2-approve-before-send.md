@@ -5,7 +5,7 @@ title: "fda-2-approve-before-send"
 
 **Task:** 11 in `marketing-plan.xlsx` (Video Plan sheet): Script EN
 **Video:** FDA-2, long-form marketing, target 8 minutes, landscape
-**Presenter:** Sarah (on-camera intro, Gemini voice narration)
+**Presenter:** Sarah (on-camera intro in her Google Flow voice; narration in her narration voice)
 **Aimed at:** owners wary of AI speaking for them
 **Purpose:** shows an AI front desk that never replies without the owner's approval
 **App screens:** none

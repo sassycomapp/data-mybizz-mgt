@@ -5,7 +5,7 @@ title: "fda-1-the-five-minute-rule"
 
 **Task:** 4 in `marketing-plan.xlsx` (Video Plan sheet): Script EN
 **Video:** FDA-1, long-form marketing, target 8 minutes, landscape
-**Presenter:** Sarah (on-camera intro, Gemini voice narration)
+**Presenter:** Sarah (on-camera intro in her Google Flow voice; narration in her narration voice)
 **Aimed at:** owners of consulting and service businesses who answer enquiries late
 **Purpose:** shows that the first helpful reply wins the client
 **App screens:** none

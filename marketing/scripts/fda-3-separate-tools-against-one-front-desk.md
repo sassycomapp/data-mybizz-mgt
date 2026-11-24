@@ -5,7 +5,7 @@ title: "fda-3-separate-tools-against-one-front-desk"
 
 **Task:** 14 in `marketing-plan.xlsx` (Video Plan sheet): Script EN
 **Video:** FDA-3, long-form marketing, target 8 minutes, landscape
-**Presenter:** Sarah (on-camera intro, Gemini voice narration)
+**Presenter:** Sarah (on-camera intro in her Google Flow voice; narration in her narration voice)
 **Aimed at:** owners paying for several tools
 **Purpose:** shows the cost and hassle of juggling separate tools
 **App screens:** none

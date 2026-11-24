@@ -5,7 +5,7 @@ title: "fda-4-your-data-your-storage"
 
 **Task:** 20 in `marketing-plan.xlsx` (Video Plan sheet): Script EN
 **Video:** FDA-4, long-form marketing, target 8 minutes, landscape
-**Presenter:** Sarah (on-camera intro, Gemini voice narration)
+**Presenter:** Sarah (on-camera intro in her Google Flow voice; narration in her narration voice)
 **Aimed at:** owners worried about being locked in
 **Purpose:** shows that the owner keeps the data and can leave at any time
 **App screens:** none
