@@ -85,7 +85,7 @@ print("done")
 EOF
 ```
 
-For the Mybizz pace, each call is `p(text, voice=voice, speed=0.9)`.
+For the Mybizz pace, each call is `p(text, voice=voice, speed=0.85)`.
 
 ### Film narration (Kokoro, all scenes of one or more scripts)
 
@@ -95,15 +95,15 @@ For the Mybizz pace, each call is `p(text, voice=voice, speed=0.9)`.
 cd /mnt/c/data-mybizz-mgt/marketing/tools && ~/tools/kokoro/.venv/bin/python narrate.py --lang en --voice bf_lily fda-1 fda-2 fda-3 fda-4 cs-1 cs-2 cs-3 cs-4
 ```
 
-`--lang` is `en`, `fr`, `es` or `it`, and `--voice` is the presenter's voice for that language (section 5). Narration runs at the Mybizz pace of 0.9, 10% slower than Kokoro's own pace, which is the tool's default; `--force` remakes scenes that already exist. Translated scripts are named like their English script with the language at the end, for example `fda-1-the-five-minute-rule-fr.md`.
+`--lang` is `en`, `fr`, `es` or `it`, and `--voice` is the presenter's voice for that language (section 5). Narration runs at the Mybizz pace of 0.85, 15% slower than Kokoro's own pace, which is the tool's default; `--force` remakes scenes that already exist. Translated scripts are named like their English script with the language at the end, for example `fda-1-the-five-minute-rule-fr.md`.
 
 ### Piper (German)
 
 ```
-cd ~/tools/kokoro/piper-voices && ../.venv/bin/python -m piper -m de_DE-kerstin-low --data-dir . --length-scale 1.11 -f /mnt/c/data-mybizz-mgt/marketing/brand-assets/done-audios/sc-3-de.wav -- "Hallo. Ich bin Sarah, eine KI-Moderatorin, mit einem kurzen Blick auf Ihre Website."
+cd ~/tools/kokoro/piper-voices && ../.venv/bin/python -m piper -m de_DE-kerstin-low --data-dir . --length-scale 1.18 -f /mnt/c/data-mybizz-mgt/marketing/brand-assets/done-audios/sc-3-de.wav -- "Hallo. Ich bin Sarah, eine KI-Moderatorin, mit einem kurzen Blick auf Ihre Website."
 ```
 
-`--length-scale 1.11` gives the Mybizz pace (10% slower than Piper's own pace). The warning "Missing phoneme from id map" means one rare sound mark is skipped; it needs no action unless the sentence sounds wrong.
+`--length-scale 1.18` gives the Mybizz pace (15% slower than Piper's own pace). The warning "Missing phoneme from id map" means one rare sound mark is skipped; it needs no action unless the sentence sounds wrong.
 
 ### Listening check
 

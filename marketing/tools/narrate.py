@@ -4,8 +4,8 @@ Reads each script in marketing/scripts/, takes the text under "## Narration"
 (without scene headings and "On screen" notes), and writes one file per scene to
 marketing/brand-assets/done-audios/ as <video>-<lang>-sNN.wav.
 A scene file that already exists is skipped, so a stopped run carries on where it stopped;
---force remakes scenes that already exist. --speed sets the pace: 0.9, the Mybizz narration
-pace, is 10% slower than Kokoro's own pace (1.0).
+--force remakes scenes that already exist. --speed sets the pace: 0.85, the Mybizz narration
+pace, is 15% slower than Kokoro's own pace (1.0).
 
 Run from WSL with Kokoro's Python (task-spec-sheets/narration-voices.md):
   ~/tools/kokoro/.venv/bin/python narrate.py --lang en --voice bf_lily fda-1 fda-2
@@ -42,7 +42,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--lang", default="en", choices=sorted(LANG_CODES))
     ap.add_argument("--voice", default="bf_lily")
-    ap.add_argument("--speed", type=float, default=0.9, help="speaking pace; 0.9 is the Mybizz pace")
+    ap.add_argument("--speed", type=float, default=0.85, help="speaking pace; 0.85 is the Mybizz pace")
     ap.add_argument("--force", action="store_true", help="remake scenes that already exist")
     ap.add_argument("videos", nargs="+", help="video IDs, e.g. fda-1 cs-2")
     a = ap.parse_args()
