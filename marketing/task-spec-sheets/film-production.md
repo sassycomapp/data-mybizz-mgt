@@ -55,6 +55,14 @@ cd ~/video_explainer && sed -i 's/model: "claude-sonnet-4-20250514"/model: "sonn
 
 **Check:** `cd ~/video_explainer && env -u ANTHROPIC_API_KEY claude auth status` shows `"authMethod": "claude.ai"`.
 
+4. **Scene checks by the TypeScript compiler only.** video_explainer's quick brace check reads every apostrophe in on-screen text or comments (for example "YOU'RE", "customer's") as the start of a quotation, reports false errors, and its automatic repair then damages correct files. The automatic repair and the quick check are switched off; the TypeScript compiler, which builds the video, stays as the check.
+
+```
+cd ~/video_explainer && sed -i 's/return verifier.verify_scenes(scenes_dir, auto_fix=True)/return verifier.verify_scenes(scenes_dir, auto_fix=False)/' src/scenes/generator.py && sed -i 's/basic_errors = self._run_basic_syntax_check(scenes_dir)/basic_errors = []  # Mybizz: TypeScript compiler only; the basic check misreads apostrophes/' src/scenes/syntax_verifier.py
+```
+
+The message "FutureWarning: The `fitz` API is deprecated" appears at the start of every video_explainer command; it comes from a document-reading library video_explainer does not use for Mybizz films, and needs no action.
+
 ---
 
 ## 4. Making One Film (WSL terminal, one step at a time)
@@ -77,6 +85,12 @@ cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli voi
 
 ```
 cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli scenes fda-1 --force
+```
+
+   Then check the scenes with the TypeScript compiler; the check passes with "All scenes pass syntax verification":
+
+```
+cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli scenes fda-1 --verify --no-auto-fix
 ```
 
 4. **Set the Mybizz colours:**
