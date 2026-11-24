@@ -121,10 +121,16 @@ cd ~/video_explainer && .venv/bin/python /mnt/c/data-mybizz-mgt/marketing/tools/
 cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli storyboard fda-1
 ```
 
-6. **Render, in one-minute pieces (1,800 frames each, about 35 minutes each):** the first piece is also the look check, watched before the rest are rendered. A piece that stops is run again. The storyboard step prints the film's length; at 30 frames a second, a 5-minute film has about 9,300 frames, so it is rendered as `0-1799`, `1800-3599`, `3600-5399`, `5400-7199` and `7200-`.
+6. **Render, in one-minute pieces (1,800 frames each, about 35 minutes each):** the first piece is also the look check, watched before the rest are rendered. A piece that stops is run again.
 
 ```
 cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli render fda-1 --gl swangle --frames 0-1799
+```
+
+   The film's length in frames is the "Duration: … frames" line that this first render prints, because the renderer adds short pauses between scenes; the storyboard's length in seconds is shorter and is not used. The remaining pieces run from `1800-3599` upwards in steps of 1,800, and the last piece ends one frame below that duration (for a duration of 10356 frames, the last piece is `9000-10355`). They run one after another in one command:
+
+```
+cd ~/video_explainer && for r in 1800-3599 3600-5399 5400-7199 7200-8999 9000-10355; do env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli render fda-1 --gl swangle --frames $r || break; done
 ```
 
    The pieces are written to `projects/fda-1/output/` as `final-frames-<range>.mp4`; `cd ~/video_explainer/projects/fda-1/output && explorer.exe .` opens that folder in Windows.
@@ -138,3 +144,11 @@ cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli ren
 8. **Save the rendered scenes for assembly** in `C:\data-mybizz-mgt\marketing\brand-assets\wip-videos\` as `<video>-scenes-en.mp4`. Work in progress goes in `wip-videos`; `done-videos` holds only finished videos and clips.
 
 **Check:** `projects/fda-1/output/final.mp4` plays, the pictures match the narration, and no app screens, foreign logos or misspelt words appear. A faulty scene is redrawn with `env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli scenes fda-1 --scene <number>`, then steps 4 to 8 run again.
+
+---
+
+## Progress
+
+| Film | State | Next step |
+|---|---|---|
+| FDA-1 (EN) | Pieces `0-1799` to `9000-9995` rendering since 2026-11-24 (render duration 10356 frames) | When that command ends, render the missing last piece, join all pieces and save the film: `cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli render fda-1 --gl swangle --frames 9996-10355 && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli render fda-1 --merge-chunks && cp projects/fda-1/output/final.mp4 /mnt/c/data-mybizz-mgt/marketing/brand-assets/wip-videos/fda-1-scenes-en.mp4` |
