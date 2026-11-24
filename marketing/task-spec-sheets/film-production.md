@@ -69,6 +69,14 @@ cd ~/video_explainer/remotion && L='  inputRange = (function (r) { r = Array.fro
 
 **Check:** `grep -rl "Mybizz: strictly increasing" ~/video_explainer/remotion/node_modules/remotion/dist | wc -l` prints `3`. Reinstalling Remotion (`npm install`) removes this change, so the command runs again after any reinstall.
 
+6. **A correct Reference component.** Every scenes step writes `scenes/components/Reference.tsx` from a template in `src/scenes/generator.py`. The template holds each brace twice (`{{`), as Python text templates do, so the file is written through `.format()`, which turns each pair into the single brace the TypeScript compiler expects.
+
+```
+cd ~/video_explainer && sed -i 's/f.write(REFERENCE_TEMPLATE)$/f.write(REFERENCE_TEMPLATE.format())  # Mybizz: single braces/' src/scenes/generator.py
+```
+
+**Check:** `grep -c "Mybizz: single braces" ~/video_explainer/src/scenes/generator.py` prints `1`.
+
 The message "FutureWarning: The `fitz` API is deprecated" appears at the start of every video_explainer command; it comes from a document-reading library video_explainer does not use for Mybizz films, and needs no action.
 
 ---
