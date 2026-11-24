@@ -61,6 +61,14 @@ cd ~/video_explainer && sed -i 's/model: "claude-sonnet-4-20250514"/model: "sonn
 cd ~/video_explainer && sed -i 's/return verifier.verify_scenes(scenes_dir, auto_fix=True)/return verifier.verify_scenes(scenes_dir, auto_fix=False)/' src/scenes/generator.py && sed -i 's/basic_errors = self._run_basic_syntax_check(scenes_dir)/basic_errors = []  # Mybizz: TypeScript compiler only; the basic check misreads apostrophes/' src/scenes/syntax_verifier.py
 ```
 
+5. **Animations that tolerate equal timing points.** Remotion's `interpolate` stops the whole render when two timing points are equal (for example a fade-out that starts where the scene ends: `[896, 916, 1268, 1268]`). The installed Remotion 4.0.242 is changed so that `interpolate` moves an equal point forward by a millionth of a frame, which is invisible, in its three copies under `remotion/node_modules/remotion/dist`. After any change to Remotion's files, Remotion's build cache is cleared, or the render keeps using the old code.
+
+```
+cd ~/video_explainer/remotion && L='  inputRange = (function (r) { r = Array.from(r); for (let i = 1; i < r.length; i++) { if (!(r[i] > r[i - 1])) r[i] = r[i - 1] + 1e-6; } return r; })(inputRange); \/\/ Mybizz: strictly increasing ranges' && for f in $(grep -rl "^function interpolate(input, inputRange, outputRange, options) {$" node_modules/remotion/dist); do grep -q "Mybizz: strictly increasing" $f || sed -i "s/^function interpolate(input, inputRange, outputRange, options) {$/&\n$L/" $f; done && rm -rf node_modules/.cache
+```
+
+**Check:** `grep -rl "Mybizz: strictly increasing" ~/video_explainer/remotion/node_modules/remotion/dist | wc -l` prints `3`. Reinstalling Remotion (`npm install`) removes this change, so the command runs again after any reinstall.
+
 The message "FutureWarning: The `fitz` API is deprecated" appears at the start of every video_explainer command; it comes from a document-reading library video_explainer does not use for Mybizz films, and needs no action.
 
 ---
@@ -105,10 +113,20 @@ cd ~/video_explainer && .venv/bin/python /mnt/c/data-mybizz-mgt/marketing/tools/
 cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli storyboard fda-1
 ```
 
-6. **Render:**
+6. **Render, in one-minute pieces (1,800 frames each, about 35 minutes each):** the first piece is also the look check, watched before the rest are rendered. A piece that stops is run again. The storyboard step prints the film's length; at 30 frames a second, a 5-minute film has about 9,300 frames, so it is rendered as `0-1799`, `1800-3599`, `3600-5399`, `5400-7199` and `7200-`.
 
 ```
-cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli render fda-1 --gl swangle
+cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli render fda-1 --gl swangle --frames 0-1799
 ```
 
-**Check:** `projects/fda-1/output/final.mp4` plays, the pictures match the narration, and no app screens, foreign logos or misspelt words appear. A faulty scene is redrawn with `env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli scenes fda-1 --scene <number>`, then steps 4 to 6 run again.
+   The pieces are written to `projects/fda-1/output/` as `final-frames-<range>.mp4`; `cd ~/video_explainer/projects/fda-1/output && explorer.exe .` opens that folder in Windows.
+
+7. **Join the pieces** once all are rendered:
+
+```
+cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli render fda-1 --merge-chunks
+```
+
+8. **Save the rendered scenes for assembly** in `C:\data-mybizz-mgt\marketing\brand-assets\wip-videos\` as `<video>-scenes-en.mp4`. Work in progress goes in `wip-videos`; `done-videos` holds only finished videos and clips.
+
+**Check:** `projects/fda-1/output/final.mp4` plays, the pictures match the narration, and no app screens, foreign logos or misspelt words appear. A faulty scene is redrawn with `env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli scenes fda-1 --scene <number>`, then steps 4 to 8 run again.
