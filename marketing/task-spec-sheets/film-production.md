@@ -39,9 +39,21 @@ Each long-form film's animated picture track is made by video_explainer on David
 
 ## 3. Set-Up (WSL terminal, once)
 
+1. **Whisper, with PyAV 16.1.** Whisper reads sound files through PyAV; PyAV 19 dropped an option Whisper uses, and PyAV 16.1 is the newest version that both works with Whisper and installs ready-made on this PC.
+
 ```
-cd ~/video_explainer && .venv/bin/pip install faster-whisper
+cd ~/video_explainer && .venv/bin/pip install faster-whisper && .venv/bin/pip install "av==16.1.0" --only-binary=:all:
 ```
+
+2. **A current Claude model.** video_explainer names the retired model `claude-sonnet-4-20250514` in `config.yaml` and in its program code; every mention is replaced by `sonnet`, which Claude Code maps to the current Sonnet model.
+
+```
+cd ~/video_explainer && sed -i 's/model: "claude-sonnet-4-20250514"/model: "sonnet"/' config.yaml && grep -rl "claude-sonnet-4-20250514" src | xargs -r sed -i 's/claude-sonnet-4-20250514/sonnet/g'
+```
+
+3. **Claude subscription, never the API key.** `~/.bashrc` sets an `ANTHROPIC_API_KEY`, which Claude Code would use, and bill, before David's Claude subscription. Every video_explainer command therefore starts with `env -u ANTHROPIC_API_KEY`, which hides the key for that command only.
+
+**Check:** `cd ~/video_explainer && env -u ANTHROPIC_API_KEY claude auth status` shows `"authMethod": "claude.ai"`.
 
 ---
 
@@ -58,13 +70,13 @@ cd ~/video_explainer && .venv/bin/python /mnt/c/data-mybizz-mgt/marketing/tools/
 2. **Time the words (voiceover import):**
 
 ```
-cd ~/video_explainer && .venv/bin/python -m src.cli voiceover fda-1 --provider manual --audio-dir projects/fda-1/recordings
+cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli voiceover fda-1 --provider manual --audio-dir projects/fda-1/recordings
 ```
 
-3. **Draw the scenes (Claude Code):**
+3. **Draw the scenes (Claude Code, about 30 to 60 minutes; `--force` redraws scenes that already exist):**
 
 ```
-cd ~/video_explainer && .venv/bin/python -m src.cli scenes fda-1
+cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli scenes fda-1 --force
 ```
 
 4. **Set the Mybizz colours:**
@@ -76,13 +88,13 @@ cd ~/video_explainer && .venv/bin/python /mnt/c/data-mybizz-mgt/marketing/tools/
 5. **Build the storyboard:**
 
 ```
-cd ~/video_explainer && .venv/bin/python -m src.cli storyboard fda-1
+cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli storyboard fda-1
 ```
 
 6. **Render:**
 
 ```
-cd ~/video_explainer && .venv/bin/python -m src.cli render fda-1 --gl swangle
+cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli render fda-1 --gl swangle
 ```
 
-**Check:** `projects/fda-1/output/final.mp4` plays, the pictures match the narration, and no app screens, foreign logos or misspelt words appear. A faulty scene is redrawn with `.venv/bin/python -m src.cli scenes fda-1 --scene <number>`, then steps 4 to 6 run again.
+**Check:** `projects/fda-1/output/final.mp4` plays, the pictures match the narration, and no app screens, foreign logos or misspelt words appear. A faulty scene is redrawn with `env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli scenes fda-1 --scene <number>`, then steps 4 to 6 run again.
