@@ -72,6 +72,8 @@ Every tool on this sheet is free. None needs a card, a billing account or an API
 
 The test passes when `render-test.mp4` is listed with its size.
 
+**Making a Mybizz film:** the full method, from importing a finished script to the rendered film, is on `task-spec-sheets/film-production.md`.
+
 **Render speed:** the test rendered 30 frames in about 31 seconds, using two of the computer's processor cores at a time. A 10-minute video at 30 frames a second has 18,000 frames, so long videos render for several hours and are run overnight.
 
 ---
