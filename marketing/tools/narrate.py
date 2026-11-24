@@ -3,10 +3,11 @@
 Reads each script in marketing/scripts/, takes the text under "## Narration"
 (without scene headings and "On screen" notes), and writes one file per scene to
 marketing/brand-assets/done-audios/ as <video>-<lang>-sNN.wav.
-A scene file that already exists is skipped, so a stopped run carries on where it stopped.
+A scene file that already exists is skipped, so a stopped run carries on where it stopped;
+--force remakes every scene. --speed sets the speaking pace (1.0 is Kokoro's own pace).
 
 Run from WSL with Kokoro's Python (task-spec-sheets/narration-voices.md):
-  ~/tools/kokoro/.venv/bin/python narrate.py --lang en --voice bf_lily fda-1 fda-2
+  ~/tools/kokoro/.venv/bin/python narrate.py --lang en --voice bf_lily --speed 0.9 fda-1 fda-2
 """
 import argparse
 import glob
@@ -40,6 +41,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--lang", default="en", choices=sorted(LANG_CODES))
     ap.add_argument("--voice", default="bf_lily")
+    ap.add_argument("--speed", type=float, default=0.9)
+    ap.add_argument("--force", action="store_true", help="remake scenes that already exist")
+    ap.add_argument("--out", default=OUT, help="folder for the voice files")
+    ap.add_argument("--only", type=int, help="make only this scene number")
     ap.add_argument("videos", nargs="+", help="video IDs, e.g. fda-1 cs-2")
     a = ap.parse_args()
     pipe = KPipeline(lang_code=LANG_CODES[a.lang], repo_id="hexgrad/Kokoro-82M")
@@ -50,12 +55,14 @@ def main():
         if len(found) != 1:
             sys.exit(f"Script for {vid} ({a.lang}) not found exactly once: {found}")
         for num, text in scenes(found[0]):
+            if a.only and num != a.only:
+                continue
             name = f"{vid}-{a.lang}-s{num:02d}.wav"
-            dest = os.path.join(OUT, name)
-            if os.path.exists(dest):
+            dest = os.path.join(a.out, name)
+            if os.path.exists(dest) and not a.force:
                 print("skip", name)
                 continue
-            audio = np.concatenate([np.asarray(x) for _, _, x in pipe(text, voice=a.voice)])
+            audio = np.concatenate([np.asarray(x) for _, _, x in pipe(text, voice=a.voice, speed=a.speed)])
             sf.write(dest, audio, 24000)
             print("made", name, f"{len(audio) / 24000:.0f} s", flush=True)
     print("done")
