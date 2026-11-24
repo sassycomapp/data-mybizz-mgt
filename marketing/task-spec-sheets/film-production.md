@@ -151,4 +151,4 @@ cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli ren
 
 | Film | State | Next step |
 |---|---|---|
-| FDA-1 (EN) | Pieces `0-1799` to `9000-9995` rendering since 2026-11-24 (render duration 10356 frames) | When that command ends, render the missing last piece, join all pieces and save the film: `cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli render fda-1 --gl swangle --frames 9996-10355 && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli render fda-1 --merge-chunks && cp projects/fda-1/output/final.mp4 /mnt/c/data-mybizz-mgt/marketing/brand-assets/wip-videos/fda-1-scenes-en.mp4` |
+| FDA-1 (EN) | Scenes rendered and approved 2026-11-24 (10356 frames, 5 min 45 s); saved as `wip-videos/fda-1-scenes-en.mp4` | Assembly in OpenShot: intro clip, scenes, SC-1 outro (task 49) |

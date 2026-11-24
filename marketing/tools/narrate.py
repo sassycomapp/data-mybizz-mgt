@@ -18,13 +18,14 @@ import sys
 
 import numpy as np
 import soundfile as sf
-from kokoro import KPipeline
+import subprocess
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 MARKETING = os.path.dirname(HERE)
 SCRIPTS = os.path.join(MARKETING, "scripts")
 OUT = os.path.join(MARKETING, "brand-assets", "done-audios")
-LANG_CODES = {"en": "b", "fr": "f", "es": "e", "it": "i"}
+LANG_CODES = {"en": "b", "fr": "f", "es": "e", "it": "i", "de": None}  # German is spoken by Piper
+PIPER_VOICES = os.path.expanduser("~/tools/kokoro/piper-voices")
 
 
 def scenes(path):
@@ -46,7 +47,11 @@ def main():
     ap.add_argument("--force", action="store_true", help="remake scenes that already exist")
     ap.add_argument("videos", nargs="+", help="video IDs, e.g. fda-1 cs-2")
     a = ap.parse_args()
-    pipe = KPipeline(lang_code=LANG_CODES[a.lang], repo_id="hexgrad/Kokoro-82M")
+    if a.lang == "de":
+        pipe = None
+    else:
+        from kokoro import KPipeline
+        pipe = KPipeline(lang_code=LANG_CODES[a.lang], repo_id="hexgrad/Kokoro-82M")
     for vid in a.videos:
         suffix = "" if a.lang == "en" else f"-{a.lang}"
         found = glob.glob(os.path.join(SCRIPTS, f"{vid}-*{suffix}.md"))
@@ -58,6 +63,13 @@ def main():
             dest = os.path.join(OUT, name)
             if os.path.exists(dest) and not a.force:
                 print("skip", name)
+                continue
+            if pipe is None:
+                # Piper: length scale is the inverse of speed (0.85 -> 1.18)
+                subprocess.run([sys.executable, "-m", "piper", "-m", a.voice, "--data-dir", PIPER_VOICES,
+                                "--length-scale", f"{1 / a.speed:.2f}", "-f", dest, "--", text], check=True)
+                info = sf.info(dest)
+                print("made", name, f"{info.duration:.0f} s", flush=True)
                 continue
             audio = np.concatenate([np.asarray(x) for _, _, x in pipe(text, voice=a.voice, speed=a.speed)])
             sf.write(dest, audio, 24000)
