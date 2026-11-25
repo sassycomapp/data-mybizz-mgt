@@ -154,9 +154,9 @@ A video that shows no app screens is made during Preparation. A video that shows
 
 | Category | Pictures | Voice | Put together with |
 |---|---|---|---|
-| 1. Marketing: long form | video_explainer animated scenes; Sarah's intro, mid-video and outro clips from Google Flow | Sarah's voices; five language tracks | OpenShot |
+| 1. Marketing: long form | video_explainer animated scenes; Sarah's intro, mid-video and outro clips from Google Flow | Sarah's voices; five language tracks | FFmpeg (`assemble_film.py`) |
 | 2. Marketing: short form | Cut from long-form and explainer videos by video_explainer's Shorts step. A feature clip is a 15-second Remotion animation of one released feature: the feature's real screen, an animated cursor clicking the feature, and its result | Sarah's voices; five language tracks. A feature clip carries on-screen text instead, one version per language | video_explainer |
-| 3. Explainer | video_explainer animated scenes built from the approved product documents; Brian's intro and outro clips | Brian's voices; five language tracks | OpenShot |
+| 3. Explainer | video_explainer animated scenes built from the approved product documents; Brian's intro and outro clips | Brian's voices; five language tracks | FFmpeg (`assemble_film.py`) |
 | 4. Help | Playwright records the real app performing the task, once per language with the app's screens in that language | Brian's narration voice; one version per language | FFmpeg, as a batch job |
 | 5. Sales: teardown | OBS Studio records the prospect's own website | Sarah's narration voice, in the prospect's language | OBS Studio records the screen while the narration plays; OpenShot adds the intro and outro |
 
@@ -165,7 +165,7 @@ A video that shows no app screens is made during Preparation. A video that shows
 2. The narration is made with the presenter's narration voice, in English first.
 3. video_explainer builds and renders the scenes from the script, using the narration as its imported voiceover.
 4. The presenter clips come from the library, or a new intro is made in Google Flow.
-5. OpenShot joins intro, main part and outro.
+5. FFmpeg joins intro, main part and outro, through `marketing/tools/assemble_film.py`.
 6. The four other language narrations are made from the translated script, and FFmpeg produces one audio track per language.
 7. The video is uploaded once to YouTube, with all five language tracks.
 

@@ -12,7 +12,7 @@ title: "film-production"
 
 ## 1. Result
 
-Each long-form film's animated picture track is made by video_explainer on David's PC, timed to Sarah's narration, in the Mybizz colours. The picture track is then assembled with the intro and outro clips in OpenShot.
+Each long-form film's animated picture track is made by video_explainer on David's PC, timed to Sarah's narration, in the Mybizz colours. The picture track is then joined with the presenter's intro clip and the shared outro clip by `marketing/tools/assemble_film.py`, which uses FFmpeg in WSL; OpenShot is kept for hand edits.
 
 | Item | Value |
 |---|---|
@@ -145,10 +145,19 @@ cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli ren
 
 **Check:** `projects/fda-1/output/final.mp4` plays, the pictures match the narration, and no app screens, foreign logos or misspelt words appear. A faulty scene is redrawn with `env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli scenes fda-1 --scene <number>`, then steps 4 to 8 run again.
 
+9. **Assemble the finished film** (FFmpeg, a few minutes): `marketing/tools/assemble_film.py` joins the intro clip `done-videos/<video>-intro-<lang>.mp4`, the rendered scenes `wip-videos/<video>-scenes-<lang>.mp4` and the outro clip `done-videos/sc-1-<lang>.mp4` (marketing films; explainers add `--outro sc-2`). It brings every part to 1920×1080 at 30 frames a second with 48 kHz stereo sound, and saves the film as `done-videos/<video>-<lang>.mp4`. An existing film is replaced only with `--force`.
+
+```
+cd /mnt/c/data-mybizz-mgt/marketing/tools && python3 assemble_film.py fda-1
+```
+
+**Check:** the finished film opens with the intro clip, runs straight into the scenes, and ends with the outro clip, with no jump in sound level or picture size between the parts.
+
 ---
 
 ## Progress
 
 | Film | State | Next step |
 |---|---|---|
-| FDA-1 (EN) | Scenes rendered and approved 2026-11-24 (10356 frames, 5 min 45 s); saved as `wip-videos/fda-1-scenes-en.mp4` | Assembly in OpenShot: intro clip, scenes, SC-1 outro (task 49) |
+| FDA-1 (EN) | Scenes rendered and approved 2026-11-24 (10356 frames, 5 min 45 s); saved as `wip-videos/fda-1-scenes-en.mp4` | Assemble with `assemble_film.py fda-1` (task 49) |
+| FDA-2 (EN) | Scenes being drawn 2026-11-25 | Verify, brand, storyboard, then render in pieces (task 50) |
