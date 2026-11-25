@@ -159,5 +159,5 @@ cd /mnt/c/data-mybizz-mgt/marketing/tools && python3 assemble_film.py fda-1
 
 | Film | State | Next step |
 |---|---|---|
-| FDA-1 (EN) | Scenes rendered and approved 2026-11-24 (10356 frames, 5 min 45 s); saved as `wip-videos/fda-1-scenes-en.mp4` | Assemble with `assemble_film.py fda-1` (task 49) |
-| FDA-2 (EN) | Scenes being drawn 2026-11-25 | Verify, brand, storyboard, then render in pieces (task 50) |
+| FDA-1 (EN) | English film finished 2026-11-25: `done-videos/fda-1-en.mp4` | Language tracks FR, DE, ES, IT (task 72), after the four translated intro clips (tasks 64 to 67) |
+| FDA-2 (EN) | Scenes drawn, checked and branded; storyboard built 2026-11-25 (309.4 s) | Render in pieces (task 50), first piece `0-1799` as the look check |
