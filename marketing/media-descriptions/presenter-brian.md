@@ -82,3 +82,5 @@ Every finished clip is kept in `C:\data-mybizz-mgt\marketing\brand-assets\done-v
 | Task | Video | Clip | File |
 |---|---|---|---|
 | 18 | SC-2 | Explainer outro, English | `sc-2-en.mp4` |
+| 25 | SC-2 | Explainer outro, French | `sc-2-fr.mp4` |
+| 26 | SC-2 | Explainer outro, German | `sc-2-de.mp4` |
