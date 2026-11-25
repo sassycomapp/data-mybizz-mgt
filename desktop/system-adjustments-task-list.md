@@ -5,7 +5,7 @@ updated: "2026-11-25"
 ---
 # System Adjustments — Task List
 
-The checklist of the system adjustments David approved on 2026-11-25: currency, data tables, the Clause Builder, Mybizz Enterprise, the referral credit, and the homes of project, marketing and business documents. Part 1 holds every decision and fact the work needs. Part 2 is the checklist.
+The checklist of the system adjustments David approved on 2026-11-25: currency, data tables, the Clause Builder, Mybizz Enterprise, the referral credit, the homes of project, marketing and business documents, and GBrain enforcement. Part 1 holds every decision and fact the work needs. Part 2 is the checklist.
 
 **How the list is worked**
 
@@ -13,7 +13,7 @@ The checklist of the system adjustments David approved on 2026-11-25: currency, 
 - Before each group, Claude lists every file of the group and the exact change in each, and waits for David's express approval. After approval Claude makes the changes, pushes them, and gives David the pull command.
 - A finished item keeps its place and is prefixed with "Done". No item is ever removed.
 - Claude reads the live repositories before changing anything and confirms each file's state with a read-only check first.
-- Groups run in order: A, B, C, D, E, F, G. Claude never works in auto mode.
+- Groups run in order: A, B, C, D, E, F, G, I. Claude never works in auto mode.
 
 ---
 
@@ -79,6 +79,13 @@ The checklist of the system adjustments David approved on 2026-11-25: currency, 
 - The PRD template theming row is corrected to the m3-custom-theme law (`project-library-global` commit `43a061a`).
 - The Anthropic API key is renewed and the old key removed, including from `~/.bashrc`.
 - The `project-template` repository holds no currency or policy material.
+- Cupcake rule `cup-block-anvil-yaml-writes.rego` blocks every OpenCode agent write to `anvil.yaml` (`mybizz-config-docs/cupcake/cupcake-config.md`). Item 8 needs a route that Cupcake allows, confirmed before item 8 starts.
+
+## 7. GBrain
+
+- GBrain runs on David's PC and is connected to OpenCode as an MCP server (`mcp.gbrain` in `~/.config/opencode/opencode.jsonc`; `mybizz-config-docs/gbrain/gbrain-config.md`). `pdlf/app-factory/pdlf-build-plan.md` and `mb-3-cs-project-library/AGENTS.md` require a GBrain search first; nothing enforces it.
+- Claude runs in Anthropic's cloud and cannot reach GBrain. GBrain's content is David's documentation repositories, including the facts and memories `mb-submit-memory` files into them, all on GitHub. At the start of every session Claude clones the documentation repositories and searches them. For content that exists only on the PC, the relay repository `mb-gbrain-searches` is the route (Claude writes a query file; David runs `bash /mnt/c/mybizz/mb-gbrain-searches/scripts/run-search.sh {name}` in WSL; Claude reads the results from GitHub).
+- Every OpenCode prompt Claude writes opens with the exact GBrain search to run.
 
 ---
 
@@ -136,3 +143,8 @@ The checklist of the system adjustments David approved on 2026-11-25: currency, 
 
 28. Resolve in anvil.works after item 8.
 29. In claude.ai, set each connector already in use to ask for approval before acting.
+
+## I. GBrain enforcement for OpenCode
+
+30. Add a Cupcake rule (global policy folder `~/.config/cupcake/policies/opencode/`, recorded in `mybizz-config-docs/cupcake/cupcake-config.md`) that blocks any OpenCode file write until the agent has run a GBrain search in that session. First confirm that Cupcake can see earlier tool calls of the session (it evaluates one event at a time); where it cannot, design the equivalent enforcement and record it the same way.
+31. Test: an OpenCode session that tries to write before a GBrain search is blocked, and the same write after a GBrain search succeeds. Success is both results seen in the OpenCode web UI.
