@@ -178,10 +178,10 @@ cd /mnt/c/data-mybizz-mgt/marketing/tools && python3 assemble_film.py fda-1
 | Film | State | Next step |
 |---|---|---|
 | FDA-1 (EN) | English film finished 2026-11-25: `done-videos/fda-1-en.mp4` | Language tracks FR, DE, ES, IT (task 72), after the four translated intro clips (tasks 64 to 67) |
-| FDA-2 (EN) | Scenes drawn, checked and branded; storyboard built 2026-11-25 (309.4 s) | Render in pieces (task 50), first piece `0-1799` as the look check |
-| FDA-3 (EN) | Built 2026-11-25 08:56 (storyboard 292.0 s) | Render in pieces after FDA-2, first piece `0-1799` as the look check; watch scene 8 for layout |
-| FDA-4 (EN) | All 14 scenes drawn 2026-11-25; line 548 of `RentedNotOwnedScene.tsx` fixed by hand (a bare `}` in on-screen text); scene check passes | Run the build command again: colours and storyboard |
-| CS-1 (EN) | Building in terminal 2 from 2026-11-25 (`build_films.py`) | Render in pieces, first piece `0-1799` as the look check |
-| CS-2 (EN) | Building in terminal 2 from 2026-11-25 (`build_films.py`) | Render in pieces, first piece `0-1799` as the look check |
-| CS-3 (EN) | Building in terminal 2 from 2026-11-25 (`build_films.py`) | Render in pieces, first piece `0-1799` as the look check |
-| CS-4 (EN) | Building in terminal 2 from 2026-11-25 (`build_films.py`) | Render in pieces, first piece `0-1799` as the look check |
+| FDA-2 (EN) | Scenes rendered and saved 2026-11-25: `wip-videos/fda-2-scenes-en.mp4` | Intro clip EN (task 40), then assembly (task 68) |
+| FDA-3 (EN) | First piece `0-1799` checked; remaining pieces, join and save to `wip-videos/fda-3-scenes-en.mp4` rendering since 2026-11-25 15:40 | Intro clip EN (task 44), then assembly (task 90) |
+| FDA-4 (EN) | Built (scenes, colours, storyboard) | Render after FDA-3, first piece `0-1799` as the look check |
+| CS-1 (EN) | Built (scenes, colours, storyboard) | Render after FDA-4, first piece `0-1799` as the look check |
+| CS-2 (EN) | Imported and word-timed; building paused 2026-11-25 before scene drawing; all 15 scenes still to draw (about 30% of a 5-hour Claude limit) | `cd ~/video_explainer && .venv/bin/python /mnt/c/data-mybizz-mgt/marketing/tools/build_films.py cs-2` |
+| CS-3 (EN) | Building not started | Build with `build_films.py cs-3` |
+| CS-4 (EN) | Building not started | Build with `build_films.py cs-4` |
