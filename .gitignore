@@ -12,3 +12,4 @@ Models/models 24 sept.xlsx
 
 # Mybizz FDA temporary files stay on the PC only
 /mybizz-fda/temp/
+__pycache__/

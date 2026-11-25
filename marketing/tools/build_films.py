@@ -9,7 +9,8 @@ Each step that already has its result is skipped, so a stopped run is started ag
 same command and carries on where it stopped. When a scene drawing stops short (Claude's usage
 limit), the tool waits 30 minutes and draws that film's scenes again, up to 12 times, so a run
 carries on by itself after the limit resets. When every scene is drawn but the check finds a
-fault, the film's scenes are drawn once more; a second fault stops the run. A film whose storyboard exists is built.
+fault, only the faulty scene is drawn again, at most twice; a fault that remains stops the run and
+names the file. A film whose storyboard exists is built.
 Every video_explainer command runs without ANTHROPIC_API_KEY, so the API key is never used.
 Each finished step is also written to projects/mybizz-build-log.txt with the date and time.
 """
@@ -18,6 +19,7 @@ import datetime
 import glob
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -45,6 +47,27 @@ def run(args):
 
 def cli(*args):
     return run([PY, "-m", "src.cli", *args])
+
+
+def check(vid):
+    """Run the scene check; return the faulty scene files (empty list when every scene passes)."""
+    r = subprocess.run([PY, "-m", "src.cli", "scenes", vid, "--verify", "--no-auto-fix"],
+                       cwd=VE, env=ENV, capture_output=True, text=True)
+    print(r.stdout, r.stderr, sep="", end="", flush=True)
+    if r.returncode == 0:
+        return []
+    m = re.search(r"Files with remaining errors:\s*(.+)", r.stdout)
+    return [f.strip() for f in m.group(1).split(",")] if m else ["(unknown file)"]
+
+
+def scene_number(vid, filename):
+    """Scene number of a scene file, from the script titles (the generator names files after them)."""
+    script = json.load(open(os.path.join(PROJECTS, vid, "script", "script.json")))
+    for i, s in enumerate(script["scenes"], 1):
+        words = re.sub(r"[^a-zA-Z0-9\s]", "", s.get("title", "")).split()
+        if "".join(w.capitalize() for w in words) + "Scene.tsx" == filename:
+            return i
+    return None
 
 
 def scenes_complete(vid):
@@ -85,10 +108,9 @@ def build(vid):
         if not cli("voiceover", vid, "--provider", "manual", "--audio-dir", f"projects/{vid}/recordings"):
             return False
         log(vid, "words timed")
-    scenes_ok = scenes_complete(vid) and cli("scenes", vid, "--verify", "--no-auto-fix")
+    faulty = check(vid) if scenes_complete(vid) else None
     waits = 0
-    redraws = 0
-    while not scenes_ok:
+    while faulty is None:
         cli("scenes", vid, "--force")
         if not scenes_complete(vid):
             # Scenes missing: Claude stopped answering, usually the usage limit. Wait, then draw again.
@@ -98,13 +120,19 @@ def build(vid):
             log(vid, f"scenes stopped short; waiting {WAIT_MINUTES} minutes before drawing again ({waits} of {MAX_WAITS})")
             time.sleep(WAIT_MINUTES * 60)
             continue
-        scenes_ok = cli("scenes", vid, "--verify", "--no-auto-fix")
-        if not scenes_ok:
-            # Every scene drawn but the check found a fault: draw the film once more, then stop.
-            redraws += 1
-            if redraws > 1:
-                return False
-            log(vid, "scene check found a fault; drawing the scenes once more")
+        faulty = check(vid)
+    redraws = 0
+    while faulty:
+        # Every scene drawn but the check found a fault: redraw only the faulty scenes, at most twice.
+        redraws += 1
+        nums = [scene_number(vid, f) for f in faulty]
+        if redraws > 2 or None in nums:
+            log(vid, "scene check still finds a fault in " + ", ".join(faulty) + "; ask Claude for the fix")
+            return False
+        for f, n in zip(faulty, nums):
+            log(vid, f"scene check found a fault in {f}; redrawing scene {n} only")
+            cli("scenes", vid, "--scene", str(n))
+        faulty = check(vid)
     log(vid, "scenes drawn and checked")
     if not run([PY, PREPARE, "brand", vid]):
         return False
