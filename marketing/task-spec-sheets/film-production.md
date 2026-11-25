@@ -83,7 +83,7 @@ The message "FutureWarning: The `fitz` API is deprecated" appears at the start o
 
 ## 4. Building Films Ahead (terminal 2)
 
-Films are built ahead of rendering, so that each render starts as soon as the one before it ends. Renders run in WSL terminal 1; builds run in WSL terminal 2, independently of the renders. `marketing/tools/build_films.py` takes each film through steps 1 to 5 of section 5 (import, word timing, scenes and their check, colours, storyboard), one film after another. A step that already has its result is skipped, so a run that stops (for example when the Claude subscription's usage limit is reached during the scene drawing) is started again later with the same command and carries on where it stopped. Every finished step is written, with the date and time, to `~/video_explainer/projects/mybizz-build-log.txt`.
+Films are built ahead of rendering, so that each render starts as soon as the one before it ends. Renders run in WSL terminal 1; builds run in WSL terminal 2, independently of the renders. `marketing/tools/build_films.py` takes each film through steps 1 to 5 of section 5 (import, word timing, scenes and their check, colours, storyboard), one film after another. A step that already has its result is skipped (a film's scenes count as drawn only when every scene of its script has a scene file and the check passes), When a scene drawing stops short because the Claude subscription's usage limit is reached, the tool waits 30 minutes and draws that film's scenes again, up to 12 times, so the run carries on by itself once the limit resets. When every scene is drawn but the check finds a fault, the film's scenes are drawn once more, and a second fault stops the run. A run that stops is started again with the same command and carries on where it stopped. Every finished step is written, with the date and time, to `~/video_explainer/projects/mybizz-build-log.txt`.
 
 ```
 cd ~/video_explainer && .venv/bin/python /mnt/c/data-mybizz-mgt/marketing/tools/build_films.py fda-3 fda-4 cs-1 cs-2 cs-3 cs-4
@@ -179,8 +179,8 @@ cd /mnt/c/data-mybizz-mgt/marketing/tools && python3 assemble_film.py fda-1
 |---|---|---|
 | FDA-1 (EN) | English film finished 2026-11-25: `done-videos/fda-1-en.mp4` | Language tracks FR, DE, ES, IT (task 72), after the four translated intro clips (tasks 64 to 67) |
 | FDA-2 (EN) | Scenes drawn, checked and branded; storyboard built 2026-11-25 (309.4 s) | Render in pieces (task 50), first piece `0-1799` as the look check |
-| FDA-3 (EN) | Building in terminal 2 from 2026-11-25 (`build_films.py`) | Render in pieces, first piece `0-1799` as the look check |
-| FDA-4 (EN) | Building in terminal 2 from 2026-11-25 (`build_films.py`) | Render in pieces, first piece `0-1799` as the look check |
+| FDA-3 (EN) | Built 2026-11-25 08:56 (storyboard 292.0 s) | Render in pieces after FDA-2, first piece `0-1799` as the look check; watch scene 8 for layout |
+| FDA-4 (EN) | Build stopped 2026-11-25 09:15 at scene 3 of 14 (Claude usage limit) | Run the build command again; all 14 scenes are drawn again |
 | CS-1 (EN) | Building in terminal 2 from 2026-11-25 (`build_films.py`) | Render in pieces, first piece `0-1799` as the look check |
 | CS-2 (EN) | Building in terminal 2 from 2026-11-25 (`build_films.py`) | Render in pieces, first piece `0-1799` as the look check |
 | CS-3 (EN) | Building in terminal 2 from 2026-11-25 (`build_films.py`) | Render in pieces, first piece `0-1799` as the look check |
