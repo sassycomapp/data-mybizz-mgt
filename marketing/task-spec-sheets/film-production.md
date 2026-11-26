@@ -77,6 +77,14 @@ cd ~/video_explainer && sed -i 's/f.write(REFERENCE_TEMPLATE)$/f.write(REFERENCE
 
 **Check:** `grep -c "Mybizz: single braces" ~/video_explainer/src/scenes/generator.py` prints `1`.
 
+7. **Level text boxes.** The scene instructions in `src/scenes/generator.py` (section "Typography Requirements") carry the rule "Keep every panel, card and note level; never rotate text boxes", so no scene draws a tilted panel, card or sticky note. The command adds the rule once; run again, it changes nothing.
+
+```
+cd ~/video_explainer && grep -q "Level text (Mybizz)" src/scenes/generator.py || sed -i '/^  - Citations: 14-16px scaled$/a - **Level text (Mybizz)**: Keep every panel, card and note level; never rotate text boxes.' src/scenes/generator.py; grep -c "Level text (Mybizz)" src/scenes/generator.py
+```
+
+**Check:** `grep -c "Level text (Mybizz)" ~/video_explainer/src/scenes/generator.py` prints `1`.
+
 The message "FutureWarning: The `fitz` API is deprecated" appears at the start of every video_explainer command; it comes from a document-reading library video_explainer does not use for Mybizz films, and needs no action.
 
 ---
