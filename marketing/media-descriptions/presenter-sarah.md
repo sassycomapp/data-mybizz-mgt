@@ -81,15 +81,18 @@ Every finished clip is kept in `C:\data-mybizz-mgt\marketing\brand-assets\done-v
 | Task | Video | Clip | File |
 |---|---|---|---|
 | 17 | SC-1 | Marketing outro, English | `sc-1-en.mp4` |
+| 18 | SC-2 | Explainer outro, English | `sc-2-en.mp4` |
 | 19 | FDA-1 | Intro clip, English | `fda-1-intro-en.mp4` |
-| 40 | FDA-2 | Intro clip, English | `fda-2-intro-en.mp4` |
-| 44 | FDA-3 | Intro clip, English | `fda-3-intro-en.mp4` |
-| 47 | FDA-4 | Intro clip, English | `fda-4-intro-en.mp4` |
-| 52 | CS-1 | Intro clip, English | `cs-1-intro-en.mp4` |
 | 21 | SC-1 | Marketing outro, French | `sc-1-fr.mp4` |
 | 22 | SC-1 | Marketing outro, German | `sc-1-de.mp4` |
 | 23 | SC-1 | Marketing outro, Spanish | `sc-1-es.mp4` |
 | 24 | SC-1 | Marketing outro, Italian | `sc-1-it.mp4` |
+| 25 | SC-2 | Explainer outro, French | `sc-2-fr.mp4` |
+| 26 | SC-2 | Explainer outro, German | `sc-2-de.mp4` |
+| 40 | FDA-2 | Intro clip, English | `fda-2-intro-en.mp4` |
+| 44 | FDA-3 | Intro clip, English | `fda-3-intro-en.mp4` |
+| 47 | FDA-4 | Intro clip, English | `fda-4-intro-en.mp4` |
+| 52 | CS-1 | Intro clip, English | `cs-1-intro-en.mp4` |
 
 Every finished voice file is kept in `C:\data-mybizz-mgt\marketing\brand-assets\done-audios\` on the PC only, made as set out in `task-spec-sheets/narration-voices.md`.
 
