@@ -188,8 +188,8 @@ cd /mnt/c/data-mybizz-mgt/marketing/tools && python3 assemble_film.py fda-1
 | FDA-1 (EN) | English film finished 2026-11-25: `done-videos/fda-1-en.mp4` | Language tracks FR, DE, ES, IT (task 72), after the four translated intro clips (tasks 64 to 67) |
 | FDA-2 (EN) | English film finished 2026-11-26: `done-videos/fda-2-en.mp4` | Language tracks FR, DE, ES, IT |
 | FDA-3 (EN) | English film finished 2026-11-26: `done-videos/fda-3-en.mp4` | Language tracks FR, DE, ES, IT |
-| FDA-4 (EN) | Scenes rendered and saved 2026-11-26: `wip-videos/fda-4-scenes-en.mp4` | Intro clip EN (task 47), then assembly (task 110) |
-| CS-1 (EN) | Scenes rendered and saved 2026-11-26: `wip-videos/cs-1-scenes-en.mp4` | Intro clip EN (task 52), then assembly (task 129) |
+| FDA-4 (EN) | English film finished 2026-11-27: `done-videos/fda-4-en.mp4` | Language tracks FR, DE, ES, IT (task 132), after the four translated intro clips (tasks 125 to 128) |
+| CS-1 (EN) | English film finished 2026-11-27: `done-videos/cs-1-en.mp4` | Language tracks FR, DE, ES, IT (task 151), after the four translated intro clips (tasks 144 to 147) |
 | CS-2 (EN) | Imported and word-timed; building paused 2026-11-25 before scene drawing; all 15 scenes still to draw (about 30% of a 5-hour Claude limit) | `cd ~/video_explainer && .venv/bin/python /mnt/c/data-mybizz-mgt/marketing/tools/build_films.py cs-2` |
 | CS-3 (EN) | Building not started | Build with `build_films.py cs-3` |
 | CS-4 (EN) | Building not started | Build with `build_films.py cs-4` |
