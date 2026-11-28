@@ -67,6 +67,11 @@ Every file is in `C:\data-mybizz-mgt\marketing\brand-assets\`. Every text is in 
 1. On youtube.com, signed in as `mybizzlive@gmail.com`: profile icon → **Create a channel**. Name **Mybizz**, handle **@mybizzlive**.
 2. YouTube Studio → **Customisation → Branding**: upload the profile picture and the YouTube banner, then **Publish**.
 3. YouTube Studio → **Customisation → Basic info**: paste the long description, add the link **Mybizz** → `https://mybizz.live`, set the contact email, then **Publish**.
+4. YouTube Studio → **Settings → Channel → Basic info → Keywords**: paste the keyword line below, then **Save**.
+
+```
+Mybizz, Mybizz FDA, Mybizz CS, mybizz.live, AI front desk, AI receptionist, small business software, online booking system, booking software, appointment booking, customer enquiries, CRM for small business, email marketing, invoicing software, all-in-one business platform, business website, service business, consultants, own your customer data, small business tips
+```
 
 **Check:** youtube.com/@mybizzlive shows the disc, the banner and the description.
 
