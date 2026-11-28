@@ -93,6 +93,8 @@ Every finished clip is kept in `C:\data-mybizz-mgt\marketing\brand-assets\done-v
 | 44 | FDA-3 | Intro clip, English | `fda-3-intro-en.mp4` |
 | 47 | FDA-4 | Intro clip, English | `fda-4-intro-en.mp4` |
 | 52 | CS-1 | Intro clip, English | `cs-1-intro-en.mp4` |
+| 64 | FDA-1 | Intro clip, French | `fda-1-intro-fr.mp4` |
+| 65 | FDA-1 | Intro clip, German | `fda-1-intro-de.mp4` |
 
 Every finished voice file is kept in `C:\data-mybizz-mgt\marketing\brand-assets\done-audios\` on the PC only, made as set out in `task-spec-sheets/narration-voices.md`.
 
