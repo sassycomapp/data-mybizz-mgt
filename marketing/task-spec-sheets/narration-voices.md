@@ -101,7 +101,7 @@ Sarah's narration of every translated script runs in one command, one language a
 cd /mnt/c/data-mybizz-mgt/marketing/tools && for lv in fr:ff_siwis es:ef_dora it:if_sara de:de_DE-kerstin-low; do ~/tools/kokoro/.venv/bin/python narrate.py --lang ${lv%%:*} --voice ${lv#*:} fda-1 fda-2 fda-3 fda-4 cs-1 cs-2 cs-3 cs-4 || break; done
 ```
 
-`--lang` is `en`, `fr`, `de`, `es` or `it`, and `--voice` is the presenter's voice for that language (section 5). Narration runs at the Mybizz pace of 0.85, 15% slower than the voice's own pace, which is the tool's default (for Piper the tool turns it into a length scale of 1.18); `--force` remakes scenes that already exist. Translated scripts are named like their English script with the language at the end, for example `fda-1-the-five-minute-rule-fr.md`.
+`--lang` is `en`, `fr`, `de`, `es` or `it`, and `--voice` is the presenter's voice for that language (section 5). English narration runs at the Mybizz pace of 0.85, 15% slower than the voice's own pace. French, German, Spanish and Italian narration runs at the voice's own pace of 1.0, because translated sentences are longer than English ones and must fit the English scenes; `make_language_tracks.py` (film-production section 5, step 10) checks that every translated scene stays at a natural pace. Both paces are the tool's defaults (for Piper the tool turns the pace into a length scale, 1.0 / pace); `--force` remakes scenes that already exist. Translated scripts are named like their English script with the language at the end, for example `fda-1-the-five-minute-rule-fr.md`.
 
 ### Piper (German)
 

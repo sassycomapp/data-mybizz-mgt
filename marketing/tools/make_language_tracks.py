@@ -16,6 +16,11 @@ Scene start times come from the film's video_explainer storyboard
 (~/video_explainer/projects/<video>/storyboard/storyboard.json), using the same arithmetic as
 the render. The narration is brought to the English narration's loudness.
 
+Natural pace: every scene's final speaking rate, in syllables per second, is checked against the
+average rate of native speakers reading aloud in that language (Pellegrino, Coupé and Marsico, 2011,
+"A cross-language perspective on speech information rate", Language 87(3)). A scene spoken faster
+than that average is marked for a shorter translation; at or below it, the pace is natural.
+
 Output:
     done-audios/<video>-track-<lang>.wav             the language track, uploaded to YouTube
     wip-videos/<video>-preview-<lang>.mp4 (--preview) the English film with the language track,
@@ -38,8 +43,11 @@ VE = os.path.expanduser("~/video_explainer")
 
 FPS = 30
 RATE = 48000
-SAFETY = 0.3      # seconds kept clear before the next scene's narration starts
-FAST_WARN = 1.15  # a scene spoken more than 15% faster is reported for a shorter translation
+SAFETY = 0.3  # seconds kept clear before the next scene's narration starts
+SCRIPTS = os.path.join(os.path.dirname(HERE), "scripts")
+# Average syllables per second of native speakers reading aloud (Pellegrino et al. 2011, table 2)
+NATURAL = {"en": 6.19, "fr": 7.18, "de": 5.97, "it": 6.99, "es": 7.82}
+VOWELS = {"fr": "aeiouyàâéèêëîïôûùüœæ", "de": "aeiouyäöü", "es": "aeiouáéíóúü", "it": "aeiouàèéìíòóùú"}
 
 
 def run(cmd):
@@ -62,6 +70,31 @@ def mean_volume(paths):
             "-f", "null", "-"]
     err = subprocess.run(cmd, check=True, capture_output=True, text=True).stderr
     return float(re.search(r"mean_volume: (-?[\d.]+) dB", err).group(1))
+
+
+def scene_texts(video, lang):
+    found = [f for f in os.listdir(SCRIPTS) if f.startswith(f"{video}-") and f.endswith(f"-{lang}.md")]
+    if len(found) != 1:
+        sys.exit(f"Script for {video} ({lang}) not found exactly once: {found}")
+    text = open(os.path.join(SCRIPTS, found[0]), encoding="utf-8").read()
+    body = text.split("## Narration", 1)[1].split("## Outro", 1)[0]
+    parts = re.split(r"^\*\*Scene (\d+) — .*?\*\*\s*$", body, flags=re.M)
+    out = {}
+    for i in range(1, len(parts), 2):
+        lines = [l.strip() for l in parts[i + 1].splitlines()]
+        out[int(parts[i])] = " ".join(l for l in lines if l and not l.startswith("*On screen"))
+    return out
+
+
+def syllables(text, lang):
+    """Spoken syllables: each group of vowels in a word is one syllable; in French a word-final
+    silent e (e, es, ent after a consonant) is not spoken. Accurate to within a few percent."""
+    count = 0
+    for word in re.findall(r"[^\W\d_]+", text.lower()):
+        if lang == "fr" and len(word) > 2:
+            word = re.sub(r"(?<=[^aeiouyàâéèêëîïôûùüœæ])(e|es|ent)$", "", word)
+        count += len(re.findall(f"[{VOWELS[lang]}]+", word))  # elided l', d', qu' count 0
+    return count
 
 
 def scene_slots(video, total):
@@ -116,12 +149,13 @@ def make_track(video, lang, outro, preview):
 
     inputs = [intro_l] + voice_l + [outro_l]
     parts = [fitted("p0", 0, intro_len)]
+    texts = scene_texts(video, lang)
     report = []
     for k, ((n, start, room), path) in enumerate(zip(slots, voice_l), start=1):
         spoken = seconds(path)
         tempo = max(1.0, spoken / max(room - SAFETY, 0.5))
-        if tempo > 1.0:
-            report.append((n, tempo))
+        rate = syllables(texts[n], lang) / (spoken / tempo)
+        report.append((n, tempo, rate))
         parts.append(fitted(f"p{k}", k, room, tempo, gain))
     last = len(inputs) - 1
     parts.append(fitted(f"p{last}", last, outro_len))
@@ -139,11 +173,14 @@ def make_track(video, lang, outro, preview):
     print(f"made {out}")
     print(f"  length {track_len:.2f} s; English film {film_len:.2f} s; difference {track_len - film_len:+.2f} s")
     print(f"  narration loudness changed by {gain:+.1f} dB to match the English narration")
-    for n, tempo in report:
-        flag = "  <- shorten this scene's translation" if tempo > FAST_WARN else ""
-        print(f"  scene {n}: spoken {100 * (tempo - 1):.0f}% faster to fit{flag}")
-    if not report:
-        print("  every scene fits without speeding up")
+    print(f"  natural pace for this language: up to {NATURAL[lang]:.2f} syllables a second")
+    fast = 0
+    for n, tempo, rate in report:
+        flag = ""
+        if rate > NATURAL[lang]:
+            flag, fast = "  <- too fast: shorten this scene's translation", fast + 1
+        print(f"  scene {n}: {rate:.2f} syllables a second, sped up {100 * (tempo - 1):.0f}%{flag}")
+    print("  every scene is at a natural pace" if not fast else f"  {fast} scene(s) too fast")
 
     if preview:
         prev = os.path.join(WIP, f"{video}-preview-{lang}.mp4")
