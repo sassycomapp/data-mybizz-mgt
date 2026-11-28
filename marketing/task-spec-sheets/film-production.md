@@ -179,6 +179,14 @@ cd /mnt/c/data-mybizz-mgt/marketing/tools && python3 assemble_film.py fda-1
 
 **Check:** the finished film opens with the intro clip, runs straight into the scenes, and ends with the outro clip, with no jump in sound level or picture size between the parts.
 
+10. **Make the language tracks** (FFmpeg, a few minutes): `marketing/tools/make_language_tracks.py` makes one sound file per language, the same length as the English film, for YouTube's multi-language audio. The one English video carries all five languages; viewers choose the language in the player. Each track plays the translated intro clip's sound `done-videos/<video>-intro-<lang>.mp4`, then each scene's voice file `done-audios/<video>-<lang>-sNN.wav`, started where the English scene's narration starts, then the outro clip's sound `done-videos/sc-1-<lang>.mp4` (explainers add `--outro sc-2`). Scene start times come from the film's storyboard in `~/video_explainer/projects/<video>/storyboard/`, by the same arithmetic as the render. A scene too long for its place is spoken slightly faster; the narration is brought to the English narration's loudness. The pictures stay English, so in the intro and outro the presenter's lips follow the English words; this is accepted, as in any dubbed film. Each track is saved as `done-audios/<video>-track-<lang>.wav`; `--preview` also saves the English film with each track as `wip-videos/<video>-preview-<lang>.mp4`, for watching.
+
+```
+cd /mnt/c/data-mybizz-mgt/marketing/tools && python3 make_language_tracks.py fda-1 --langs fr de es it --preview
+```
+
+**Check:** the command reports a length difference from the English film of under one second for each track. A scene marked "shorten this scene's translation" (spoken more than 15% faster) gets a shorter translation and a new voice file, then the command runs again. Each preview plays the translated intro, every scene's narration starting with its pictures, and the translated outro, with no narration cut off.
+
 ---
 
 ## Progress

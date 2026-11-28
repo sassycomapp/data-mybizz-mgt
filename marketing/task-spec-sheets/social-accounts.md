@@ -73,6 +73,9 @@ Every file is in `C:\data-mybizz-mgt\marketing\brand-assets\`. Every text is in 
 Mybizz, Mybizz FDA, Mybizz CS, mybizz.live, AI front desk, AI receptionist, small business software, online booking system, booking software, appointment booking, customer enquiries, CRM for small business, email marketing, invoicing software, all-in-one business platform, business website, service business, consultants, own your customer data, small business tips
 ```
 
+5. YouTube Studio → **Settings → Channel → Feature eligibility**: **Intermediate features** enabled with David's mobile number; **Advanced features** enabled by video verification. Advanced features allow multi-language audio, the extra language tracks each video carries.
+6. YouTube Studio → **Settings → Upload defaults → Advanced settings**: **Allow automatic dubbing** off, so every language uses the Mybizz presenter voices.
+
 **Check:** youtube.com/@mybizzlive shows the disc, the banner and the description.
 
 ---
