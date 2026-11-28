@@ -171,28 +171,31 @@ cd ~/video_explainer && env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli ren
 
 **Check:** `projects/fda-1/output/final.mp4` plays, the pictures match the narration, and no app screens, foreign logos or misspelt words appear. A faulty scene is redrawn with `env -u ANTHROPIC_API_KEY .venv/bin/python -m src.cli scenes fda-1 --scene <number>`, then steps 4 to 8 run again.
 
-9. **Assemble the finished film** (FFmpeg, a few minutes): `marketing/tools/assemble_film.py` joins the intro clip `done-videos/<video>-intro-<lang>.mp4`, the rendered scenes `wip-videos/<video>-scenes-<lang>.mp4` and the outro clip `done-videos/sc-1-<lang>.mp4` (marketing films; explainers add `--outro sc-2`). It brings every part to 1920×1080 at 30 frames a second with 48 kHz stereo sound, and saves the film as `done-videos/<video>-<lang>.mp4`. An existing film is replaced only with `--force`.
+9. **Translate the on-screen text and render each language's scenes** (WSL terminal, then an overnight render per language). The scene pictures carry English words, so each language gets its own copy of the film's scenes. `marketing/tools/scene_text.py` lists every on-screen text and writes translations back; the English scenes are never changed. Brand names, emoji, colours, code names and the Spanish demo lines stay as they are.
+
+   1. Copy the film's project in `~/video_explainer/projects/` to `<video>-<lang>` (for example `fda-1-de`), and in its `config.json` set `"id"` to the new name.
+   2. List the texts: `python3 scene_text.py extract ~/video_explainer/projects/fda-1-de/scenes ~/video_explainer/projects/fda-1-de/texts.json` (the file lists each text with its scene and a blank `text` field).
+   3. Claude translates every entry into `text`, keeping each text short enough for its box (German and French run about a third longer than English).
+   4. Write the translations into a new folder: `python3 scene_text.py apply ~/video_explainer/projects/fda-1-de/scenes ~/video_explainer/projects/fda-1-de/texts.json ~/video_explainer/projects/fda-1-de/scenes-translated`. The tool checks that every scene is still valid code, then the original `scenes` folder is replaced by `scenes-translated` only after a read-only check.
+   5. Render the first minute and check that no text is cut off or overflows its box; shorten any translation that does not fit and apply again.
+   6. Render the rest overnight and save it as `wip-videos/<video>-scenes-<lang>.mp4`.
+
+   **Check:** every translated scene shows its words in the language, no word is cut off, and the Spanish demo lines are unchanged.
+
+10. **Assemble the finished film for each language** (FFmpeg, a few minutes): `marketing/tools/assemble_film.py` joins that language's intro clip `done-videos/<video>-intro-<lang>.mp4`, the rendered scenes `wip-videos/<video>-scenes-<lang>.mp4` and that language's outro clip `done-videos/sc-1-<lang>.mp4` (marketing films; explainers add `--outro sc-2`). For a language other than English the tool first fits each scene's narration `done-audios/<video>-<lang>-sNN.wav` into its scene time (pace as in "Narration pace" below), with no change of sound level. It brings every part to 1920×1080 at 30 frames a second with 48 kHz stereo sound, and saves the film as `done-videos/<video>-<lang>.mp4`. An existing film is replaced only with `--force`. Each language film is published as its own YouTube video.
 
 ```
-cd /mnt/c/data-mybizz-mgt/marketing/tools && python3 assemble_film.py fda-1
+cd /mnt/c/data-mybizz-mgt/marketing/tools && python3 assemble_film.py fda-1 --lang de
 ```
 
-**Check:** the finished film opens with the intro clip, runs straight into the scenes, and ends with the outro clip, with no jump in sound level or picture size between the parts.
-
-10. **Make the language tracks** (FFmpeg, a few minutes): `marketing/tools/make_language_tracks.py` makes one sound file per language, the same length as the English film, for YouTube's multi-language audio. The one English video carries all five languages; viewers choose the language in the player. Each track plays the translated intro clip's sound `done-videos/<video>-intro-<lang>.mp4`, then each scene's voice file `done-audios/<video>-<lang>-sNN.wav`, started where the English scene's narration starts, then the outro clip's sound `done-videos/sc-1-<lang>.mp4` (explainers add `--outro sc-2`). Scene start times come from the film's storyboard in `~/video_explainer/projects/<video>/storyboard/`, by the same arithmetic as the render. The narration is brought to the English narration's loudness; its pace is set and checked as in "Narration pace" below. The pictures stay English, so in the intro and outro the presenter's lips follow the English words; this is accepted, as in any dubbed film. Each track is saved as `done-audios/<video>-track-<lang>.wav`; `--preview` also saves the English film with each track as `wip-videos/<video>-preview-<lang>.mp4`, for watching.
-
-```
-cd /mnt/c/data-mybizz-mgt/marketing/tools && python3 make_language_tracks.py fda-1 --langs fr de es it --preview
-```
-
-**Check:** the command reports a length difference from the English film of under one second for each track, and ends each language with "every scene is at a natural pace". Each preview plays the translated intro, every scene's narration starting with its pictures, and the translated outro, with no narration cut off.
+**Check:** the finished film opens with the intro clip, runs straight into the scenes, and ends with the outro clip, with no jump in sound level or picture size between the parts, and the lips match the voice in every part.
 
 **Narration pace.** A translated scene must fit the time the English scene gives it and still sound natural to a native speaker. Pace is judged by measurement, not by ear, because the developer does not speak the translated languages.
 
 1. **Pace set:** English is narrated at 0.85, 15% slower than the voice's own pace. French, German, Spanish and Italian are narrated at the voice's own pace, 1.0, because translated sentences run longer than English ones (`narrate.py` defaults; `narration-voices.md`).
 2. **Fitted:** each scene's voice has the English scene's narration time plus the 1-second pause before the next scene, less 0.3 seconds kept clear. A voice longer than that is sped up just enough to fit, without changing its pitch.
 3. **Checked:** for every scene, the tool counts the syllables of the translated narration and divides them by the final speaking time. The limit is the average pace of native speakers reading aloud (Pellegrino, Coupé and Marsico, 2011, "A cross-language perspective on speech information rate", *Language* 87(3)): French 7.18, German 5.97, Italian 6.99 and Spanish 7.82 syllables a second. A scene at or below the limit is natural; a faster scene is marked "too fast". The syllable count is accurate to within a few percent.
-4. **Managed:** Claude shortens the translation of every scene marked "too fast" in `marketing/scripts/<video>-...-<lang>.md`, keeping its meaning and facts. That scene's voice file `done-audios/<video>-<lang>-sNN.wav` is deleted and `narrate.py` is run again for the language (it remakes only missing scenes), then the tracks are made again. This repeats until every scene is at a natural pace.
+4. **Managed:** Claude shortens the translation of every scene marked "too fast" in `marketing/scripts/<video>-...-<lang>.md`, keeping its meaning and facts. That scene's voice file `done-audios/<video>-<lang>-sNN.wav` is deleted and `narrate.py` is run again for the language (it remakes only missing scenes), then the film is assembled again. This repeats until every scene is at a natural pace.
 
 ---
 
@@ -200,11 +203,11 @@ cd /mnt/c/data-mybizz-mgt/marketing/tools && python3 make_language_tracks.py fda
 
 | Film | State | Next step |
 |---|---|---|
-| FDA-1 (EN) | English film finished 2026-11-25: `done-videos/fda-1-en.mp4` | Language tracks FR, DE, ES, IT (task 72), after the four translated intro clips (tasks 64 to 67) |
-| FDA-2 (EN) | English film finished 2026-11-26: `done-videos/fda-2-en.mp4` | Language tracks FR, DE, ES, IT |
-| FDA-3 (EN) | English film finished 2026-11-26: `done-videos/fda-3-en.mp4` | Language tracks FR, DE, ES, IT |
-| FDA-4 (EN) | English film finished 2026-11-27: `done-videos/fda-4-en.mp4` | Language tracks FR, DE, ES, IT (task 132), after the four translated intro clips (tasks 125 to 128) |
-| CS-1 (EN) | English film finished 2026-11-27: `done-videos/cs-1-en.mp4` | Language tracks FR, DE, ES, IT (task 151), after the four translated intro clips (tasks 144 to 147) |
+| FDA-1 (EN) | English film finished 2026-11-25: `done-videos/fda-1-en.mp4` | Language films FR, DE, ES, IT (task 72); German film built and approved; on-screen text translation next, then the French, Spanish and Italian films |
+| FDA-2 (EN) | English film finished 2026-11-26: `done-videos/fda-2-en.mp4` | Language films FR, DE, ES, IT |
+| FDA-3 (EN) | English film finished 2026-11-26: `done-videos/fda-3-en.mp4` | Language films FR, DE, ES, IT |
+| FDA-4 (EN) | English film finished 2026-11-27: `done-videos/fda-4-en.mp4` | Language films FR, DE, ES, IT (task 132), after the four translated intro clips (tasks 125 to 128) |
+| CS-1 (EN) | English film finished 2026-11-27: `done-videos/cs-1-en.mp4` | Language films FR, DE, ES, IT (task 151), after the four translated intro clips (tasks 144 to 147) |
 | CS-2 (EN) | Imported and word-timed; building paused 2026-11-25 before scene drawing; all 15 scenes still to draw (about 30% of a 5-hour Claude limit) | `cd ~/video_explainer && .venv/bin/python /mnt/c/data-mybizz-mgt/marketing/tools/build_films.py cs-2` |
 | CS-3 (EN) | Building not started | Build with `build_films.py cs-3` |
 | CS-4 (EN) | Building not started | Build with `build_films.py cs-4` |
