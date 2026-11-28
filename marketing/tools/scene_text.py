@@ -88,6 +88,9 @@ if (mode === 'extract') {
     const tr = map[i];
     if (!tr || !tr.text || tr.text === f.text) continue;
     if (tr.en !== f.text.trim()) { console.error('MISMATCH at ' + i + ': ' + tr.en + ' != ' + f.text); process.exit(2); }
+    // keep the original's leading/trailing spaces (fragments sit next to other text)
+    { const lead = f.text.match(/^\s*/)[0], trail = f.text.match(/\s*$/)[0];
+      tr.text = lead + tr.text.trim() + trail; }
     let rep;
     const esc = s => s.replace(/\\/g,'\\\\');
     if (f.kind === 'jsx') {
