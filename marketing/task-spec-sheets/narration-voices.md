@@ -105,11 +105,17 @@ cd /mnt/c/data-mybizz-mgt/marketing/tools && for lv in fr:ff_siwis es:ef_dora it
 
 ### Piper (German)
 
+German is spoken by Piper through `narrate.py`, never through Piper's own command. Piper's sound converter splits the soft "ch" of "ich", "nicht" and "möchten" (sign ç) into "c" and a separate cedilla; the German voice knows only the single sign, so it would drop the cedilla and speak a hard "c". `narrate.py` joins every such split sign back into the single sign before speaking, and reports for each file how many it joined; a file listing "UNKNOWN SIGNS" has a sound the voice does not know and is not used until that sound is resolved.
+
+Shared German clips are spoken with `--say` (the text) and `--out` (the file name in `done-audios`), at the Mybizz pace of 0.85:
+
 ```
-cd ~/tools/kokoro/piper-voices && ../.venv/bin/python -m piper -m de_DE-kerstin-low --data-dir . --length-scale 1.18 -f /mnt/c/data-mybizz-mgt/marketing/brand-assets/done-audios/sc-3-de.wav -- "Hallo. Ich bin Sarah, eine KI-Moderatorin, mit einem kurzen Blick auf Ihre Website."
+cd /mnt/c/data-mybizz-mgt/marketing/tools && ~/tools/kokoro/.venv/bin/python narrate.py --lang de --voice de_DE-kerstin-low --speed 0.85 --say "Hallo. Ich bin Sarah, eine KI-Moderatorin, mit einem kurzen Blick auf Ihre Website." --out sc-3-de.wav
 ```
 
-`--length-scale 1.18` gives the Mybizz pace (15% slower than Piper's own pace). The warning "Missing phoneme from id map" means one rare sound mark is skipped; it needs no action unless the sentence sounds wrong.
+```
+cd /mnt/c/data-mybizz-mgt/marketing/tools && ~/tools/kokoro/.venv/bin/python narrate.py --lang de --voice de_DE-kerstin-low --speed 0.85 --say "Wenn das hilfreich war, antworten Sie einfach auf die E-Mail. Danke fürs Zuschauen." --out sc-4-de.wav
+```
 
 ### Listening check
 

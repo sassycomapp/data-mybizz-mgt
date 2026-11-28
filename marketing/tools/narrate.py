@@ -8,6 +8,13 @@ A scene file that already exists is skipped, so a stopped run carries on where i
 narration pace, 15% slower than the voice's own pace (1.0); French, German, Spanish and Italian run at
 the voice's own pace (1.0), so the longer translated sentences fit the English scenes.
 
+German is spoken by Piper. Piper's sound converter splits the "ch" of "ich" (sign ç) into "c" and a
+separate cedilla, which the German voice does not know and drops; the tool joins every such split sign
+back into the single sign the voice knows before speaking, and reports how many it joined.
+
+--say speaks one text to one file instead of a script (shared clips), for example:
+  ~/tools/kokoro/.venv/bin/python narrate.py --lang de --voice de_DE-kerstin-low --speed 0.85 --say "Hallo." --out sc-3-de.wav
+
 Run from WSL with Kokoro's Python (task-spec-sheets/narration-voices.md):
   ~/tools/kokoro/.venv/bin/python narrate.py --lang en --voice bf_lily fda-1 fda-2
 """
@@ -16,10 +23,10 @@ import glob
 import os
 import re
 import sys
+import unicodedata
 
 import numpy as np
 import soundfile as sf
-import subprocess
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 MARKETING = os.path.dirname(HERE)
@@ -40,6 +47,52 @@ def scenes(path):
         yield num, " ".join(lines)
 
 
+class Speaker:
+    """One voice: Kokoro for English, French, Spanish and Italian; Piper for German."""
+
+    def __init__(self, lang, voice, speed):
+        self.voice, self.speed = voice, speed
+        if lang == "de":
+            from piper import PiperVoice
+            self.piper = PiperVoice.load(os.path.join(PIPER_VOICES, f"{voice}.onnx"))
+            self.kokoro = None
+        else:
+            from kokoro import KPipeline
+            self.kokoro = KPipeline(lang_code=LANG_CODES[lang], repo_id="hexgrad/Kokoro-82M")
+
+    def speak(self, text, dest):
+        if self.kokoro:
+            audio = np.concatenate([np.asarray(x) for _, _, x in self.kokoro(text, voice=self.voice, speed=self.speed)])
+            sf.write(dest, audio, 24000)
+            return len(audio) / 24000, ""
+        from piper import SynthesisConfig
+        cfg = SynthesisConfig(length_scale=1 / self.speed)  # length scale is the inverse of speed
+        known = self.piper.config.phoneme_id_map
+        parts, joined, unknown = [], 0, set()
+        for sentence in self.piper.phonemize(text):
+            signs = []
+            for sign in sentence:
+                if signs and unicodedata.combining(sign):
+                    whole = unicodedata.normalize("NFC", signs[-1] + sign)
+                    if whole in known:
+                        signs[-1] = whole
+                        joined += 1
+                        continue
+                signs.append(sign)
+            unknown |= {x for x in signs if x not in known}
+            audio = np.asarray(self.piper.phoneme_ids_to_audio(self.piper.phonemes_to_ids(signs), cfg))
+            if audio.dtype == np.int16:
+                audio = audio.astype(np.float32) / 32768
+            parts.append(audio.astype(np.float32).ravel())
+        rate = self.piper.config.sample_rate
+        audio = np.concatenate(parts)
+        sf.write(dest, audio, rate)
+        note = f", {joined} split sign(s) joined"
+        if unknown:
+            note += ", UNKNOWN SIGNS: " + " ".join(f"U+{ord(c[0]):04X}" for c in sorted(unknown))
+        return len(audio) / rate, note
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--lang", default="en", choices=sorted(LANG_CODES))
@@ -47,15 +100,19 @@ def main():
     ap.add_argument("--speed", type=float, default=None,
                     help="speaking pace; default 0.85 for English, 1.0 for the other languages")
     ap.add_argument("--force", action="store_true", help="remake scenes that already exist")
-    ap.add_argument("videos", nargs="+", help="video IDs, e.g. fda-1 cs-2")
+    ap.add_argument("--say", help="speak this text instead of a script")
+    ap.add_argument("--out", help="with --say: the file name in done-audios, e.g. sc-3-de.wav")
+    ap.add_argument("videos", nargs="*", help="video IDs, e.g. fda-1 cs-2")
     a = ap.parse_args()
     if a.speed is None:
         a.speed = 0.85 if a.lang == "en" else 1.0
-    if a.lang == "de":
-        pipe = None
-    else:
-        from kokoro import KPipeline
-        pipe = KPipeline(lang_code=LANG_CODES[a.lang], repo_id="hexgrad/Kokoro-82M")
+    if bool(a.say) != bool(a.out) or bool(a.say) == bool(a.videos):
+        sys.exit("Give either video IDs, or --say with --out.")
+    speaker = Speaker(a.lang, a.voice, a.speed)
+    if a.say:
+        secs, note = speaker.speak(a.say, os.path.join(OUT, a.out))
+        print("made", a.out, f"{secs:.0f} s{note}")
+        return
     for vid in a.videos:
         suffix = "" if a.lang == "en" else f"-{a.lang}"
         found = glob.glob(os.path.join(SCRIPTS, f"{vid}-*{suffix}.md"))
@@ -68,16 +125,8 @@ def main():
             if os.path.exists(dest) and not a.force:
                 print("skip", name)
                 continue
-            if pipe is None:
-                # Piper: length scale is the inverse of speed (0.85 -> 1.18)
-                subprocess.run([sys.executable, "-m", "piper", "-m", a.voice, "--data-dir", PIPER_VOICES,
-                                "--length-scale", f"{1 / a.speed:.2f}", "-f", dest, "--", text], check=True)
-                info = sf.info(dest)
-                print("made", name, f"{info.duration:.0f} s", flush=True)
-                continue
-            audio = np.concatenate([np.asarray(x) for _, _, x in pipe(text, voice=a.voice, speed=a.speed)])
-            sf.write(dest, audio, 24000)
-            print("made", name, f"{len(audio) / 24000:.0f} s", flush=True)
+            secs, note = speaker.speak(text, dest)
+            print("made", name, f"{secs:.0f} s{note}", flush=True)
     print("done")
 
 
